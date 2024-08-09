@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'WAGURITTF', sans-serif;
+}
+
 .table_div{
     width: 100%;
     text-align: center;
@@ -21,8 +32,8 @@
     margin-left: auto; /* 검색박스를 오른쪽 정렬 */
     display: flex;
     align-items: center; /* 가운데 정렬(세로) */
-    background-color: #F67280;
-    border-color: aliceblue;
+    /* background-color: #F67280;
+    border-color: aliceblue; */
     font-size: 15px; /* 글자 크기 */
     padding: 7px 15px; /* 내부 여백 */
     width: 100px; /* 버튼 너비 */
@@ -35,8 +46,8 @@
 
 #list{ 
     margin-left: auto; /* 검색박스를 오른쪽 정렬 */
-    background-color: #F67280;
-    border-color: aliceblue;
+    /* background-color: #F67280;
+    border-color: aliceblue; */
     font-size: 15px; /* 글자 크기 */
     padding: 7px 15px; /* 내부 여백 */
     width: 100px; /* 버튼 너비 */
@@ -45,8 +56,8 @@
 
 #registration{ 
     margin-left: auto; /* 검색박스를 오른쪽 정렬 */
-    background-color: #F67280;
-    border-color: aliceblue;
+    /* background-color: #F67280;
+    border-color: aliceblue; */
     font-size: 15px; /* 글자 크기 */
     padding: 7px 15px; /* 내부 여백 */
     width: 100px; /* 버튼 너비 */

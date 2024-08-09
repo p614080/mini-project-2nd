@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'WAGURITTF', sans-serif;
+}
+
 .body_div{
     width: 100%;
 }
@@ -17,10 +28,10 @@
     align-items: center; /* 가운데 정렬(세로) */
 }
 
-#button{
+/* #button{
     background-color: #F67280;
     border-color: aliceblue;
-}
+} */
 
 .menu_div a{
     text-decoration: none;/* 밑줄을 없앰 */
@@ -30,7 +41,7 @@
     color: #000; /* 텍스트 색상변경 */
 }
 
-.table_div{
+/* .table_div{
     width: 100%;
     text-align: center;
 }
@@ -38,7 +49,7 @@
 .table_div table{
     width: 100%;
     text-align: center;
-    border-collapse: collapse;/* 셀 간격 없앰 */
+    border-collapse: collapse;
 }
 
 .table_div tr{
@@ -51,7 +62,22 @@
 
 .table_row :hover{
     background-color: #F67280;
-}
+} */
+
+table {
+    width: 100%;
+    border-top: 1px solid #d3d3d3;
+    border-collapse: collapse;
+  }
+  th {
+    background-color: white;
+    border-top: 1px solid #727272;
+  }
+  th,
+  td {
+    border-bottom: 1px solid;
+    padding: 10px;
+  }
 
 .page_div{
     text-align: center;
@@ -69,8 +95,8 @@
     margin-left: auto; /* 검색박스를 오른쪽 정렬 */
     display: flex;
     align-items: center; /* 가운데 정렬(세로) */
-    background-color: #F67280;
-    border-color: aliceblue;
+    /* background-color: #F67280;
+    border-color: aliceblue; */
     font-size: 15px; /* 글자 크기 */
     padding: 7px 15px; /* 내부 여백 */
     width: 100px; /* 버튼 너비 */

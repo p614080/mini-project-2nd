@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'WAGURITTF', sans-serif;
+}
 
 .body_div{
     width: 100%;
@@ -18,10 +28,10 @@
     align-items: center; /* 가운데 정렬(세로) */
 }
 
-#button{
+/* #button{
     background-color: #F67280;
     border-color: aliceblue;
-}
+} */
 
 .menu_div a{
     text-decoration: none;/* 밑줄을 없앰 */
