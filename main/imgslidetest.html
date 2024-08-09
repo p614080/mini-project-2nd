@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        /* Slider Container */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        /* Slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Navigation Buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
+    </div>
+    <a class="prev" onclick="prevSlide()">❮</a>
+    <a class="next" onclick="nextSlide()">❯</a>
+</div>
+
+<script>
+    let slideIndex = 0;
+
+    function showSlides() {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        if (slideIndex >= totalSlides) {
+            slideIndex = 0;
+        }
+        if (slideIndex < 0) {
+            slideIndex = totalSlides - 1;
+        }
+
+        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        slideIndex++;
+        showSlides();
+    }
+
+    function prevSlide() {
+        slideIndex--;
+        showSlides();
+    }
+
+    // Automatically change slides every 3 seconds
+    setInterval(nextSlide, 3000);
+
+    showSlides();
+</script>
+
+</body>
+</html>
