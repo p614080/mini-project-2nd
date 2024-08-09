@@ -54,3 +54,4 @@ function filterPosts(filter, query = '') {
     }, 10);
 }
 
+
