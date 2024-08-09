@@ -14,9 +14,9 @@
         <button onclick="login()">로그인</button>
         <p class="error_message" id="login_error"></p>
         <div class="social_login_icons">
-            <img id="googleSignIn" src="images/google_login.png" alt="google_login">
-            <img id="naverIdLogin" src="images/naver_login.png" alt="naver_login">
-            <img id="kakaoLogin" src="images/kakao_login.png" alt="kakao_login">
+            <img id="googleSignIn" src="../img/login_register/google_login.png" alt="google_login">
+            <img id="naverIdLogin" src="../img/login_register/naver_login.png" alt="naver_login">
+            <img id="kakaoLogin" src="../img/login_register/kakao_login.png" alt="kakao_login">
         </div>
         <div class="login_bottom_bar">
             <button id="termstoregist_button" onclick="location.href='id_find.html'">아이디찾기</button>
@@ -27,7 +27,7 @@
 
     <script>
         async function fetchUserData() {
-            const response = await fetch('users.json');
+            const response = await fetch('../json/users.json');
             const data = await response.json();
             return data.users;
         }
