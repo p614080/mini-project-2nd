@@ -27,7 +27,7 @@
 
     <script>
         async function fetchUserData() {
-            const response = await fetch('users.json');
+            const response = await fetch('../json/users.json');
             const data = await response.json();
             return data.users;
         }
