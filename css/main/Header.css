@@ -4,9 +4,12 @@
     font-weight: normal;
     font-style: normal;
   }
-  h1, th{
+  h1{
       font-family: 'WAGURITTF';
-  }
+    }
+  th{ 
+     font-family: 'WAGURITTF';
+    }
 .menu li{
     
     float: left;
