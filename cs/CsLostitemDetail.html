@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분실물문의 상세페이지</title>
+    <link rel="stylesheet" href="../css/cs/CsNotificationDetail.css">
+    <!-- <iframe src="/MiniProject-김생아/main_header.html" style="width: 100%;"></iframe> -->
+</head>
+<body>
+    <div class="menu_div">
+        <a href="./CsLostitemDetail.html">분실물문의 상세페이지</a>
+    </div>
+    <div class="table_div">
+        <table>
+            <tr>
+                <td>번호</td>
+                <td>제목</td>
+                <td>등록일</td>
+                <td>작성자</td>
+                <td>조회수</td>
+            </tr>
+            <tr>
+                <td colspan="5" style="height: 400px;">내용</td>
+            </tr>
+        </table>
+        <div class="button_div">
+            <input type="button" value="수정" onclick="updateBtn()">
+            <input type="button" value="삭제" onclick="deleteBtn()">
+            <input type="button" value="이전" style="margin-left: 500px;">
+            <input type="button" value="목록" onclick="location.href='CsLostitem.html';">
+            <input type="button" value="다음">
+        </div>
+    </div>
+
+    <script>
+        function updateBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("수정권한이 없습니다");
+            }
+        }
+
+        function deleteBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("삭제권한이 없습니다");
+            }
+        }
+        function deleteBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("삭제권한이 없습니다");
+            }
+        }
+        
+    </script>
+</body>
+<iframe src="/MiniProject-박성찬/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+</html>

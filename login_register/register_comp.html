@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법인/기관 회원가입</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login_container">
+        <h2>법인/기관 회원가입</h2>
+        <h3>정보 입력</h3>
+        <input type="text" id="register_name" placeholder="법인/기관명" required>
+        <input type="email" id="register_email" placeholder="이메일 주소" required>
+        <div class="password_container">
+            <input type="password" id="register_password" placeholder="비밀번호 (문자, 숫자, 특수문자 포함 8자리 이상)" required>
+            <span class="password_toggle" onclick="togglePassword('register_password', this)">👁️</span>
+        </div>
+        <div class="password_container">
+            <input type="password" id="confirm_password" placeholder="비밀번호 확인" required>
+            <span class="password_toggle" onclick="togglePassword('confirm_password', this)">👁️</span>
+        </div>
+        <div class="brn_container">
+            <input type="text" id="brn" placeholder="사업자등록번호 10자리" maxlength="10" required>
+            <button id="phone-verify-button" onclick="verifyBrn()">사업자 인증</button>
+        </div>
+        <div class="vertification_checkline">
+            <label for="verification_checkbox">사업자 인증 완료</label>
+            <input type="checkbox" id="verification_checkbox" disabled>
+        </div>
+        <h3>연락 가능 번호</h3>
+        <h4>법인/기관 가입은 담당자 확인전화 후 승인 예정이니 연락가능한 번호를 입력해주세요.</h4>
+        <div class="phone_container">
+            <input type="text" id="phone_1" placeholder="010" maxlength="3" oninput="moveFocus(this, 'phone_2')" required>
+            <span>-</span>
+            <input type="text" id="phone_2" placeholder="1234" maxlength="4" oninput="moveFocus(this, 'phone_3')" required>
+            <span>-</span>
+            <input type="text" id="phone_3" placeholder="5678" maxlength="4" required>
+        </div>
+        <button id="register_button" onclick="redirectToTerms()">회원가입 완료</button>
+        <p class="error_message" id="register_error"></p>
+        <p>
+            <button id="termstoregist_button" onclick="location.href='terms.html'">이전으로</button>
+        </p>
+    </div>
+
+    <script>
+        // Clear previous error message
+        errorMessage.textContent = '';
+        
+        function togglePassword(fieldId, toggleIcon) {
+            const passwordField = document.getElementById(fieldId);
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.textContent = '🙈';
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.textContent = '👁️';
+            }
+        }
+
+        async function redirectToTerms() {
+            const name = document.getElementById('register_name').value;
+            const email = document.getElementById('register_email').value;
+            const password = document.getElementById('register_password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const brn = document.getElementById('brn').value;
+            const errorMessage = document.getElementById('register_error');
+            const emailCriteria = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const passwordCriteria = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            const verificationCheckbox = document.getElementById('verification_checkbox').checked;
+            const phone1 = document.getElementById('phone_1').value;
+            const phone2 = document.getElementById('phone_2').value;
+            const phone3 = document.getElementById('phone_3').value;
+            const phone = `${phone1}-${phone2}-${phone3}`;
+
+            if (!name || !email || !password || !confirmPassword || !brn || !phone1 || !phone2 || !phone3) {
+                errorMessage.textContent = '모든 필드를 입력해 주세요.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            if (!emailCriteria.test(email)) {
+                errorMessage.textContent = '유효한 이메일 주소를 입력해 주세요.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            async function checkEmailDuplicate(email) {
+                try {
+                    const response = await fetch('users.json'); // JSON 파일에서 이메일 중복 체크
+                    const data = await response.json();
+                    return data.users.some(user => user.email === email);
+                } catch (error) {
+                    console.error('이메일 중복 검사 실패:', error);
+                    return false;
+                }
+            }
+
+            if (await checkEmailDuplicate(email)) {
+                errorMessage.textContent = '이미 사용 중인 이메일 주소입니다.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            if (!passwordCriteria.test(password)) {
+                errorMessage.textContent = '비밀번호는 영문, 숫자, 특수문자를 포함하여 8자 이상이어야 합니다.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = '비밀번호가 일치하지 않습니다.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            if (!verificationCheckbox) {
+                errorMessage.textContent = '사업자 인증을 완료해 주세요.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            // 환영 페이지로 리다이렉션
+            const keep_register = confirm('회원가입 하시겠습니까?');
+            if (keep_register == true){
+                window.location.href = 'welcome_comp.html'
+            } else {
+            }
+        }
+
+        function verifyBrn() {
+            const isVerified = confirm('사업자번호 인증 API');
+            if (isVerified) {
+                document.getElementById('verification_checkbox').checked = true;
+            }
+        }
+
+        function enableDisableRegisterButton() {
+            const name = document.getElementById('register_name').value;
+            const email = document.getElementById('register_email').value;
+            const password = document.getElementById('register_password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const brn = document.getElementById('brn').value;
+            const registerButton = document.getElementById('register_button');
+
+            if (name && email && password && confirmPassword && brn) {
+                registerButton.classList.add('active');
+                registerButton.disabled = false;
+            } else {
+                registerButton.classList.remove('active');
+                registerButton.disabled = true;
+            }
+        }
+
+        function moveFocus(currentField, nextFieldId) {
+            if (currentField.value.length >= currentField.maxLength) {
+                document.getElementById(nextFieldId).focus();
+            }
+        }
+
+        document.querySelectorAll('.login_container input').forEach(input => {
+            input.addEventListener('input', enableDisableRegisterButton);
+        });
+
+        enableDisableRegisterButton();
+    </script>
+</body>
+</html>

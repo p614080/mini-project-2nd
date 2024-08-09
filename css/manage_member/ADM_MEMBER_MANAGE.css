@@ -1,0 +1,99 @@
+
+.headcontainer{
+  height: 150px;
+  border: 1px solid black;  
+}
+#logo{
+  object-fit: scale-down;
+  height: 200px;
+  position: absolute;
+}
+#headmenu{
+  margin-top: 20px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 10px;
+  height: 100px;
+  background-color: #F67280;
+  border-radius: 15px;
+}
+
+.sidecontainer {
+  display: inline-flex;
+}
+aside{
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+#sidemenuname{
+  height: 30px;
+  background-color: #F67280;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-left: 3px;
+  width: 1500px;
+  height: 1000px;
+  border: 1px solid black;
+}
+
+.btn {
+  margin: 9px;
+  margin-top: 250px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  padding: 100px 150px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 35px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  font-family: D2Coding;
+}
+#BusinessMember {
+  background-color: #edf04b;
+}
+#GeneralMember {
+  background-color: #4a8deb;
+}
+
+footer{
+  margin-top: 20px;
+  border-top: 1px solid #F67280;
+}
+.footercontainer{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerleft{
+  display: block;
+  margin-left: 10%;
+}
+#footerlogo{
+  font-size: large;
+}
+#logoname{
+  font-size: larger;
+  margin-right: 20px;
+  text-decoration-line: none;
+}
+#footercopyright{
+  font-size: small;
+  margin-top: 5px;
+}
+.footerright{
+  display: block;
+  margin-right: 10%;
+  text-align: center;
+}
+#callnumber{
+  font-size: larger;
+  text-decoration-line: none;
+}

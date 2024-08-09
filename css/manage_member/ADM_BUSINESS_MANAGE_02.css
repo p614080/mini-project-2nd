@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+}
+#info_table_div {
+  margin-top: 20px;
+  margin-left: 20px;
+  justify-content: center;
+}
+#info_table {
+  border-top: 1px;
+  width:700px;
+  height:400px;
+}
+td, th {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.info_name{
+  width: 100px;
+  text-align: left; 
+}
+#approve_div {
+  justify-content: right;
+  margin-right: 50px;
+}
+#bottom_div {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+button{
+  height: 40px;
+}
+.btn {
+  margin: 9px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  padding: 20px 30px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 35px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  font-family: D2Coding;
+  background-color: #F67280;
+}

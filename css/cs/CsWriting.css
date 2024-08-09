@@ -1,0 +1,62 @@
+.table_div{
+    width: 100%;
+    text-align: center;
+}
+
+.table_div table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;/* 셀 간격 없앰 */
+}
+
+.table_div tr{
+    height: 50px;
+}
+
+.table_div td{
+    border: 1px solid #000;
+}
+
+#fileBtn{ 
+    margin-left: auto; /* 검색박스를 오른쪽 정렬 */
+    display: flex;
+    align-items: center; /* 가운데 정렬(세로) */
+    background-color: #F67280;
+    border-color: aliceblue;
+    font-size: 15px; /* 글자 크기 */
+    padding: 7px 15px; /* 내부 여백 */
+    width: 100px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+}
+
+#password {
+    display: none;
+}
+
+#list{ 
+    margin-left: auto; /* 검색박스를 오른쪽 정렬 */
+    background-color: #F67280;
+    border-color: aliceblue;
+    font-size: 15px; /* 글자 크기 */
+    padding: 7px 15px; /* 내부 여백 */
+    width: 100px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+}
+
+#registration{ 
+    margin-left: auto; /* 검색박스를 오른쪽 정렬 */
+    background-color: #F67280;
+    border-color: aliceblue;
+    font-size: 15px; /* 글자 크기 */
+    padding: 7px 15px; /* 내부 여백 */
+    width: 100px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+}
+
+#privateMember{
+    transform: scale(2);
+}
+
+#control{
+    text-align: right;
+}

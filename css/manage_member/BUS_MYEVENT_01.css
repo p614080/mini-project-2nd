@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.tb {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+.sort_select {
+  justify-content: right;
+  margin-right: 100px;
+}
+.page_num {
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+table {
+  width: 100%;
+  border-top: 1px solid #d3d3d3;
+  border-collapse: collapse;
+  text-align: center;
+}
+th {
+  background-color: white;
+  border-top: 1px solid #727272;
+  border-bottom: 1px solid;
+  height: 20px;
+}
+td {
+  border-top: 1px solid #727272;
+  border-bottom: 1px solid;
+  height: 100px;
+}
+img{
+  object-fit: scale-down;
+  height: 90px;
+}

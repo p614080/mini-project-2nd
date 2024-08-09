@@ -1,0 +1,70 @@
+.container {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.container div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    width: 120px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    flex: 1;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: beige;
+}
+
+button {
+    margin: 0px 5px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F67280;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn1 {
+    margin: 0px 5px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#ddd;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #C06C84;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+#phone1, #phone2, #phone3 {
+    width: 60px;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.tb {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+.sort_select {
+  justify-content: right;
+  margin-right: 100px;
+}
+.page_num {
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+table {
+  width: 100%;
+  border-top: 1px solid #d3d3d3;
+  border-collapse: collapse;
+}
+th {
+  background-color: white;
+  border-top: 1px solid #727272;
+}
+th,
+td {
+  border-bottom: 1px solid;
+  padding: 10px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 행사 목록</title>
+    <link rel="stylesheet" href="/css/BUS_MYEVENT_01.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <select name="검색종류" id="">
+          <option value="name">행사 이름</option>
+          <option value="date">기간</option>
+          <option value="number">예약자수</option>
+        </select>
+      </div>
+      <div>
+        <input type="text" />
+      </div>
+      <div>
+        <button>검색</button>
+      </div>
+    </div>
+    <div class="container sort_select">
+      <select name="정렬" id="">
+        <option value="">이름순▼</option>
+        <option value="">행사기간▼</option>
+        <option value="">예약자▼</option>
+      </select>
+      <a>정렬</a>
+    </div>
+    <div class="container tb">
+      <table>
+        <tr>
+          <th></th>
+          <th>행사 이미지</th>
+          <th>행사 이름</th>
+          <th>행사기간</th>
+          <th>예약자수</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>
+            <a href="/ADM_REGULAR_MANAGE_02.html"
+              ><img src="/img/night walk.png" alt="나이트워크"
+            /></a>
+          </td>
+          <td>2024 부산 나이트워크</td>
+          <td>2024-08-31 ~ 2024-09-01</td>
+          <td>1,382</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="container page_num">
+      <a href="">이전</a>
+      <a href="">1</a>
+      <a href="">2</a>
+      <a href="">3</a>
+      <a href="">4</a>
+      <a href="">5</a>
+      <a href="">6</a>
+      <a href="">7</a>
+      <a href="">8</a>
+      <a href="">9</a>
+      <a href="">10</a>
+      <a href="">다음</a>
+    </div>
+  </body>
+  <iframe
+    src="/MiniProject-박성찬/Footer.html"
+    style="width: 100%"
+    frameborder="0"
+  ></iframe>
+</html>

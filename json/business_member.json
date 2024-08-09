@@ -1,0 +1,182 @@
+[
+  {
+    "name":"(주)자바2차반",
+    "id": "java2",
+    "email": "java2@naver.com",
+    "phonnumber":"010-1234-3607",
+    "signupdate":"2024-08-07",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"수영구청",
+    "id": "suyounggu",
+    "email": "suyoung123@email.com",
+    "phonnumber":"051-239-4829",
+    "signupdate":"2023-02-23",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"영도구청",
+    "id": "yeongdogu",
+    "email": "yd123@yeongdo.kr",
+    "phonnumber":"051-413-2500",
+    "signupdate":"2022-11-11",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"해운대구청",
+    "id": "haeundae",
+    "email": "haeundae@busan.kr",
+    "phonnumber":"051-749-4000",
+    "signupdate":"2024-01-15",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"서울특별시청",
+    "id": "seoul",
+    "email": "seoul@seoul.go.kr",
+    "phonnumber":"02-120",
+    "signupdate":"2023-05-10",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"부산광역시청",
+    "id": "busan",
+    "email": "busan@busan.go.kr",
+    "phonnumber":"051-888-8888",
+    "signupdate":"2022-09-29",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"대구광역시청",
+    "id": "daegu",
+    "email": "daegu@daegu.go.kr",
+    "phonnumber":"053-803-8030",
+    "signupdate":"2023-03-14",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"인천광역시청",
+    "id": "incheon",
+    "email": "incheon@incheon.go.kr",
+    "phonnumber":"032-120",
+    "signupdate":"2023-08-21",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"광주광역시청",
+    "id": "gwangju",
+    "email": "gwangju@gwangju.go.kr",
+    "phonnumber":"062-613-0000",
+    "signupdate":"2023-07-07",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"대전광역시청",
+    "id": "daejeon",
+    "email": "daejeon@daejeon.go.kr",
+    "phonnumber":"042-120",
+    "signupdate":"2022-12-15",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"울산광역시청",
+    "id": "ulsan",
+    "email": "ulsan@ulsan.go.kr",
+    "phonnumber":"052-120",
+    "signupdate":"2024-02-28",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"경기도청",
+    "id": "gyeonggi",
+    "email": "gyeonggi@gg.go.kr",
+    "phonnumber":"031-120",
+    "signupdate":"2023-04-22",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"강원도청",
+    "id": "gangwon",
+    "email": "gangwon@gangwon.go.kr",
+    "phonnumber":"033-120",
+    "signupdate":"2022-10-31",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"충청북도청",
+    "id": "chungbuk",
+    "email": "chungbuk@chungbuk.go.kr",
+    "phonnumber":"043-120",
+    "signupdate":"2023-11-19",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"충청남도청",
+    "id": "chungnam",
+    "email": "chungnam@chungnam.go.kr",
+    "phonnumber":"041-120",
+    "signupdate":"2023-06-14",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"전라북도청",
+    "id": "jeonbuk",
+    "email": "jeonbuk@jeonbuk.go.kr",
+    "phonnumber":"063-120",
+    "signupdate":"2022-08-25",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"전라남도청",
+    "id": "jeonnam",
+    "email": "jeonnam@jeonnam.go.kr",
+    "phonnumber":"061-120",
+    "signupdate":"2023-12-12",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"경상북도청",
+    "id": "gyeongbuk",
+    "email": "gyeongbuk@gyeongbuk.go.kr",
+    "phonnumber":"054-120",
+    "signupdate":"2023-09-17",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"경상남도청",
+    "id": "gyeongnam",
+    "email": "gyeongnam@gyeongnam.go.kr",
+    "phonnumber":"055-120",
+    "signupdate":"2024-07-08",
+    "approve":"승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  },
+  {
+    "name":"제주특별자치도청",
+    "id": "jeju",
+    "email": "jeju@jeju.go.kr",
+    "phonnumber":"064-120",
+    "signupdate":"2022-07-30",
+    "approve":"미승인",
+    "url": "./ADM_BUSINESS_MANAGE_02.html"
+  }
+]

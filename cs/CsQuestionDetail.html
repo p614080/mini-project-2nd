@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>질문QnA 상세페이지</title>
+    <link rel="stylesheet" href="./CsNotificationDetail.css">
+    <script src="CsQuestion.js"></script>
+    <iframe src="/MiniProject-김생아/main_header.html" style="width: 100%;"></iframe>
+</head>
+<body>
+    <div class="menu_div">
+        <a href="./CsQuestionDetail.html">질문QnA 상세페이지</a>
+    </div>
+    <div class="table_div">
+        <table>
+            <tr>
+                <td>번호</td>
+                <td>제목</td>
+                <td>등록일</td>
+                <td>작성자</td>
+                <td>조회수</td>
+            </tr>
+            <tbody id="tableBody"></tbody> <!-- 질문 정보가 추가될 부분 -->
+            <tr>
+                <td colspan="5" style="height: 400px;" id="questionText">내용</td> <!-- 질문 내용이 추가될 부분 -->
+            </tr>
+        </table>
+        <div class="button_div">
+            <input type="button" value="수정" onclick="updateBtn()">
+            <input type="button" value="삭제" onclick="deleteBtn()">
+            <input type="button" value="이전" style="margin-left: 500px;">
+            <input type="button" value="목록" onclick="location.href='CsQuestion.html';"> <!-- 목록 버튼 클릭 시 질문 목록 페이지로 이동 -->
+            <input type="button" value="다음">
+        </div>
+    </div>
+
+    <script>
+        function updateBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("수정권한이 없습니다");
+            }
+        }
+
+        function deleteBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("삭제권한이 없습니다");
+            }
+        }
+
+        function updateBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("수정권한이 없습니다");
+            }
+        }
+
+        function deleteBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("삭제권한이 없습니다");
+            }
+        }
+        function deleteBtn(){
+            if(document.getElementById('id값').value != 'id값'){
+                alert("삭제권한이 없습니다");
+            }
+        }
+        
+    </script>
+</body>
+<iframe src="/MiniProject-박성찬/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+</html>

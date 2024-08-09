@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>약관 동의</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terms_container">
+        <h2>약관 동의</h2>
+        
+        <div class="terms_section">
+            <input type="checkbox" id="term1" required>
+            <label for="term1">
+                [필수] 부비온앤온 이용약관
+                <button class="toggle_button" onclick="toggleContent('term1_content', this)">펼치기</button>
+            </label>
+            <div id="term1_content" class="term_content"></div>
+        </div>
+
+        <div class="terms_section">
+            <input type="checkbox" id="term2" required>
+            <label for="term2">
+                [필수] 커뮤니티 이용약관
+                <button class="toggle_button" onclick="toggleContent('term2_content', this)">펼치기</button>
+            </label>
+            <div id="term2_content" class="term_content"></div>
+        </div>
+
+        <div class="terms_section">
+            <input type="checkbox" id="term3" required>
+            <label for="term3">
+                [필수] 개인정보 수집 및 이용 동의
+                <button class="toggle_button" onclick="toggleContent('term3_content', this)">펼치기</button>
+            </label>
+            <div id="term3_content" class="term_content"></div>
+        </div>
+
+        <div class="terms_section">
+            <input type="checkbox" id="term4">
+            <label for="term4">
+                [선택] 제 3자 정보제공 동의<br>미동의 시 사이트 내 행사예약 불가능
+                <button class="toggle_button" onclick="toggleContent('term4_content', this)">펼치기</button>
+            </label>
+            <div id="term4_content" class="term_content"></div>
+        </div>
+
+        <p class="error_message" id="terms_error_message"></p>
+
+        <div>
+            <button id="termstoregist_button" onclick="completeRegistration('register_norm.html')">일반 회원</button>
+            <button id="termstoregist_button" onclick="completeRegistration('register_kids.html')">만 14세 미만</button>
+            <button id="termstoregist_button" onclick="completeRegistration('register_comp.html')">법인/기관</button>
+        </div>
+        
+        <p>
+            <button id="termstoregist_button" onclick="location.href='login.html'">이전으로</button>
+        </p>
+    </div>
+
+    <script>
+        function toggleContent(contentId, button) {
+            const content = document.getElementById(contentId);
+            const isExpanded = content.style.display === 'block';
+
+            if (isExpanded) {
+                content.style.display = 'none';
+                button.textContent = '펼치기';
+            } else {
+                content.style.display = 'block';
+                button.textContent = '접기';
+            }
+        }
+
+        async function loadTermsContent() {
+            try {
+                const response = await fetch('terms.json');
+                if (!response.ok) {
+                    throw new Error('파일을 가져오는 데 실패했습니다.');
+                }
+                const data = await response.json();
+                const formatContent = text => text.replace(/\n/g, '<br>');
+                
+                document.getElementById('term1_content').innerText = data.terms1;
+                document.getElementById('term2_content').innerText = data.terms2;
+                document.getElementById('term3_content').innerText = data.terms3;
+                document.getElementById('term4_content').innerText = data.terms4;
+                
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // 약관 내용 로드
+        loadTermsContent();
+
+        function completeRegistration(page) {
+            const term1 = document.getElementById('term1').checked;
+            const term2 = document.getElementById('term2').checked;
+            const term3 = document.getElementById('term3').checked;
+            const errorMessage = document.getElementById('terms_error_message');
+
+            if (!term1 || !term2 || !term3) {
+                errorMessage.textContent = '필수 약관에 동의해 주세요.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            // 페이지로 리다이렉션
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

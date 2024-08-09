@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
+    <title>기업회원리스트페이지</title>
+    <link rel="stylesheet" href="./css/ADM_BUSINESS_MANAGE_01.css" />
+    <iframe
+      src="../MiniProject-김생아/main_header.html"
+      style="width: 100%; height: 100%"
+      frameborder="0"
+    ></iframe>
+  </head>
+  <body>
+    <div class="sidecontainer">
+      <aside>
+        <div class="container" id="sidemenuname">사이드바</div>
+      </aside>
+
+      <div>
+        <div class="container">
+          <div class="item">
+            <select name="검색종류" id="">
+              <option value="name">이름</option>
+              <option value="id">아이디</option>
+              <option value="date">가입날짜</option>
+            </select>
+          </div>
+          <div>
+            <input type="text" />
+          </div>
+          <div>
+            <button>검색</button>
+          </div>
+        </div>
+        <div class="container sort_select">
+          <select name="정렬" id="">
+            <option value="">이름순▼</option>
+            <option value="">아이디순▼</option>
+            <option value="">가입날짜순▼</option>
+          </select>
+          <a>정렬</a>
+        </div>
+        <div class="container tb">
+          <table>
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>아이디</th>
+                <th>이메일</th>
+                <th>전화번호</th>
+                <th>가입날짜</th>
+                <th>승인여부</th>
+              </tr>
+            </thead>
+
+            <tbody></tbody>
+            <script>
+              let xhttp = new XMLHttpRequest();
+              xhttp.open("GET", "./json/business_member.json", true);
+              xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                  let storage = JSON.parse(this.response);
+                  for (let i = 0; i < storage.length; i++) {
+                    let tr = document.createElement("tr");
+
+                    let tdName = document.createElement("td");
+                    let a = document.createElement("a");
+                    a.href = storage[i].url;
+                    a.innerHTML = storage[i].name; 
+                    a.onclick = function () {
+                      localStorage.setItem(
+                        "selectedUser",
+                        JSON.stringify(storage[i])
+                      );
+                    };
+                    tdName.appendChild(a);
+                    tr.appendChild(tdName);
+
+                    let tdId = document.createElement("td");
+                    tdId.innerHTML = storage[i].id;
+                    tr.appendChild(tdId);
+
+                    let tdEmail = document.createElement("td");
+                    tdEmail.innerHTML = storage[i].email;
+                    tr.appendChild(tdEmail);
+
+                    let tdPhone = document.createElement("td");
+                    tdPhone.innerHTML = storage[i].phonnumber;
+                    tr.appendChild(tdPhone);
+
+                    let tdSignupDate = document.createElement("td");
+                    tdSignupDate.innerHTML = storage[i].signupdate;
+                    tr.appendChild(tdSignupDate);
+
+                    let tdApprove = document.createElement("td");
+                    tdApprove.innerHTML = storage[i].approve;
+                    tr.appendChild(tdApprove);
+
+                    document.querySelector("tbody").appendChild(tr);
+                  }
+                }
+              };
+              xhttp.send();
+            </script>
+          </table>
+        </div>
+        <div class="container page_num">
+          <a href="">이전</a>
+          <a href="">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+          <a href="">5</a>
+          <a href="">6</a>
+          <a href="">7</a>
+          <a href="">8</a>
+          <a href="">9</a>
+          <a href="">10</a>
+          <a href="">다음</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <iframe
+    src="/MiniProject-박성찬/Footer.html"
+    style="width: 100%"
+    frameborder="0"
+  ></iframe>
+</html>

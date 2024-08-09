@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분실물문의</title>
+    <link rel="stylesheet" href="../css/cs/CsQuestion.css">
+    <script src="../js/cs/CsLostitem.js"></script>
+    <!-- <iframe src="/MiniProject-김생아/main_header.html" style="width: 100%;"></iframe> -->
+</head>
+<body>
+    <div class="body_div">
+        <div class="menu_div">
+            <a href="./CsLostitem.html">분실물문의</a>
+            <input type="search" id="search" placeholder="내용을 입력하세요">
+            <input type="button" id="button" value="검색" onclick="checkSearch()">
+        </div>
+
+        <div class="table_div">
+            <table>
+                <tr>
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>등록일</td>
+                    <td>작성자</td>
+                    <td>조회수</td>
+                </tr>
+                <tbody id="tableBody">
+                </tr>
+            </table>
+        </div>
+        <div class="page_div">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+        </div>
+        <div>
+            <input type="button" id="writing" value="글쓰기" onclick="location.href='CsWriting.html';">
+        </div>
+    </div>
+
+    <script>
+        function checkSearch() {
+            if (document.getElementById('search').value == "") {
+                alert("내용을 입력하세요");
+            }
+        }
+
+        function loadCsLostitem() {
+            const tableBody = document.getElementById('tableBody');  // 테이블 본문 요소를 가져옴
+
+            cslostitem.forEach(item => {
+                const row = document.createElement('tr');  // 새로 추가할때마다 tr태그써서 행을 생성을 해서 row 변수에 담음
+                row.className = 'table_row';  // 행에 클래스 이름을 설정
+                row.onclick = () => location.href = 'CsLostitemDetail.html';  // 행을 클릭하면 상세 페이지로 이동
+
+                // 번호
+                const num = document.createElement('td');  // 번호 셀을 생성
+                num.textContent = item.num;  // JSON 데이터에서 번호를 설정
+                row.appendChild(num);  // 행에 번호 셀을 추가
+
+                // 제목
+                const title = document.createElement('td');  // 제목 셀을 생성
+                title.textContent = item.title;  // JSON 데이터에서 제목을 설정
+                row.appendChild(title);  // 행에 제목 셀을 추가
+
+                // 등록일
+                const CreatedDay = document.createElement('td');  // 등록일 셀을 생성
+                CreatedDay.textContent = item.CreatedDay;  // JSON 데이터에서 등록일을 설정
+                row.appendChild(CreatedDay);  // 행에 등록일 셀을 추가
+
+                // 작성자
+                const member = document.createElement('td');  // 작성자 셀을 생성
+                member.textContent = item.member;  // JSON 데이터에서 작성자를 설정
+                row.appendChild(member);  // 행에 작성자 셀을 추가
+
+                // 조회수
+                const Views = document.createElement('td');  // 조회수 셀을 생성
+                Views.textContent = item.Views;  // JSON 데이터에서 조회수를 설정
+                row.appendChild(Views);  // 행에 조회수 셀을 추가
+
+                // 행을 테이블 본문에 추가
+                tableBody.appendChild(row);  // 생성한 행을 테이블 본문에 추가
+            });
+        }
+
+        // 데이터 가져오기 함수 호출
+        loadCsLostitem();
+    </script>
+</body>
+<iframe src="/MiniProject-박성찬/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+</html>

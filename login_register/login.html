@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login_container">
+        <h2>로그인</h2>
+        <input type="email" id="email" placeholder="이메일 주소" required>
+        <input type="password" id="password" placeholder="비밀번호" required>
+        <button onclick="login()">로그인</button>
+        <p class="error_message" id="login_error"></p>
+        <div class="social_login_icons">
+            <img id="googleSignIn" src="images/google_login.png" alt="google_login">
+            <img id="naverIdLogin" src="images/naver_login.png" alt="naver_login">
+            <img id="kakaoLogin" src="images/kakao_login.png" alt="kakao_login">
+        </div>
+        <div class="login_bottom_bar">
+            <button id="termstoregist_button" onclick="location.href='id_find.html'">아이디찾기</button>
+            <button id="termstoregist_button" onclick="location.href='pw_find.html'">비밀번호찾기</button>
+            <button id="termstoregist_button" onclick="location.href='terms.html'">회원가입</button>
+        </div>
+    </div>
+
+    <script>
+        async function fetchUserData() {
+            const response = await fetch('users.json');
+            const data = await response.json();
+            return data.users;
+        }
+
+        async function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('login_error');
+
+            const users = await fetchUserData();
+            const user = users.find(user => user.email === email);
+
+            if (user && user.password === password) {
+                alert("로그인 성공");
+                window.location.href = '../main/home.html';
+            } else {
+                errorMessage.textContent = '이메일 또는 비밀번호가 잘못되었습니다.';
+                errorMessage.style.color = 'red';
+            }
+        }
+
+        document.getElementById('googleSignIn').onclick = function() {
+            alert("구글 로그인 API 호출");
+        };
+
+        document.getElementById('naverIdLogin').onclick = function() {
+            alert("네이버 로그인 API 호출");
+        };
+
+        document.getElementById('kakaoLogin').onclick = function() {
+            alert("카카오 로그인 API 호출");
+        };
+    </script>
+</body>
+</html>

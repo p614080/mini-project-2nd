@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보변경</title>
+    <link rel="stylesheet" href="./user_info_modify.css">
+</head>
+<body>
+    <div class="container">
+        <h1>회원정보변경</h1>
+        <div class="line">
+            <label for="email">이메일</label>
+            <input type="text" id="email">
+        </div>
+        <div class="line">
+            <label for="name">이름</label>
+            <input type="text" id="name">
+        </div>
+        <div class="line">
+            <label for="phone">휴대폰번호</label>
+            <input type="text" id="phone1">
+            -
+            <input type="text" id="phone2">
+            -
+            <input type="text" id="phone3">
+            <button onclick="phoneAuth()">휴대폰 인증</button>
+        </div>
+        <div class="line">
+            <label for="consent">정보 수신 동의</label>
+            <div>
+                <input type="checkbox" id="consent1"> 개인정보 수집동의서
+            </div>
+            <div>
+                <input type="checkbox" id="consent2"> 위치기반서비스 이용약관
+            </div>
+        </div>
+        <div>
+            <a href="./mypage.html"><button class="btn1">취소</button></a>
+            <button onclick="updateInfo()">수정</button>
+        </div>
+    </div>
+    <script src="user_info_modify.js"></script>
+</body>
+</html> 

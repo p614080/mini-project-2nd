@@ -1,0 +1,62 @@
+.caption {
+    display: none;
+    visibility: hidden;
+  }
+  
+  th {
+    text-align: center;
+    background-color: #F67280;
+    color: white;
+  }
+  
+  table, th, td {
+    border: 1px solid #355C7D;
+    border-collapse: collapse;
+  }
+  
+  button {
+    background-color: #355C7D;
+    color: white;
+    text-align: center;
+    border: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #inputSearchText {
+    margin-left: 10px;
+  }
+  
+  aside {
+    width: 30%;
+    padding: 10px;
+    background-color: lightblue;
+    float: left;
+  }
+  
+  article {
+    width: 70%;
+    float: left;
+    padding: 10px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #355C7D;
+    font-weight: bold;
+  }
+
+  /* Header styling */
+header {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }

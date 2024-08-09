@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login_container">
+        <h2>비밀번호 찾기</h2>
+        <input type="text" id="register_name" placeholder="이름" required>
+        <input type="email" id="register_email" placeholder="이메일 주소" required>
+        <div class="phone_container">
+            <input type="text" id="phone_1" placeholder="010" maxlength="3" oninput="moveFocus(this, 'phone_2')" required>
+            <span>-</span>
+            <input type="text" id="phone_2" placeholder="1234" maxlength="4" oninput="moveFocus(this, 'phone_3')" required>
+            <span>-</span>
+            <input type="text" id="phone_3" placeholder="5678" maxlength="4" required>
+            <button id="phone-verify-button" onclick="verifyPhone()">본인 인증</button>
+        </div>
+        <div class="vertification_checkline">
+            <label for="verification_checkbox">본인 인증 완료</label>
+            <input type="checkbox" id="verification_checkbox" disabled>
+        </div>
+        <button class="find_id_button" onclick="completeFindId()">비밀번호 재설정</button>
+        <p class="error_message" id="register_error"></p>
+        <div class="login_bottom_bar">
+            <button id="termstoregist_button" onclick="location.href='id_find.html'">아이디찾기</button>
+            <button id="termstoregist_button" onclick="location.href='terms.html'">회원가입</button>
+        </div>
+    </div>
+
+    <script>
+        // Clear previous error message
+        errorMessage.textContent = '';
+        
+        function togglePassword(fieldId, toggleIcon) {
+            const passwordField = document.getElementById(fieldId);
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.textContent = '🙈';
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.textContent = '👁️';
+            }
+        }
+
+        async function completeFindId() {
+            const name = document.getElementById('register_name').value;
+            const email = document.getElementById('register_email').value;
+            const phone1 = document.getElementById('phone_1').value;
+            const phone2 = document.getElementById('phone_2').value;
+            const phone3 = document.getElementById('phone_3').value;
+            const phone = `${phone1}-${phone2}-${phone3}`;
+            const errorMessage = document.getElementById('register_error');
+            const verificationCheckbox = document.getElementById('verification_checkbox').checked;
+
+            if (!name || !email || !phone1 || !phone2 || !phone3) {
+                errorMessage.textContent = '모든 필드를 입력해 주세요.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            if (!verificationCheckbox) {
+                errorMessage.textContent = '본인 인증을 완료해 주세요.';
+                errorMessage.style.color = 'red';
+                return;
+            }
+
+            window.location.href = 'pw_reset.html';
+        }
+
+        function verifyPhone() {
+            const isVerified = confirm('휴대폰 본인 인증 API');
+            if (isVerified) {
+                document.getElementById('verification_checkbox').checked = true;
+            }
+        }
+
+        function moveFocus(currentField, nextFieldId) {
+            if (currentField.value.length >= currentField.maxLength) {
+                document.getElementById(nextFieldId).focus();
+            }
+        }
+
+    </script>
+</body>
+</html>

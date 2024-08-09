@@ -1,0 +1,35 @@
+
+footer{
+  margin-top: 20px;
+  border-top: 1px solid #F67280;
+}
+.footercontainer{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerleft{
+  display: block;
+  margin-left: 10%;
+}
+#footerlogo{
+  font-size: large;
+}
+#logoname{
+  font-size: larger;
+  margin-right: 20px;
+  text-decoration-line: none;
+}
+#footercopyright{
+  font-size: small;
+  margin-top: 5px;
+}
+.footerright{
+  display: block;
+  margin-right: 10%;
+  text-align: center;
+}
+#callnumber{
+  font-size: larger;
+  text-decoration-line: none;
+}

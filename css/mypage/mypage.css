@@ -1,0 +1,53 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.my-btn {
+    padding: 10px 20px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.my-btn1 {
+    background-color: #F67280;
+}
+
+.my-btn2 {
+    background-color: coral;
+}
+
+.my-btn3 {
+    background-color: cornflowerblue;
+}
+
+.my-btn4 {
+    background-color:indianred ;
+}
+
+.my-btn:hover {
+    transform: scale(1.05);
+}
+
+.my-btn:active {
+    transform: scale(0.95);
+}

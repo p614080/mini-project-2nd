@@ -1,0 +1,15 @@
+#Busan {
+   fill: #355C7D; /* 기본 상태에서 노란색 */
+   stroke: #F67280;
+}
+
+/* 다른 구역에 대해서도 동일하게 설정 */
+
+#seo:hover, #dong:hover, #yeongdo:hover, #busanjin:hover, #dongnae:hover, #nam:hover, #buk:hover,
+#haeundae:hover, #saha:hover, #geumjeong:hover, #gangseo:hover, #yeonje:hover, 
+#suyoung:hover, #sasang:hover, #gijang:hover, #jung:hover {
+   fill: #F67280; /* 호버 시 붉은색으로 변경 */
+}
+
+/* ㅇㅇㅇㅇㅇ */
+/* 필요한 만큼 다른 구역에 대해서도 스타일을 추가 */

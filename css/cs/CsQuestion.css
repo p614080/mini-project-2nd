@@ -1,0 +1,78 @@
+.body_div{
+    width: 100%;
+}
+
+.menu_div{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* 가운데 정렬(가로) */
+    align-items: center; /* 가운데 정렬(세로) */
+    margin-bottom: 20px; /* 밑으로 여백 */
+}
+
+.menu_div #search{ 
+    margin-left: auto; /* 검색박스를 오른쪽 정렬 */
+    display: flex;
+    align-items: center; /* 가운데 정렬(세로) */
+}
+
+#button{
+    background-color: #F67280;
+    border-color: aliceblue;
+}
+
+.menu_div a{
+    text-decoration: none;/* 밑줄을 없앰 */
+    font-size: 30px;
+    background-color:#F67280; /* 배경색 변경 */
+    border-radius: 10px; /* 둥근모서리 */
+    color: #000; /* 텍스트 색상변경 */
+}
+
+.table_div{
+    width: 100%;
+    text-align: center;
+}
+
+.table_div table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;/* 셀 간격 없앰 */
+}
+
+.table_div tr{
+    height: 50px;
+}
+
+.table_div td{
+    border: 1px solid #000;
+}
+
+.table_row :hover{
+    background-color: #F67280;
+}
+
+.page_div{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page_div a{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#writing{ 
+    margin-left: auto; /* 검색박스를 오른쪽 정렬 */
+    display: flex;
+    align-items: center; /* 가운데 정렬(세로) */
+    background-color: #F67280;
+    border-color: aliceblue;
+    font-size: 15px; /* 글자 크기 */
+    padding: 7px 15px; /* 내부 여백 */
+    width: 100px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+}

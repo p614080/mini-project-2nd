@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="CsWriting.css">
+    <iframe src="/MiniProject-김생아/main_header.html" style="width: 100%;"></iframe>
+</head>
+<body>
+    <h1>글쓰기</h1>
+    <div class="table_div">
+        <table>
+            <tr>
+                <td colspan="5" style="height: 100px;">제목</td>
+            </tr>
+            <tr>
+                <td colspan="5" style="height: 400px;">내용</td>
+            </tr>
+        </table>
+        <div>
+            <input type="button" id="fileBtn" value="파일첨부"  onclick="location.href='testpage.html';">
+        </div>
+        <div id="control">
+            <input type="checkbox" id="privateMember" value="비공개" onclick="privatePw()"> 비공개
+            <input type="search" id="password" placeholder="비밀번호를 입력하세요">
+            <input type="button" id="registration" value="등록"  onclick="location.href='testpage.html';">
+            <input type="button" id="list" value="목록"  onclick="location.href='testpage.html';">
+        </div>
+    </div>
+    
+    <script>
+        function privatePw(){
+            if(document.getElementById('privateMember').checked){
+                // console.log('작동됨?');
+                document.getElementById('password').style.display = 'inline-block';
+            }else{
+                // console.log('작동안됨?');
+                document.getElementById('password').style.display = 'none';
+
+            }
+        }
+    </script>
+</body>
+<iframe src="/MiniProject-박성찬/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+</html>
