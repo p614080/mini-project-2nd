@@ -8,7 +8,8 @@
         /* Slider Container */
         .slider {
             position: relative;
-            max-width: 100%;
+            max-width: 60%;
+            max-height: 500px;
             margin: auto;
             overflow: hidden;
         }
@@ -41,7 +42,7 @@
             font-size: 18px;
             border-radius: 0 3px 3px 0;
             user-select: none;
-            background-color: rgba(0,0,0,0.5);
+            background-color: #F67280;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -52,7 +53,7 @@
         }
         
         .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+            background-color: #6C5B7B;
         }
     </style>
 </head>
@@ -63,6 +64,9 @@
         <div class="slide"><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
         <div class="slide"><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
         <div class="slide"><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
+        <div class="slide"><img src="../img/eventlist/fes04.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="../img/eventlist/fes05.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="../img/eventlist/fes06.jpg" alt="Slide 3"></div>
     </div>
     <a class="prev" onclick="prevSlide()">❮</a>
     <a class="next" onclick="nextSlide()">❯</a>
@@ -95,8 +99,8 @@
         showSlides();
     }
 
-    // Automatically change slides every 3 seconds
-    setInterval(nextSlide, 3000);
+    // Automatically change slides every 5 seconds
+    setInterval(nextSlide, 5000);
 
     showSlides();
 </script>
