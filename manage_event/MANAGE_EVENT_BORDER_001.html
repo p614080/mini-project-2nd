@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<iframe src="MANAGE_HEADER.html" style="width: 100%;"  style="border:none;" scrolling="no"></iframe>
+<iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 <style>
-.caption {
-  display: none;
-  visibility: hidden;
-}  
-th {
+th { /* 테이블 헤드*/
   text-align: center;
   background-color: #F67280;
   color: white;
 }
-table, th, td {
+table, th, td { 
   border: 1px solid #355C7D ;
   border-collapse: collapse;
 }
@@ -35,19 +31,40 @@ button {
     float: right;
 }
 
-aside {
-  width: 15%;
-  height: 100%;
-  padding-left: 10px;
-  margin-left: 10x;
-  float: left;
-  background-color: lightblue;
+
+aside{
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+#search {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 20px; 
 }
 
-</style>
-<script type="text/javascript">
-</script>
+#inputSearchText {
+    width: 200px; 
+    padding: 5px; 
+    font-size: 14px; 
+}
 
+#btnSearch {
+    padding: 5px 10px; 
+    font-size: 14px; 
+    margin-left: 5px; 
+}
+
+#btnAddEventList {
+  padding: 5px 10px; 
+  font-size: 14px;
+  margin-left: 100px; 
+  float: right;
+}
+
+
+</style>
 <aside>
   <div class="sidebar">
     <li><a href="#" class="side-button">공지사항</a></li>
@@ -59,6 +76,9 @@ aside {
       <div id="search">
         <input type="text" id="inputSearchText" placeholder="검색어를 입력해주세요">
         <button id="btnSearch" class="button">검색</button>
+      </div>
+      <div>
+        <button id="btnAddEventList" class="button"></button>
       </div>
       <div id="manage_event_popup_list">
         <table>
