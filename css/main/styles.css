@@ -1,6 +1,29 @@
+.svg_container {
+   background-color: #fff;
+   padding: 10px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   max-width: 60%; /* 최대 너비 설정 */
+   box-sizing: border-box; /* padding과 border를 전체 너비에 포함시킴 */
+   margin-bottom: 20px; /* 다른 요소와의 간격 추가 */
+   display: flex;
+   justify-content: center; /* 가로 방향 중앙 정렬 */
+   align-items: center; /* 세로 방향 중앙 정렬 */
+   min-height: 100vh; /* 최소 높이 설정 */
+   margin: 0 auto; /* 가로 방향 중앙 정렬 */
+}
+
+.busan_map {
+   width: 100%;
+   height: auto;
+   display: block; /* 인라인 요소 특성을 제거하여 중앙 정렬 */
+}
+
 #Busan {
    fill: #355C7D; /* 기본 상태에서 노란색 */
    stroke: #F67280;
+   transform: translate(10%, 10%);
+   transform-origin: center;
 }
 
 /* 다른 구역에 대해서도 동일하게 설정 */
@@ -106,6 +129,6 @@
    transition: background-color 0.6s ease;
 }
 
-.play-pause-btn:hover {
+.play-pause-btn:hover, .dot:hover {
    background-color: #6C5B7B;
 }
