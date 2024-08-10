@@ -3,7 +3,7 @@
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
 @font-face {
     font-family: 'HancomMalangMalang-Regular';
@@ -13,9 +13,9 @@
 }
 
 header{ 
-     font-family: 'HancomMalangMalang-Regular';
-     height: 100px;
-     
+    font-family: 'HancomMalangMalang-Regular';
+    height: 100px;
+    
 }
 
 ul.menu {
@@ -50,6 +50,10 @@ ul.menu> li >a >img {
     color: #FFFFFF;
     padding-left: 10px;
     margin: 5px;
+    border-radius: 5px;
+}
 
-
+.btnHeader:hover {
+    background-color: #6C5B7B;
+    border-color: #6C5B7B;
 }
