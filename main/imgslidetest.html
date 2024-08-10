@@ -62,9 +62,13 @@
             position: absolute;
             bottom: 20px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .dot, .play-pause-btn {
+        /* Dot Style */
+        .dot {
             cursor: pointer;
             height: 15px;
             width: 15px;
@@ -75,31 +79,46 @@
             transition: background-color 0.6s ease;
         }
 
-        .dot:hover {
+        .dot.active {
             background-color: #6C5B7B;
         }
 
-        .active, .play-pause-btn.active {
-            background-color: #6C5B7B;
+        /* Play/Pause Button Style */
+        .play-pause-btn {
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            margin-left: 15px;
+            background-color: #F67280;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px; /* Align text vertically */
+            transition: background-color 0.6s ease;
         }
 
+        .play-pause-btn:hover {
+            background-color: #6C5B7B;
+        }
     </style>
 </head>
 <body>
 
 <div class="slider">
     <div class="slides">
-        <div class="slide" onclick="window.location.href='../eventlist/fes01.html'" ><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes02.html'" ><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes03.html'" ><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes04.html'" ><img src="../img/eventlist/fes04.jpg" alt="Slide 4"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes05.html'" ><img src="../img/eventlist/fes05.jpg" alt="Slide 5"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes06.html'" ><img src="../img/eventlist/fes06.jpg" alt="Slide 6"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes01.html'"><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes02.html'"><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes03.html'"><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes04.html'"><img src="../img/eventlist/fes04.jpg" alt="Slide 4"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes05.html'"><img src="../img/eventlist/fes05.jpg" alt="Slide 5"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes06.html'"><img src="../img/eventlist/fes06.jpg" alt="Slide 6"></div>
     </div>
     <a class="prev" onclick="prevSlide()">❮</a>
     <a class="next" onclick="nextSlide()">❯</a>
 
-    <!-- Dots -->
+    <!-- Dots and Play/Pause Button -->
     <div class="dots">
         <span class="dot" onclick="currentSlide(0)"></span>
         <span class="dot" onclick="currentSlide(1)"></span>
@@ -109,8 +128,6 @@
         <span class="dot" onclick="currentSlide(5)"></span>
         <button class="play-pause-btn" onclick="togglePlayPause()">❚❚</button>
     </div>
-
-    
 </div>
 
 <script>
