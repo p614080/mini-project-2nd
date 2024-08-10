@@ -1,9 +1,16 @@
+iframe {
+  display: block; /* 블록 요소로 설정하여 한 줄 전체 차지 */
+  margin-top: 20px; /* login_container 아래에 여백 추가 */
+  width: 100%; /* 부모 요소의 너비를 100%로 차지 */
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 요소들을 세로로 정렬 */
+  justify-content: center; /* 세로축 중앙 정렬 */
+  align-items: center; /* 가로축 중앙 정렬 */
   height: 100vh;
 }
 
@@ -15,6 +22,7 @@ body {
   max-width: 450px; /* 최대 너비 설정 */
   width: 100%; /* 부모 요소의 너비를 기준으로 100% 차지 */
   box-sizing: border-box; /* padding과 border를 전체 너비에 포함시킴 */
+  margin-bottom: 20px; /* 다른 요소와의 간격 추가 */
 }
 
 .login_container h2, .terms_container h2 {
