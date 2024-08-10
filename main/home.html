@@ -34,6 +34,11 @@
             pathElement.setAttribute('id', id);
             pathElement.setAttribute('d', data.Busan[id]);
             busanGroup.appendChild(pathElement);
+
+            // 클릭시 해당 쥬칙에 따른 html로 이동
+            pathElement.addEventListener('click', () => {
+              window.location.href = `event_${id}.html`;
+            });
         });
     })
     .catch(error => console.error('Error loading JSON:', error));
