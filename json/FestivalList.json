@@ -1,115 +1,130 @@
 {
-  "num": "1",
-  "genre":"팝업",
-  "name": "개구리 중사 케로로 바캉스 팝업스토어",
+"num": 1,
+"genre":"팝업",
+"name": "개구리 중사 케로로 바캉스 팝업스토어",
+"price": 0,
+"region":"busanjin",
+"place":"투니크 부산점 부산광역시 부산진구 중앙대로 672 삼정타워 13층 CGV옆",
+"img":"",
+"officialHomePage":"https://x.com/ovvio_official/status/1795615778450087968",
+"startDate": "2024-08-08",
+"endDate" : "2024-09-22",
+"noticeStart" : "2024-07 01",
+"noticeEnd" : "2024-09-23"
+}
+{
+"num": 2,
+"genre":"전시",
+"name": "노릇노릇 부산",
+"price": 0,
+"region":"dongnae",
+"place":"부산해양자연사박물관 부산광역시 동래구 우장춘로 175(온천동)",
+"img":"",
+"officialHomePage":"https://www.busan.go.kr/sea/onnews/1630246",
+"startDate" : "2024-06-25",
+"endDate" : "2024-12-01",
+"noticeStart" : "2024-06-01",
+"noticeEnd" : "2024-12-02"
+}
+{
+  "num": 3,
+  "genre":"행사",
+  "name": "부산 나이트 워크42k",
+  "price": 42000,
+  "region":"haeundae",
+  "place":"APEC 나루공원 부산광역시 해운대구 수영강변대로 85(우동)",
+  "officialHomePage":"https://urbansports.kr/busannightwalk42K",
+  "startDate": "2024-08-31",
+  "endDate" : "2024-09-01",
+  "noticeStart" : "2024-06-01",
+  "noticeEnd" : "2024-09-02s"
+}
+{
+  "num": 4,
+  "genre":"행사",
+  "name": "제12회 부산국제코미디페스티벌",
   "price": 0,
-  "region":"busanjin",
-  "place":"부산광역시 부산진구 중앙대로 672 삼정타워 13층 CGV옆",
-  "img":"",
+  "place":"all",
+  "officialHomePage":"http://bicf.kr/",
+  "startDate": "2024-08-23",
+  "endDate" : "2024-09-01",
+  "noticeStart" : "2024-08-01",
+  "noticeEnd" : "2024-09-02"
+}
+{
+  "num": "6",
+  "name": "어둠에서 보기",
+  "price": 0,
+  "place":"",
   "officialHomePage":"",
   "startDate": "2024년 08월 08일 (목)",
   "endDate" : "2024년 09월 22일 (일)",
   "noticeStart" : "2024년 07월 01일 (월)",
   "noticeEnd" : "2024년 09월 23일 (일)"
 }
-
 {
-    "num": "2",
-    "genre":"전시",
-    "name": "노릇노릇 부산",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "3",
-    "name": "부산 나이트 워크",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "4",
-    "name": "어둠에서 보기",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "5",
-    "name": "유라리 건맥축제",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "6",
-    "name": "부산 국제마케팅광고제",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "7",
-    "name": "두근두근도라에몽",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "8",
-    "name": "이번 여름에 나랑 다꾸할래?",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "9",
-    "name": "인생은 스폰지밥처럼 스폰지밥캉스",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
-  {
-    "num": "10",
-    "name": "부산 rockfish weatherwear",
-    "price": 0,
-    "place":"",
-    "officialHomePage":"",
-    "startDate": "2024년 08월 08일 (목)",
-    "endDate" : "2024년 09월 22일 (일)",
-    "noticeStart" : "2024년 07월 01일 (월)",
-    "noticeEnd" : "2024년 09월 23일 (일)"
-  }
+  "num": "5",
+  "name": "유라리 건맥축제",
+  "price": 0,
+  "place":"",
+  "officialHomePage":"",
+  "startDate": "2024년 08월 08일 (목)",
+  "endDate" : "2024년 09월 22일 (일)",
+  "noticeStart" : "2024년 07월 01일 (월)",
+  "noticeEnd" : "2024년 09월 23일 (일)"
+}
+{
+  "num": "6",
+  "name": "부산 국제마케팅광고제",
+  "price": 0,
+  "place":"",
+  "officialHomePage":"",
+  "startDate": "2024년 08월 08일 (목)",
+  "endDate" : "2024년 09월 22일 (일)",
+  "noticeStart" : "2024년 07월 01일 (월)",
+  "noticeEnd" : "2024년 09월 23일 (일)"
+}
+{
+  "num": "7",
+  "name": "두근두근도라에몽",
+  "price": 0,
+  "place":"",
+  "officialHomePage":"",
+  "startDate": "2024년 08월 08일 (목)",
+  "endDate" : "2024년 09월 22일 (일)",
+  "noticeStart" : "2024년 07월 01일 (월)",
+  "noticeEnd" : "2024년 09월 23일 (일)"
+}
+{
+  "num": "8",
+  "name": "이번 여름에 나랑 다꾸할래?",
+  "price": 0,
+  "place":"",
+  "officialHomePage":"",
+  "startDate": "2024년 08월 08일 (목)",
+  "endDate" : "2024년 09월 22일 (일)",
+  "noticeStart" : "2024년 07월 01일 (월)",
+  "noticeEnd" : "2024년 09월 23일 (일)"
+}
+{
+  "num": "9",
+  "name": "인생은 스폰지밥처럼 스폰지밥캉스",
+  "price": 0,
+  "place":"",
+  "officialHomePage":"",
+  "startDate": "2024년 08월 08일 (목)",
+  "endDate" : "2024년 09월 22일 (일)",
+  "noticeStart" : "2024년 07월 01일 (월)",
+  "noticeEnd" : "2024년 09월 23일 (일)"
+}
+{
+  "num": "10",
+  "name": "부산 rockfish weatherwear",
+  "price": 0,
+  "place":"",
+  "officialHomePage":"",
+  "startDate": "2024년 08월 08일 (목)",
+  "endDate" : "2024년 09월 22일 (일)",
+  "noticeStart" : "2024년 07월 01일 (월)",
+  "noticeEnd" : "2024년 09월 23일 (일)"
+}
