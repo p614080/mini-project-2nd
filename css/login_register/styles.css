@@ -49,9 +49,10 @@ body {
   margin-top: 10px;
 }
 
-.vertification_checkline input[type="checkbox"] {
-  margin-right: 5px; /* 체크박스와 텍스트 사이의 간격 설정 */
+.vertification_checkline label {
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
 }
+
 
 .login_container img {
   width: 50px;
