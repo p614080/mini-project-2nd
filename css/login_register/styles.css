@@ -46,7 +46,7 @@ body {
 .vertification_checkline {
   display: flex;
   align-items: center; /* 체크박스와 라벨을 수직으로 정렬 */
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .vertification_checkline label {
