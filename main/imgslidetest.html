@@ -55,54 +55,137 @@
         .prev:hover, .next:hover {
             background-color: #6C5B7B;
         }
+
+        /* Dots Container */
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Dot Style */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #F67280;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot.active {
+            background-color: #6C5B7B;
+        }
+
+        /* Play/Pause Button Style */
+        .play-pause-btn {
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            margin-left: 15px;
+            background-color: #F67280;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px; /* Align text vertically */
+            transition: background-color 0.6s ease;
+        }
+
+        .play-pause-btn:hover {
+            background-color: #6C5B7B;
+        }
     </style>
 </head>
 <body>
 
 <div class="slider">
     <div class="slides">
-        <div class="slide" onclick="window.location.href='../eventlist/fes01.html'" ><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes02.html'" ><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes03.html'" ><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes04.html'" ><img src="../img/eventlist/fes04.jpg" alt="Slide 4"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes05.html'" ><img src="../img/eventlist/fes05.jpg" alt="Slide 5"></div>
-        <div class="slide" onclick="window.location.href='../eventlist/fes06.html'" ><img src="../img/eventlist/fes06.jpg" alt="Slide 6"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes01.html'"><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes02.html'"><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes03.html'"><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes04.html'"><img src="../img/eventlist/fes04.jpg" alt="Slide 4"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes05.html'"><img src="../img/eventlist/fes05.jpg" alt="Slide 5"></div>
+        <div class="slide" onclick="window.location.href='../eventlist/fes06.html'"><img src="../img/eventlist/fes06.jpg" alt="Slide 6"></div>
     </div>
     <a class="prev" onclick="prevSlide()">❮</a>
     <a class="next" onclick="nextSlide()">❯</a>
+
+    <!-- Dots and Play/Pause Button -->
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <button class="play-pause-btn" onclick="togglePlayPause()">❚❚</button>
+    </div>
 </div>
 
 <script>
-    let slideIndex = 0;
+let slideIndex = 0;
+let slideInterval;
+let isPlaying = true;
 
-    function showSlides() {
-        const slides = document.querySelector('.slides');
-        const totalSlides = document.querySelectorAll('.slide').length;
+function showSlides() {
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = document.querySelectorAll('.slide').length;
 
-        if (slideIndex >= totalSlides) {
-            slideIndex = 0;
-        }
-        if (slideIndex < 0) {
-            slideIndex = totalSlides - 1;
-        }
-
-        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0;
+    }
+    if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
     }
 
-    function nextSlide() {
-        slideIndex++;
-        showSlides();
-    }
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
 
-    function prevSlide() {
-        slideIndex--;
-        showSlides();
-    }
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[slideIndex].classList.add('active');
+}
 
-    // Automatically change slides every 5 seconds
-    setInterval(nextSlide, 5000);
-
+function nextSlide() {
+    slideIndex++;
     showSlides();
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlides();
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+}
+
+function togglePlayPause() {
+    const playPauseBtn = document.querySelector('.play-pause-btn');
+
+    if (isPlaying) {
+        clearInterval(slideInterval);
+        playPauseBtn.textContent = '▶'; // Play icon
+    } else {
+        slideInterval = setInterval(nextSlide, 5000);
+        playPauseBtn.textContent = '❚❚'; // Pause icon
+    }
+
+    isPlaying = !isPlaying;
+}
+
+// Start automatic slide change
+slideInterval = setInterval(nextSlide, 5000);
+
+showSlides();
 </script>
 
 </body>
