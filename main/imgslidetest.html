@@ -64,7 +64,7 @@
             width: 100%;
         }
 
-        .dot {
+        .dot, .play-pause-btn {
             cursor: pointer;
             height: 15px;
             width: 15px;
@@ -75,7 +75,11 @@
             transition: background-color 0.6s ease;
         }
 
-        .active {
+        .dot:hover {
+            background-color: #6C5B7B;
+        }
+
+        .active, .play-pause-btn.active {
             background-color: #6C5B7B;
         }
 
