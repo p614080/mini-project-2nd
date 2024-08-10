@@ -4,17 +4,40 @@
     font-weight: normal;
     font-style: normal;
   }
-  h1{
-      font-family: 'WAGURITTF';
-    }
-  th{ 
-     font-family: 'WAGURITTF';
-    }
-.menu li{
-    float: left;
-    display: inline;
-    font-size: 20px;   
+
+@font-face {
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
 }
+
+header{ 
+     font-family: 'HancomMalangMalang-Regular';
+}
+
+header {
+    height: 100px;
+}
+
+ul.menu {
+    position: relative;
+    top: -120px;
+    left: 82px;
+    list-style: none;
+}
+
+ul.menu > li {
+    display: inline-flex;
+    font-size: 23px;
+    margin-right: 199px;
+}
+
+ul.menu>li>a>img {
+    position: relative;
+    top: 7px;
+}
+
 .btnHeader {
     background-color: #F67280;
     border-color: #F67280;
