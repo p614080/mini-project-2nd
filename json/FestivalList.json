@@ -1,9 +1,9 @@
 {
 "num": 1,
+"region":"busanjin",
 "genre":"팝업",
 "name": "개구리 중사 케로로 바캉스 팝업스토어",
 "price": 0,
-"region":"busanjin",
 "place":"투니크 부산점 부산광역시 부산진구 중앙대로 672 삼정타워 13층 CGV옆",
 "img":"",
 "officialHomePage":"https://x.com/ovvio_official/status/1795615778450087968",
@@ -14,10 +14,10 @@
 }
 {
 "num": 2,
+"region":"dongnae",
 "genre":"전시",
 "name": "노릇노릇 부산",
 "price": 0,
-"region":"dongnae",
 "place":"부산해양자연사박물관 부산광역시 동래구 우장춘로 175(온천동)",
 "img":"",
 "officialHomePage":"https://www.busan.go.kr/sea/onnews/1630246",
@@ -28,23 +28,24 @@
 }
 {
   "num": 3,
+  "region":"haeundae",
   "genre":"행사",
   "name": "부산 나이트 워크42k",
   "price": 42000,
-  "region":"haeundae",
   "place":"APEC 나루공원 부산광역시 해운대구 수영강변대로 85(우동)",
   "officialHomePage":"https://urbansports.kr/busannightwalk42K",
   "startDate": "2024-08-31",
   "endDate" : "2024-09-01",
   "noticeStart" : "2024-06-01",
-  "noticeEnd" : "2024-09-02s"
+  "noticeEnd" : "2024-09-02"
 }
 {
   "num": 4,
+  "region" :"all",
   "genre":"행사",
   "name": "제12회 부산국제코미디페스티벌",
   "price": 0,
-  "place":"all",
+  "place":"부산전역",
   "officialHomePage":"http://bicf.kr/",
   "startDate": "2024-08-23",
   "endDate" : "2024-09-01",
@@ -52,79 +53,81 @@
   "noticeEnd" : "2024-09-02"
 }
 {
-  "num": "6",
+  "num": 5,
+  "region":"saha",
+  "genre":"전시",
   "name": "어둠에서 보기",
-  "price": 0,
-  "place":"",
-  "officialHomePage":"",
-  "startDate": "2024년 08월 08일 (목)",
-  "endDate" : "2024년 09월 22일 (일)",
-  "noticeStart" : "2024년 07월 01일 (월)",
-  "noticeEnd" : "2024년 09월 23일 (일)"
+  "price": {"성인":16000, "군인" : 8000, "아동": 5000},
+  "place":["부산현대미술관","부산근현대역사관","한성1918","초량재"],
+  "officialHomePage": "https://www.busan.go.kr/moca/index",
+  "startDate": "2024-08-17",
+  "endDate" : "2024-10-20",
+  "noticeStart" : "2024-07-01",
+  "noticeEnd" : "2024-10-21"
 }
 {
-  "num": "5",
+  "num": 6,
+  "region" : "jung",
+  "genre":"행사",
   "name": "유라리 건맥축제",
   "price": 0,
-  "place":"",
-  "officialHomePage":"",
-  "startDate": "2024년 08월 08일 (목)",
-  "endDate" : "2024년 09월 22일 (일)",
-  "noticeStart" : "2024년 07월 01일 (월)",
-  "noticeEnd" : "2024년 09월 23일 (일)"
+  "place":"부산광역시 중구 용미길9번길 6-45(남포동1가)",
+  "officialHomePage":"https://www.instagram.com/yoorari_dryseafood_beer/",
+  "startDate": "2024-08-23",
+  "endDate" : "2024-08-24",
+  "noticeStart" : "2024-08-01",
+  "noticeEnd" : "2024-08-25"
 }
 {
-  "num": "6",
+  "num": 7,
+  "region":"haeundae",
+  "genre":"행사",
   "name": "부산 국제마케팅광고제",
   "price": 0,
-  "place":"",
-  "officialHomePage":"",
-  "startDate": "2024년 08월 08일 (목)",
-  "endDate" : "2024년 09월 22일 (일)",
-  "noticeStart" : "2024년 07월 01일 (월)",
-  "noticeEnd" : "2024년 09월 23일 (일)"
+  "place":"벡스코 	부산광역시 해운대구 APEC로 55",
+  "officialHomePage":"https://www.madstars.org/adstar/main/AdstarMainView.do",
+  "startDate": "2024-08-21",
+  "endDate" : "2024-08-23",
+  "noticeStart" : "2024-08-01",
+  "noticeEnd" : "2024-08-24"
 }
 {
-  "num": "7",
+  "num": 8,
+  "region" : "yeongdo",
+  "genre":"전시",
   "name": "두근두근도라에몽",
-  "price": 0,
-  "place":"",
+  "price": {"일반":18000, "청소년/어린이":15000},
+  "place":"부산 영도구 해양로195번길 180 P.ARK(피아크)2층, 3층",
   "officialHomePage":"",
-  "startDate": "2024년 08월 08일 (목)",
-  "endDate" : "2024년 09월 22일 (일)",
-  "noticeStart" : "2024년 07월 01일 (월)",
-  "noticeEnd" : "2024년 09월 23일 (일)"
+  "startDate": "2024-05-01",
+  "endDate" : "2024-11-03",
+  "noticeStart" : "2024-04-01",
+  "noticeEnd" : "2024-11-04"
 }
 {
-  "num": "8",
+  "num": 9,
+  "region":"",
   "name": "이번 여름에 나랑 다꾸할래?",
+  "genre":"팝업",
   "price": 0,
-  "place":"",
-  "officialHomePage":"",
+  "place":"부산진구 전포대로 199번길 34",
+  "officialHomePage":"https://www.picuki.com/profile/madeby.official",
   "startDate": "2024년 08월 08일 (목)",
   "endDate" : "2024년 09월 22일 (일)",
   "noticeStart" : "2024년 07월 01일 (월)",
   "noticeEnd" : "2024년 09월 23일 (일)"
 }
 {
-  "num": "9",
-  "name": "인생은 스폰지밥처럼 스폰지밥캉스",
+  "num": 10,
+  "region": "haeundae",
+  "name": "인생은 스폰지밥처럼!! 25주년 스폰지밥 팝업스토어",
+  "genre":"팝업",
   "price": 0,
-  "place":"",
+  "place":"해운대구 센텀남대로 35 신세계백화점 센텀시티점",
   "officialHomePage":"",
-  "startDate": "2024년 08월 08일 (목)",
-  "endDate" : "2024년 09월 22일 (일)",
-  "noticeStart" : "2024년 07월 01일 (월)",
-  "noticeEnd" : "2024년 09월 23일 (일)"
+  "startDate": "2024-07-12",
+  "endDate" : "2024-07-25",
+  "noticeStart" : "2024-07-01",
+  "noticeEnd" : "2024-07-26"
 }
-{
-  "num": "10",
-  "name": "부산 rockfish weatherwear",
-  "price": 0,
-  "place":"",
-  "officialHomePage":"",
-  "startDate": "2024년 08월 08일 (목)",
-  "endDate" : "2024년 09월 22일 (일)",
-  "noticeStart" : "2024년 07월 01일 (월)",
-  "noticeEnd" : "2024년 09월 23일 (일)"
-}
+
