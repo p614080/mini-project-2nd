@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>home</title>
-  <link rel="stylesheet" href="../css/main/styles.css">
-  <iframe src="../main/Header.html"></iframe>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="../css/main/styles.css">
+    <iframe src="../main/Header.html"></iframe>
 </head>
 <body>
-  
-  homepage
-  <p><a href="../login_register/login.html">로그인</a></p>
+    
+    homepage
+    <p><a href="../login_register/login.html">로그인</a></p>
 
-  <div class="slider">
+    <div class="slider">
     <div class="slides">
         <div class="slide" onclick="window.location.href='../eventlist/fes01.html'"><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
         <div class="slide" onclick="window.location.href='../eventlist/fes02.html'"><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
@@ -34,21 +34,21 @@
         <span class="dot" onclick="currentSlide(5)"></span>
         <button class="play-pause-btn" onclick="togglePlayPause()">❚❚</button>
     </div>
-  </div>
+    </div>
 
-  <div class="svg-container" id="svg-container">
-    <svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
-        <g id="Busan"></g>
-    </svg>
-  </div>
+    <div class="svg_container" id="svg_container">
+        <svg class="busan_map" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+            <g id="Busan" transform="translate(500 500)">
+            </g>
+        </svg>
+    </div>
 
 <iframe
     src="/main/Footer.html"
-    style="width: 100%"
-    frameborder="0"
-  ></iframe>
+    style="width: 100%"    frameborder="0"
+    ></iframe>
 
-  <script>
+    <script>
     fetch('../json/busan_paths.json')
     .then(response => response.json())
     .then(data => {
@@ -62,7 +62,7 @@
 
             // 클릭시 event_구이름.html로 이동
             pathElement.addEventListener('click', () => {
-              window.location.href = `event_${id}.html`;
+            window.location.href = `event_${id}.html`;
             });
         });
     })
