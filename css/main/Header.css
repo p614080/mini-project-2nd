@@ -11,8 +11,16 @@
      font-family: 'WAGURITTF';
     }
 .menu li{
-    
     float: left;
     display: inline;
     font-size: 20px;   
+}
+.btnHeader {
+    background-color: #F67280;
+    border-color: #F67280;
+    float: right;
+    color: #FFFFFF;
+    padding-left: 10px;
+    margin: 5px;
+    border-radius: 10px;
 }
