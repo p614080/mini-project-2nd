@@ -46,6 +46,7 @@
                     </ul>
                 </li>
             </ul>
+            <button id="search_button">검색</button>
         </div>
         <div class="svg_container" id="svg_container">
             <svg class="busan_map" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +57,7 @@
     </div>
 
 <script>  
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const categories = document.querySelectorAll('#category_list > li > input[type="checkbox"]');
     
     categories.forEach(category => {
@@ -69,19 +70,44 @@
     });
 
     const regionCheckboxes = document.querySelectorAll('.sub_category input[type="checkbox"]');
-    
+    const festivalCheckbox = document.getElementById('festival');
+    const popupCheckbox = document.getElementById('popup');
+    const searchButton = document.getElementById('search_button');
+
+    // 지역 선택시 맵에 active-region 클래스 추가/제거
     regionCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function() {
             const region = checkbox.id;
             const targetElement = document.querySelector('#Busan #' + region);
             
-            // 선택된 지역에 active 클래스 추가 또는 제거
             if (checkbox.checked) {
                 targetElement.classList.add('active-region');
             } else {
                 targetElement.classList.remove('active-region');
             }
         });
+    });
+
+    // 검색 버튼 클릭 시 체크된 항목을 기반으로 페이지 이동
+    searchButton.addEventListener('click', function() {
+        const selectedRegions = Array.from(regionCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.id)
+            .join('_');
+
+        const categories = [];
+
+        if (festivalCheckbox.checked) categories.push('fest');
+        if (popupCheckbox.checked) categories.push('pop');
+
+        const categoryString = categories.join('_');
+        const combinedString = [categoryString, selectedRegions].filter(Boolean).join('_');
+
+        if (combinedString) {
+            window.location.href = `event_${combinedString}.html`;
+        } else {
+            alert('축제, 팝업 또는 지역을 선택해 주세요.');
+        }
     });
 });
 
