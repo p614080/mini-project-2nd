@@ -12,6 +12,7 @@
 .sidecontainer {
     display: inline-flex;
     width: 100%;
+    height : auto;
   }
 
 .table_div{
@@ -135,3 +136,6 @@ table {
     text-align: right;
 }
 
+#password {
+    width: auto;
+}

@@ -19,10 +19,10 @@
         <div class="table_div">
         <table>
             <tr>
-                <td colspan="5" style="height: 100px;">제목</td>
+                <td>제목</td>
             </tr>
             <tr>
-                <td colspan="5" style="height: 400px;">내용</td>
+                <td>내용</td>
             </tr>
         </table>
         <div>
@@ -30,9 +30,9 @@
         </div>
         <div id="control">
             <input type="checkbox" id="privateMember" value="비공개" onclick="privatePw()"> 비공개
-            <input type="search" id="password" placeholder="비밀번호를 입력하세요">
-            <input type="button" id="registrationBtn" value="등록"  onclick="location.href='testpage.html';">
-            <input type="button" id="listBtn" value="목록"  onclick="location.href='testpage.html';">
+            <input type="text" id="password" placeholder="비밀번호(숫자)를 입력하세요">
+            <input type="button" id="registrationBtn" value="등록" onclick="passwodrcheck()">
+            <input type="button" id="listBtn" value="목록" onclick="pagemove()">
         </div>
     </div>
     
@@ -47,6 +47,41 @@
 
             }
         }
+
+        function passwodrcheck(){
+            // alert("확인");
+            let passwordInput = document.querySelector('#password').value;
+            let numberPattern = /^[0-9]+$/; // 오직 숫자만 허용하는 정규식 패턴
+            let privateMemberChecked = document.getElementById('privateMember').checked;
+            
+            
+
+            if (!privateMemberChecked) {
+                alert('확인되었습니다');
+                location.href='testpage.html';
+                return;
+            }
+
+            // 정규식으로 숫자인지 확인
+            if (!numberPattern.test(passwordInput)) {
+                alert('비밀번호가 틀렸습니다');
+            } else {
+                alert('확인되었습니다');
+                location.href='testpage.html';
+            }
+
+            document.querySelector('#password').value = ''; //비밀번호 초기화
+        
+
+        }
+
+        function pagemove(){
+            if(confirm('목록으로 가시겠습니까?')){
+                location.href='testpage.html';
+            }
+        }
+
+        
     </script>
     </div>
 </div>
