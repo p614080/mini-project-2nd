@@ -13,6 +13,10 @@
    margin-bottom: 50px;
 }
 
+.first_box h2{
+   margin-left: 10%;
+}
+
 /* second_box 내부에서 h2를 독립적인 블록 요소로 처리 */
 .second_box {
    display: flex;
