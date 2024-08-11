@@ -9,12 +9,51 @@
    font-family: 'WAGURITTF', sans-serif;
 }
 
-.first_box, second_box {
-   margin-bottom: 100px;
+.first_box, .second_box {
+   margin-bottom: 50px;
 }
 
-h2 {
+/* second_box 내부에서 h2를 독립적인 블록 요소로 처리 */
+.second_box {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap; /* 요소들이 여러 줄에 걸쳐 배치될 수 있도록 함 */
+}
+
+/* h2를 블록 요소로 처리하여 flex의 영향을 받지 않게 함 */
+.second_box h2 {
+   flex-basis: 100%; /* h2가 한 줄을 모두 차지하게 설정 */
    margin-left: 10%;
+   margin-bottom: 20px; /* 아래 요소들과의 간격 추가 */
+}
+
+/* 기존 스타일 유지 */
+.category_box {
+   width: 100px;
+   margin-left: 10%;
+}
+
+.category_box h3 {
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+
+#category_list {
+   list-style-type: none;
+   padding: 0;
+}
+
+#category_list li {
+   padding: 5px 0;
+   cursor: pointer;
+}
+
+.sub_category {
+   padding-left: 20px;
+}
+
+.hidden {
+   display: none;
 }
 
 .svg_container {
@@ -51,6 +90,10 @@ h2 {
 #seo:hover, #dong:hover, #yeongdo:hover, #busanjin:hover, #dongnae:hover, #nam:hover, #buk:hover,
 #haeundae:hover, #saha:hover, #geumjeong:hover, #gangseo:hover, #yeonje:hover, 
 #suyoung:hover, #sasang:hover, #gijang:hover, #jung:hover {
+   fill: #F67280;
+}
+
+.active-region {
    fill: #F67280;
 }
 
