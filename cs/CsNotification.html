@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항</title>
     <link rel="stylesheet" href="../css/cs/CsNotification.css">
-    <script src="../js/cs/CsNotification.js"></script>
-    <iframe src="../main/Header.html" style="width: 100%;"></iframe>
+    <!-- <script src="../js/cs/CsNotification.js"></script> -->
+    <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 </head>
 <body>
     <div class="body_div">
         <div class="menu_div">
-            <a href="./CsNotification.html">공지사항</a>
+            <h1>공지사항</h1>
+            <!-- <a href="./CsNotification.html">공지사항</a> -->
             <input type="search" id="search" placeholder="내용을 입력하세요">
             <input type="button" id="button" value="검색" onclick="checkSearch()">
         </div>
 
         <div class="table_div">
             <table>
+                <tr>
                     <td>번호</td>
                     <td>제목</td>
                     <td>등록일</td>
@@ -45,47 +47,50 @@
         }
 
 
-        function loadNotifications() {
-            const tableBody = document.getElementById('tableBody');  // 테이블 본문 요소를 가져옴
+        let xhttp = new XMLHttpRequest();
+              xhttp.open("GET", "../json/cs/CsNotification.json", true);
+              xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                  let storage = JSON.parse(this.response);
+                  for (let i = 0; i < storage.length; i++) {
+                    let tr = document.createElement("tr");
 
-            notifications.forEach(item => {
-                const row = document.createElement('tr');  // 새로 추가할때마다 tr태그써서 행을 생성을 해서 row 변수에 담음
-                row.className = 'table_row';  // 행에 클래스 이름을 설정
-                row.onclick = () => location.href = 'CsNotificationDetail.html';  // 행을 클릭하면 상세 페이지로 이동
 
-                // 번호
-                const num = document.createElement('td');  // 번호 셀을 생성
-                num.textContent = item.num;  // JSON 데이터에서 번호를 설정
-                row.appendChild(num);  // 행에 번호 셀을 추가
+                    // JSON 데이터의 num 필드 값으로 td를 생성하고 tr에 추가
+                    let tdNum = document.createElement("td");
+                    tdNum.innerHTML = storage[i].num;
+                    tr.appendChild(tdNum);
 
-                // 제목
-                const title = document.createElement('td');  // 제목 셀을 생성
-                title.textContent = item.title;  // JSON 데이터에서 제목을 설정
-                row.appendChild(title);  // 행에 제목 셀을 추가
+                    // JSON 데이터의 title 필드 값으로 td를 생성하고 tr에 추가
+                    let tdTitle = document.createElement("td");
+                    tdTitle.innerHTML = storage[i].title;
 
-                // 등록일
-                const CreatedDay = document.createElement('td');  // 등록일 셀을 생성
-                CreatedDay.textContent = item.CreatedDay;  // JSON 데이터에서 등록일을 설정
-                row.appendChild(CreatedDay);  // 행에 등록일 셀을 추가
+                    tdTitle.addEventListener("click", function() {
+                        let url = `CsNotificationDetail.html?num=${storage[i].num}`;
+                        window.location.href = url;
+                    });
+                    tr.appendChild(tdTitle);
 
-                // 작성자
-                const member = document.createElement('td');  // 작성자 셀을 생성
-                member.textContent = item.member;  // JSON 데이터에서 작성자를 설정
-                row.appendChild(member);  // 행에 작성자 셀을 추가
+                    // JSON 데이터의 CreatedDay 필드 값으로 td를 생성하고 tr에 추가
+                    let tdCreatedDay = document.createElement("td");
+                    tdCreatedDay.innerHTML = storage[i].CreatedDay;
+                    tr.appendChild(tdCreatedDay);
 
-                // 조회수
-                const Views = document.createElement('td');  // 조회수 셀을 생성
-                Views.textContent = item.Views;  // JSON 데이터에서 조회수를 설정
-                row.appendChild(Views);  // 행에 조회수 셀을 추가
+                    // JSON 데이터의 member 필드 값으로 td를 생성하고 tr에 추가
+                    let tdMember = document.createElement("td");
+                    tdMember.innerHTML = storage[i].member;
+                    tr.appendChild(tdMember);
 
-                // 행을 테이블 본문에 추가
-                tableBody.appendChild(row);  // 생성한 행을 테이블 본문에 추가
-            });
+                    // JSON 데이터의 Views 필드 값으로 td를 생성하고 tr에 추가
+                    let tdViews = document.createElement("td");
+                    tdViews.innerHTML = storage[i].Views;
+                    tr.appendChild(tdViews);
+
+                    document.querySelector("tbody").appendChild(tr);
+            }
         }
-
-        // 데이터 가져오기 함수 호출
-        loadNotifications();
-
+    };
+        xhttp.send();
     </script>
 </body>
 <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>

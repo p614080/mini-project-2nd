@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>질문QnA 상세페이지</title>
     <link rel="stylesheet" href="../css/cs/CsNotificationDetail.css">
-    <iframe src="../main/Header.html" style="width: 100%;"></iframe>
+    <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 </head>
 <body>
     <div class="menu_div">
-        <a href="./CsQuestionDetail.html">질문QnA 상세페이지</a>
+        <!-- <a href="./CsQuestionDetail.html">질문QnA 상세페이지</a> -->
+        <h1>질문QnA 상세페이지</h1>
     </div>
     <div class="table_div">
         <table>
@@ -20,9 +21,16 @@
                 <td>작성자</td>
                 <td>조회수</td>
             </tr>
-            <tbody id="tableBody"></tbody> <!-- 질문 정보가 추가될 부분 -->
             <tr>
-                <td colspan="5" style="height: 400px;" id="questionText">내용</td> <!-- 질문 내용이 추가될 부분 -->
+                <td id="num"></td>
+                <td id="title"></td>
+                <td id="createdDay"></td>
+                <td id="member"></td>
+                <td id="views"></td>
+            </tr>
+            <tr>
+                <td colspan="5" id="text"></td>
+                <!-- <td colspan="5" style="height: 400px;" id="text">값</td> -->
             </tr>
         </table>
         <div class="button_div">
@@ -47,23 +55,37 @@
             }
         }
 
-        function updateBtn(){
-            if(document.getElementById('id값').value != 'id값'){
-                alert("수정권한이 없습니다");
-            }
+        
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
         }
 
-        function deleteBtn(){
-            if(document.getElementById('id값').value != 'id값'){
-                alert("삭제권한이 없습니다");
-            }
+        let num = getQueryParam('num');
+
+        function fetchData() {
+            let xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "../json/cs/CsQuestion.json", true);
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let storage = JSON.parse(this.response);
+                    let item = storage.find(item => item.num == num);
+                    if (item) {
+                        document.getElementById('num').innerText = item.num;
+                        document.getElementById('title').innerText = item.title;
+                        document.getElementById('createdDay').innerText = item.CreatedDay;
+                        document.getElementById('member').innerText = item.member;
+                        document.getElementById('views').innerText = item.Views;
+                        document.getElementById('text').innerText = item.text || "텍스트 내용이 없습니다.";
+                    } else {
+                        alert("해당 번호의 데이터를 찾을 수 없습니다.");
+                    }
+                }
+            };
+            xhttp.send();
         }
-        function deleteBtn(){
-            if(document.getElementById('id값').value != 'id값'){
-                alert("삭제권한이 없습니다");
-            }
-        }
-        
+        window.onload = fetchData;
+
     </script>
 </body>
 <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>

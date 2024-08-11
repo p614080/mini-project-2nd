@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>분실물문의 상세페이지</title>
     <link rel="stylesheet" href="../css/cs/CsNotificationDetail.css">
-    <iframe src="../main/Header.html" style="width: 100%;"></iframe>
+    <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 </head>
 <body>
     <div class="menu_div">
-        <a href="./CsLostitemDetail.html">분실물문의 상세페이지</a>
+        <!-- <a href="./CsLostitemDetail.html">분실물문의 상세페이지</a> -->
+        <h1>분실물문의 상세페이지</h1>
     </div>
     <div class="table_div">
         <table>
@@ -52,7 +53,7 @@
 
         function fetchData() {
             let xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "../js/cs/CsLostitem.json", true);
+            xhttp.open("GET", "../json/cs/CsLostitem.json", true);
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     let storage = JSON.parse(this.response);

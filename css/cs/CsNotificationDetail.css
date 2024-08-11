@@ -17,16 +17,9 @@
     margin-bottom: 20px; /* 밑으로 여백 */
 }
 
-.menu_div a{
-    text-decoration: none;/* 밑줄을 없앰 */
-    font-size: 30px;
-    background-color:#F67280; /* 배경색 변경 */
-    border-radius: 10px; /* 둥근모서리 */
-    color: #000; /* 텍스트 색상변경 */
-}
 
 
-.table_div{
+/* .table_div{
     width: 100%;
     text-align: center;
 }
@@ -34,7 +27,7 @@
 .table_div table{
     width: 100%;
     text-align: center;
-    border-collapse: collapse;/* 셀 간격 없앰 */
+    border-collapse: collapse;
 }
 
 .table_div tr{
@@ -43,7 +36,23 @@
 
 .table_div td{
     border: 1px solid #000;
-}
+} */
+
+table {
+    width: 100%;
+    border-top: 1px solid #d3d3d3;
+    border-collapse: collapse;
+  }
+  th {
+    background-color: white;
+    border-top: 1px solid #727272;
+  }
+  th, td {
+    border-bottom: 1px solid;
+    padding: 10px;
+    text-align: center;
+  }
+
 
 .button_div{
     margin-top: 20px;

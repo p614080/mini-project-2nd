@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>분실물문의</title>
     <link rel="stylesheet" href="../css/cs/CsQuestion.css">
-    <script src="../js/cs/CsLostitem.js"></script>
-    <iframe src="../main/Header.html" style="width: 100%;"></iframe>
+    <!-- <script src="../js/cs/CsLostitem.js"></script> -->
+    <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 </head>
 <body>
     <div class="body_div">
         <div class="menu_div">
-            <a href="./CsLostitem.html">분실물문의</a>
+            <!-- <a href="./CsLostitem.html">분실물문의</a> -->
+            <h1>분실물문의</h1>
             <input type="search" id="search" placeholder="내용을 입력하세요">
             <input type="button" id="button" value="검색" onclick="checkSearch()">
         </div>
@@ -49,7 +50,7 @@
         }
 
             let xhttp = new XMLHttpRequest();
-              xhttp.open("GET", "../js/cs/CsLostitem.json", true);
+              xhttp.open("GET", "../json/cs/CsLostitem.json", true);
               xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                   let storage = JSON.parse(this.response);
