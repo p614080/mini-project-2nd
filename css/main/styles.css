@@ -1,5 +1,9 @@
-.sidecontainer {
-   display: inline-flex;
+.first_box, second_box {
+   margin-bottom: 100px;
+}
+
+h2 {
+   margin-left: 10%;
 }
 
 .svg_container {
