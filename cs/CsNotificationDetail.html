@@ -36,9 +36,9 @@
         <div class="button_div">
             <input type="button" value="수정" onclick="updateBtn()">
             <input type="button" value="삭제" onclick="deleteBtn()">
-            <input type="button" value="이전" style="margin-left: 500px;">
+            <input type="button" value="이전" style="margin-left: 500px;" id="prevBtn">
             <input type="button" value="목록" onclick="location.href='CsNotification.html';">
-            <input type="button" value="다음">
+            <input type="button" value="다음" id="nextBtn">
         </div>
     </div>
 
@@ -66,11 +66,33 @@
                         document.getElementById('member').innerText = item.member;
                         document.getElementById('views').innerText = item.Views;
                         document.getElementById('text').innerText = item.text || "텍스트 내용이 없습니다.";
+
+                        // 이전 및 다음 버튼 설정
+                        let currentIndex = storage.indexOf(item);
+                        document.getElementById('prevBtn').onclick = function() {
+                            if (currentIndex > 0) {
+                                let prevNum = storage[currentIndex - 1].num;
+                                window.location.href = `CsNotificationDetail.html?num=${prevNum}`;
+                            } else {
+                                alert("첫 번째 글입니다.");
+                            }
+                        };
+                        document.getElementById('nextBtn').onclick = function() {
+                            if (currentIndex < storage.length - 1) {
+                                let nextNum = storage[currentIndex + 1].num;
+                                window.location.href = `CsNotificationDetail.html?num=${nextNum}`;
+                            } else {
+                                alert("마지막 글입니다.");
+                            }
+                        };
                     } else {
                         alert("해당 번호의 데이터를 찾을 수 없습니다.");
                     }
+
                 }
-            };
+            };            
+
+
             xhttp.send();
         }
         window.onload = fetchData;

@@ -62,6 +62,11 @@
                     // JSON 데이터의 num 필드 값으로 td를 생성하고 tr에 추가
                     let tdNum = document.createElement("td");
                     tdNum.innerHTML = storage[i].num;
+
+                    tdNum.addEventListener("click", function() {
+                        let url = `CsQuestionDetail.html?num=${storage[i].num}`;
+                        window.location.href = url;
+                    });
                     tr.appendChild(tdNum);
 
                     // JSON 데이터의 title 필드 값으로 td를 생성하고 tr에 추가
@@ -77,16 +82,31 @@
                     // JSON 데이터의 CreatedDay 필드 값으로 td를 생성하고 tr에 추가
                     let tdCreatedDay = document.createElement("td");
                     tdCreatedDay.innerHTML = storage[i].CreatedDay;
+                    
+                    tdCreatedDay.addEventListener("click", function() {
+                        let url = `CsQuestionDetail.html?num=${storage[i].num}`;
+                        window.location.href = url;
+                    });
                     tr.appendChild(tdCreatedDay);
 
                     // JSON 데이터의 member 필드 값으로 td를 생성하고 tr에 추가
                     let tdMember = document.createElement("td");
                     tdMember.innerHTML = storage[i].member;
+                    
+                    tdMember.addEventListener("click", function() {
+                        let url = `CsQuestionDetail.html?num=${storage[i].num}`;
+                        window.location.href = url;
+                    });
                     tr.appendChild(tdMember);
 
                     // JSON 데이터의 Views 필드 값으로 td를 생성하고 tr에 추가
                     let tdViews = document.createElement("td");
                     tdViews.innerHTML = storage[i].Views;
+                    
+                    tdViews.addEventListener("click", function() {
+                        let url = `CsQuestionDetail.html?num=${storage[i].num}`;
+                        window.location.href = url;
+                    });
                     tr.appendChild(tdViews);
 
                     document.querySelector("tbody").appendChild(tr);
