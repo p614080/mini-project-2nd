@@ -124,6 +124,10 @@
    transform-origin: center;
 }
 
+#Busan path {
+   transition: fill 0.3s ease; /* 각 path 요소에 fill 색상 변경에 애니메이션 추가 */
+}
+
 #seo:hover, #dong:hover, #yeongdo:hover, #busanjin:hover, #dongnae:hover, #nam:hover, #buk:hover,
 #haeundae:hover, #saha:hover, #geumjeong:hover, #gangseo:hover, #yeonje:hover, 
 #suyoung:hover, #sasang:hover, #gijang:hover, #jung:hover {
@@ -148,7 +152,7 @@
 /* Slides */
 .slides {
    display: flex;
-   transition: transform 0.5s ease-in-out;
+   transition: transform 0.3s ease-in-out;
 }
 
 .slide {

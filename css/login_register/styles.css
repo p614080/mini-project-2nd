@@ -5,23 +5,24 @@
   font-style: normal;
 }
 
-*{
+* {
   font-family: 'WAGURITTF', sans-serif;
+  transition: color 0.3s ease, background-color 0.3s ease; /* 전체 색상 변경에 애니메이션 추가 */
 }
 
 iframe {
-  display: block; /* 블록 요소로 설정하여 한 줄 전체 차지 */
-  margin-top: 20px; /* login_container 아래에 여백 추가 */
-  width: 100%; /* 부모 요소의 너비를 100%로 차지 */
+  display: block;
+  margin-top: 20px;
+  width: 100%;
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  display: flex; /* Flexbox 사용 */
-  flex-direction: column; /* 요소들을 세로로 정렬 */
-  justify-content: center; /* 세로축 중앙 정렬 */
-  align-items: center; /* 가로축 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -30,10 +31,10 @@ body {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 450px; /* 최대 너비 설정 */
-  width: 100%; /* 부모 요소의 너비를 기준으로 100% 차지 */
-  box-sizing: border-box; /* padding과 border를 전체 너비에 포함시킴 */
-  margin-bottom: 20px; /* 다른 요소와의 간격 추가 */
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .login_container h2, .terms_container h2 {
@@ -43,44 +44,44 @@ body {
 .social_login_icons {
   display: flex;
   justify-content: center;
-  gap: 10px; /* 아이콘 사이의 간격 */
-  margin: 10px 0; /* 아이콘 그룹의 상하 여백 */
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .login_bottom_bar {
   display: flex;
   justify-content: center;
-  gap: 10px; /* 아이콘 사이의 간격 */
-  margin: 10px 0; /* 아이콘 그룹의 상하 여백 */
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .vertification_checkline {
   display: flex;
-  align-items: center; /* 체크박스와 라벨을 수직으로 정렬 */
+  align-items: center;
   margin-bottom: 10px;
 }
 
 .vertification_checkline label {
-  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  white-space: nowrap;
 }
-
 
 .login_container img {
   width: 50px;
   height: 50px;
   margin: 10px;
-  display: inline-block; /* 한 줄로 배치되도록 설정 */
+  display: inline-block;
 }
 
 .login_container input[type="email"],
 .login_container input,
 .login_container input[type="text"] {
-  width: calc(100% - 40px); /* 버튼의 너비를 고려하여 입력 필드 너비 설정 */
+  width: calc(100% - 40px);
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
+  transition: border-color 0.3s ease; /* 입력 필드 테두리 색상 변경에 애니메이션 추가 */
 }
 
 .password_container {
@@ -90,12 +91,13 @@ body {
 
 .password_toggle {
   position: absolute;
-  right: 10px; /* 오른쪽 여백 */
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  font-size: 18px; /* 버튼 크기 조정 */
-  color: #333; /* 버튼의 색상 */
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease; /* 비밀번호 토글 색상 변경에 애니메이션 추가 */
 }
 
 .phone_container {
@@ -104,8 +106,8 @@ body {
 }
 
 .phone_container input {
-  width: calc(100% - 120px); /* 버튼을 고려하여 입력 필드 너비 설정 */
-  margin-right: 10px; /* 버튼과의 간격 설정 */
+  width: calc(100% - 120px);
+  margin-right: 10px;
 }
 
 .login_container button,
@@ -117,6 +119,7 @@ body {
   border-radius: 5px;
   color: white;
   font-size: 16px;
+  transition: background-color 0.3s ease; /* 버튼 배경색 변경에 애니메이션 추가 */
 }
 
 #termstoregist_button {
@@ -127,6 +130,7 @@ body {
   border-radius: 5px;
   color: white;
   font-size: 16px;
+  transition: background-color 0.3s ease; /* 버튼 배경색 변경에 애니메이션 추가 */
 }
 
 .login_container button:hover,
@@ -138,21 +142,24 @@ body {
 .error_message {
   color: red;
   margin-top: 10px;
+  transition: color 0.3s ease; /* 에러 메시지 색상 변경에 애니메이션 추가 */
 }
 
 .terms_section {
-  margin-bottom: 20px; /* 각 약관 사이의 여백 추가 */
+  margin-bottom: 20px;
 }
 
 .terms_section label {
   display: flex;
-  align-items: center; /* 체크박스와 제목을 수평 정렬 */
-  justify-content: space-between; /* 체크박스와 버튼을 양쪽으로 배치 */
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease; /* 약관 제목 색상 변경에 애니메이션 추가 */
 }
 
 .terms_section input[type="checkbox"] {
-  margin-right: 10px; /* 체크박스와 텍스트 사이의 여백 설정 */
-  margin-left: 0; /* 체크박스와 왼쪽 컨테이너 사이의 여백 최소화 */
+  margin-right: 10px;
+  margin-left: 0;
+  transition: background-color 0.3s ease; /* 체크박스 배경색 변경에 애니메이션 추가 */
 }
 
 .toggle_button {
@@ -161,7 +168,8 @@ body {
   border: none;
   color: #F67280;
   cursor: pointer;
-  white-space: nowrap; /* 버튼 텍스트가 한 줄로 유지되도록 함 */
+  white-space: nowrap;
+  transition: color 0.3s ease; /* 토글 버튼 색상 변경에 애니메이션 추가 */
 }
 
 .toggle_button:focus {
@@ -173,8 +181,8 @@ body {
 }
 
 .term_content {
-  display: none; /* 펼치기/접기 기본값은 감추기 */
-  margin-top: 10px; /* 약관과 내용 사이의 여백 */
-  text-align: left; /* 내용 왼쪽 정렬 */
-  padding-left: 20px; /* 내용 왼쪽 여백 */
+  display: none;
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
 }
