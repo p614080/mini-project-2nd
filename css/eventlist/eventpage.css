@@ -4,6 +4,13 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  .sidecontainer {
+    display: inline-flex;
+    width: 100%;
+    height: 30vh;
+  }
+
   *{
       font-family: 'WAGURITTF';
   }
