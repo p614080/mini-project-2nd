@@ -1,109 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
-<style>
-th { /* 테이블 헤드*/
-  text-align: center;
-  background-color: #F67280;
-  color: white;
-}
-table, th, td { 
-  border: 1px solid #355C7D ;
-  border-collapse: collapse;
-}
-table {
-    width: 81%;
-    position: relative;
-    left: 24px;
-    top: 11px;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival List</title>
+  <style>
+    aside {
+      width: 200px;
+      border: 1px solid black;
+      border-radius: 10px;
+      position: relative;
+      float: left;
+      height: 100vh;
+      box-sizing: border-box;
+    }
 
-button {
-  background-color: #355C7D;
-  color: white;
-  text-align: center;
-  border: 0px;
-  position: relative;
-  float: right;
-}
-#inputSearchText {
-    position: relative;
-    float: right;
-}
+    #container {
+      margin-left: 200px; /* aside의 너비만큼 여백을 추가하여 레이아웃 맞춤 */
+      padding: 20px; /* 추가적인 여백을 설정 */
+    }
 
+    table {
+      width: 100%; /* 테이블의 너비를 100%로 설정 */
+      border-collapse: collapse; /* 테두리 겹침을 없앰 */
+      table-layout: fixed; /* 테이블 레이아웃을 고정으로 설정 */
+      margin-top: 10px;
+    }
 
-aside{
-  width: 200px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-#search {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    margin-top: 20px; 
-}
+    th, td {
+      border: 1px solid black; /* 셀 테두리 설정 */
+      padding: 10px; /* 셀의 여백 설정 */
+      text-align: center; /* 텍스트 중앙 정렬 */
+      box-sizing: border-box; /* 테두리와 패딩을 포함한 너비 계산 */
+    }
 
-#inputSearchText {
-    width: 200px; 
-    padding: 5px; 
-    font-size: 14px; 
-}
+    th {
+      background-color: #F67280; /* 헤더 배경색 설정 */
+      color: white; /* 헤더 텍스트 색상 설정 */
+    }
 
-#btnSearch {
-    padding: 5px 10px; 
-    font-size: 14px; 
-    margin-left: 5px; 
-}
+    button {
+      background-color: #355C7D;
+      color: white;
+      text-align: center;
+      border: 0;
+      padding: 5px 10px;
+      font-size: 14px;
+      margin-left: 5px;
+    }
 
-#btnAddEventList {
-  padding: 5px 10px; 
-  font-size: 14px;
-  margin-left: 100px; 
-  float: right;
-}
+    #inputSearchText {
+      width: 35vw;
+      padding: 5px;
+      font-size: 14px;
+    }
 
+    #search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -6px;
+      position: relative;
+    }
 
-</style>
-<aside>
-  <div class="sidebar">
-    <li><a href="#" class="side-button">공지사항</a></li>
-    <li><a href="#" class="side-button"></a></li>
-    <li><a href="#" class="side-button">Link 3</a></li>
-  </div>
-</aside>
+    #btnAddEventList {
+      position: absolute;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
+
+  <aside>
+    <div class="sidebar">
+      <li><a href="#" class="side-button">축제/팝업게시글 관리</a></li>
+      <li><a href="#" class="side-button">공지사항 관리</a></li>
+      <li><a href="#" class="side-button">분실물게시판 관리</a></li>
+    </div>
+  </aside>
+
   <div id="container">
-      <div id="search">
-        <input type="text" id="inputSearchText" placeholder="검색어를 입력해주세요">
-        <button id="btnSearch" class="button">검색</button>
-      </div>
-      <div>
-        <button id="btnAddEventList" class="button"></button>
-      </div>
-      <div id="manage_event_popup_list">
-        <table>
+    <div id="search">
+      <input type="text" id="inputSearchText" placeholder="검색어를 입력해주세요">
+      <button id="btnSearch" class="button">검색</button>
+      <button id="btnAddEventList" class="button" onclick="window.location.href='./MANAGE_EVENT_BORDER_002.html'">추가</button>
+    </div>
+    <div id="manage_event_popup_list">
+      <table id="tblEventList">
+        <thead>
           <tr>
             <th>번호</th>
             <th>행사명</th>
             <th>게시 기간</th>
             <th>행사 기간</th>
             <th>지역</th>
-            <th>조회수</th>
-            <th>게시 유무</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-          </tr>
-        </table>
-      </div> 
-     </div>
+        </thead>
+        <tbody>
+          <!-- 데이터 행 삽입-->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+
+  <script>
+    const desiredProperties = ['num', 'name', 'noticeStart', 'noticeEnd', 'startDate', 'endDate', 'region'];
+
+  function displayData(data) {
+    const tableBody = document.querySelector('#tblEventList tbody');
+    tableBody.innerHTML = ''; // 기존 테이블 지우기
+
+      data.forEach(item => {
+      const row = document.createElement('tr');
+      
+      // 번호
+      const numCell = document.createElement('td');
+      numCell.textContent = item.num;
+      row.appendChild(numCell);
+      
+      // 행사명
+      const nameCell = document.createElement('td');
+      nameCell.textContent = item.name;
+      row.appendChild(nameCell);
+      
+      // 게시기간
+      const noticePeriodCell = document.createElement('td');
+      noticePeriodCell.textContent = `${item.noticeStart} ~ ${item.noticeEnd}`;
+      row.appendChild(noticePeriodCell);
+      
+      // 행사기간
+      const eventPeriodCell = document.createElement('td');
+      eventPeriodCell.textContent = `${item.startDate} ~ ${item.endDate}`;
+      row.appendChild(eventPeriodCell);
+      
+      // 지역
+      const regionCell = document.createElement('td');
+      regionCell.textContent = item.region;
+      row.appendChild(regionCell);
+      
+      // 행을 테이블 본문에 추가합니다
+      tableBody.appendChild(row);
+    });
+  }
+
+// JSON 데이터 가져오기
+fetch('../json/FestivalList.json')
+  .then(response => response.json())
+  .then(data => displayData(data))
+  .catch(error => console.error('Error fetching JSON data:', error));
+  </script>
 </body>
-<!-- footer-->
-<iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
 </html>
