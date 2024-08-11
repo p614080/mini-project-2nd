@@ -1,11 +1,40 @@
+@font-face {
+  font-family: 'HancomMalangMalang-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 #sidemenu{
   position: relative;
   width: 200px;
+  height: 1000px;
+  border-right: 3px solid #355C7D;
+  border-top: 1px solid #355C7D;
+  font-family: 'HancomMalangMalang-Regular';
+  border-radius: 10px;
+  border-top-left-radius: 0;
+}
+h2{
+  
+  border-bottom: 2px solid #355C7D;
 }
 .sidemenucontainer{
-  border: 1px solid black;
+  
 }
 
 a {
   text-decoration-line: none;
+  color: black;
+}
+a:hover {
+  color: #F67280;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  margin-top: 10px;
 }
