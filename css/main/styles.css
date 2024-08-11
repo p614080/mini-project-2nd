@@ -1,3 +1,7 @@
+.sidecontainer {
+   display: inline-flex;
+}
+
 .svg_container {
    background-image: url('../../img/main/ocean.jpg'); /* 배경 이미지 설정 */
    background-size: cover; /* 이미지가 컨테이너를 완전히 덮도록 설정 */
