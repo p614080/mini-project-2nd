@@ -41,17 +41,15 @@
             <h3>카테고리 선택</h3>
             <ul id="category_list">
                 <li>
-                    <input type="checkbox" id="event_category">
                     <label for="event_category">행사구분</label>
-                    <ul class="sub_category hidden">
+                    <ul class="sub_category hidden" id="event_category">
                         <li><input type="checkbox" id="festival"><label for="festival">축제</label></li>
                         <li><input type="checkbox" id="popup"><label for="popup">팝업</label></li>
                     </ul>
                 </li>
                 <li>
-                    <input type="checkbox" id="region_category">
                     <label for="region_category">지역</label>
-                    <ul class="sub_category hidden">
+                    <ul class="sub_category hidden" id="region_category">
                         <li><input type="checkbox" id="gangseo"><label for="gangseo">강서구</label></li>
                         <li><input type="checkbox" id="geumjeong"><label for="geumjeong">금정구</label></li>
                         <li><input type="checkbox" id="gijang"><label for="gijang">기장군</label></li>
@@ -68,7 +66,6 @@
                         <li><input type="checkbox" id="yeongdo"><label for="yeongdo">영도구</label></li>
                         <li><input type="checkbox" id="jung"><label for="jung">중구</label></li>
                         <li><input type="checkbox" id="haeundae"><label for="haeundae">해운대구</label></li>
-                        <!-- 다른 지역도 추가 가능 -->
                     </ul>
                 </li>
             </ul>
@@ -85,31 +82,81 @@
 
 <script>  
     document.addEventListener('DOMContentLoaded', function() {
-    const categories = document.querySelectorAll('#category_list > li > input[type="checkbox"]');
+    const categoryLabels = document.querySelectorAll('#category_list > li > label');
+    const regionCheckboxes = document.querySelectorAll('.sub_category input[type="checkbox"]');
+    const festivalCheckbox = document.getElementById('festival');
+    const popupCheckbox = document.getElementById('popup');
+    const searchButton = document.createElement('button');
     
-    categories.forEach(category => {
-        category.addEventListener('change', function() {
-            const subCategory = category.nextElementSibling.nextElementSibling; // 하위 카테고리 ul
-            if (subCategory) {
-                subCategory.classList.toggle('hidden', !category.checked);
+    searchButton.textContent = '검색';
+    searchButton.id = 'search_button';
+    document.querySelector('.category_box').appendChild(searchButton);
+
+    // 카테고리 클릭 시 하위 카테고리 토글
+    categoryLabels.forEach(label => {
+        label.addEventListener('click', function() {
+            const subCategory = this.nextElementSibling; // 하위 카테고리 ul
+            if (subCategory && subCategory.classList.contains('sub_category')) {
+                subCategory.classList.toggle('hidden');
             }
         });
     });
 
-    const regionCheckboxes = document.querySelectorAll('.sub_category input[type="checkbox"]');
-    
+    // 지역 선택 시 맵에 active-region 클래스 추가/제거
     regionCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function() {
             const region = checkbox.id;
             const targetElement = document.querySelector('#Busan #' + region);
             
-            // 선택된 지역에 active 클래스 추가 또는 제거
             if (checkbox.checked) {
                 targetElement.classList.add('active-region');
             } else {
                 targetElement.classList.remove('active-region');
             }
         });
+    });
+
+    // 지도 구역 클릭 시 선택된 행사 구분과 함께 이동
+    document.getElementById('Busan').addEventListener('click', function(event) {
+        if (event.target.tagName === 'path') {
+            const clickedRegionId = event.target.id;
+            const selectedCategories = [];
+
+            // 축제와 팝업 체크박스 상태에 따라 선택된 카테고리 추가
+            if (festivalCheckbox.checked || !popupCheckbox.checked) selectedCategories.push('fest');
+            if (popupCheckbox.checked || !festivalCheckbox.checked) selectedCategories.push('pop');
+            
+            const categoryString = selectedCategories.join('_');
+            const combinedString = `${categoryString}_${clickedRegionId}`;
+
+            if (combinedString) {
+                window.location.href = `event_${combinedString}.html`;
+            } else {
+                alert('축제 또는 팝업을 선택해 주세요.');
+            }
+        }
+    });
+
+    // 검색 버튼 클릭 시 선택된 행사 구분과 지역에 기반하여 페이지 이동
+    searchButton.addEventListener('click', function() {
+        const selectedRegions = Array.from(regionCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.id)
+            .join('_');
+
+        const selectedCategories = [];
+        
+        if (festivalCheckbox.checked || !popupCheckbox.checked) selectedCategories.push('fest');
+        if (popupCheckbox.checked || !festivalCheckbox.checked) selectedCategories.push('pop');
+        
+        const categoryString = selectedCategories.join('_');
+        const combinedString = [categoryString, selectedRegions].filter(Boolean).join('_');
+
+        if (combinedString) {
+            window.location.href = `event_${combinedString}.html`;
+        } else {
+            alert('축제, 팝업 또는 지역을 선택해 주세요.');
+        }
     });
 });
 
