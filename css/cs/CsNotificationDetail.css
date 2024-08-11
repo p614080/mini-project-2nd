@@ -9,6 +9,13 @@
     font-family: 'WAGURITTF', sans-serif;
 }
 
+.sidecontainer {
+    display: inline-flex;
+    width: 100%;
+    height : auto;
+  }
+
+
 .menu_div{
     width: 100%;
     height: 50px;
@@ -64,6 +71,14 @@ table {
     margin: 20px; /* 버튼 간격 */
     width: 100px; /* 버튼 너비 */
     height: 40px; /* 버튼 높이 */
-    /* background-color: #F67280;
-    border-color: aliceblue; */
+    background-color: #F67280;
+    border-color: #F67280;
+    color: #FFFFFF;
+    font-family: 'WAGURITTF';
+    border-radius: 5px;
+}
+
+.button_div input[type="button"]:hover {
+    background-color: #6C5B7B;
+    border-color: #6C5B7B;
 }

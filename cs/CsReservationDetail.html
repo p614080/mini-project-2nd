@@ -8,105 +8,112 @@
     <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 </head>
 <body>
-    <div class="menu_div">
-        <!-- <a href="./CsReservationDetail.html">예약문의 상세페이지</a> -->
-        <h1>예약문의 상세페이지</h1>
-    </div>
-    <div class="table_div">
-        <table>
-            <tr>
-                <td>번호</td>
-                <td>제목</td>
-                <td>등록일</td>
-                <td>작성자</td>
-                <td>조회수</td>
-            </tr>
-            <tr>
-                <td id="num"></td>
-                <td id="title"></td>
-                <td id="createdDay"></td>
-                <td id="member"></td>
-                <td id="views"></td>
-            </tr>
-            <tr>
-                <td colspan="5" id="text"></td>
-                <!-- <td colspan="5" style="height: 400px;" id="text">값</td> -->
-            </tr>
-        </table>
-        <div class="button_div">
-            <input type="button" value="수정" onclick="updateBtn()">
-            <input type="button" value="삭제" onclick="deleteBtn()">
-            <input type="button" value="이전" style="margin-left: 500px;" id="prevBtn">
-            <input type="button" value="목록" onclick="location.href='CsReservation.html';">
-            <input type="button" value="다음" id="nextBtn">
+
+    <div class="sidecontainer">
+        <iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
+
+    <div class="body_div">
+        <div class="menu_div">
+            <!-- <a href="./CsReservationDetail.html">예약문의 상세페이지</a> -->
+            <h1>예약문의 상세페이지</h1>
         </div>
-    </div>
+        <div class="table_div">
+            <table>
+                <tr style="background-color: #F67280;">
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>등록일</td>
+                    <td>작성자</td>
+                    <td>조회수</td>
+                </tr>
+                <tr>
+                    <td id="num"></td>
+                    <td id="title"></td>
+                    <td id="createdDay"></td>
+                    <td id="member"></td>
+                    <td id="views"></td>
+                </tr>
+                <tr>
+                    <td colspan="5" id="text"></td>
+                    <!-- <td colspan="5" style="height: 400px;" id="text">값</td> -->
+                </tr>
+            </table>
+            <div class="button_div">
+                <input type="button" value="수정" onclick="updateBtn()">
+                <input type="button" value="삭제" onclick="deleteBtn()">
+                <input type="button" value="이전" style="margin-left: 500px;" id="prevBtn">
+                <input type="button" value="목록" onclick="location.href='CsReservation.html';">
+                <input type="button" value="다음" id="nextBtn">
+            </div>
+        </div>
 
-    <script>
-        function updateBtn(){
-            if(document.getElementById('id값').value != 'id값'){
-                alert("수정권한이 없습니다");
-            }
-        }
-
-        function deleteBtn(){
-            if(document.getElementById('id값').value != 'id값'){
-                alert("삭제권한이 없습니다");
-            }
-        }
-
-        function getQueryParam(param) {
-            let urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        let num = getQueryParam('num');
-
-        function fetchData() {
-            let xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "../json/cs/CsReservation.json", true);
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    let storage = JSON.parse(this.response);
-                    let item = storage.find(item => item.num == num);
-                    if (item) {
-                        document.getElementById('num').innerText = item.num;
-                        document.getElementById('title').innerText = item.title;
-                        document.getElementById('createdDay').innerText = item.CreatedDay;
-                        document.getElementById('member').innerText = item.member;
-                        document.getElementById('views').innerText = item.Views;
-                        document.getElementById('text').innerText = item.text || "텍스트 내용이 없습니다.";
-                        
-                        
-                        // 이전 및 다음 버튼 설정
-                        let currentIndex = storage.indexOf(item);
-                        document.getElementById('prevBtn').onclick = function() {
-                            if (currentIndex > 0) {
-                                let prevNum = storage[currentIndex - 1].num;
-                                window.location.href = `CsReservationDetail.html?num=${prevNum}`;
-                            } else {
-                                alert("첫 번째 글입니다.");
-                            }
-                        };
-                        document.getElementById('nextBtn').onclick = function() {
-                            if (currentIndex < storage.length - 1) {
-                                let nextNum = storage[currentIndex + 1].num;
-                                window.location.href = `CsReservationDetail.html?num=${nextNum}`;
-                            } else {
-                                alert("마지막 글입니다.");
-                            }
-                        };
-                    } else {
-                        alert("해당 번호의 데이터를 찾을 수 없습니다.");
-                    }
-
+        <script>
+            function updateBtn(){
+                if(document.getElementById('id값').value != 'id값'){
+                    alert("수정권한이 없습니다");
                 }
-            };
-            xhttp.send();
-        }
-        window.onload = fetchData;        
+            }
 
-    </script>
+            function deleteBtn(){
+                if(document.getElementById('id값').value != 'id값'){
+                    alert("삭제권한이 없습니다");
+                }
+            }
+
+            function getQueryParam(param) {
+                let urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            let num = getQueryParam('num');
+
+            function fetchData() {
+                let xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "../json/cs/CsReservation.json", true);
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        let storage = JSON.parse(this.response);
+                        let item = storage.find(item => item.num == num);
+                        if (item) {
+                            document.getElementById('num').innerText = item.num;
+                            document.getElementById('title').innerText = item.title;
+                            document.getElementById('createdDay').innerText = item.CreatedDay;
+                            document.getElementById('member').innerText = item.member;
+                            document.getElementById('views').innerText = item.Views;
+                            document.getElementById('text').innerText = item.text || "텍스트 내용이 없습니다.";
+                            
+                            
+                            // 이전 및 다음 버튼 설정
+                            let currentIndex = storage.indexOf(item);
+                            document.getElementById('prevBtn').onclick = function() {
+                                if (currentIndex > 0) {
+                                    let prevNum = storage[currentIndex - 1].num;
+                                    window.location.href = `CsReservationDetail.html?num=${prevNum}`;
+                                } else {
+                                    alert("첫 번째 글입니다.");
+                                }
+                            };
+                            document.getElementById('nextBtn').onclick = function() {
+                                if (currentIndex < storage.length - 1) {
+                                    let nextNum = storage[currentIndex + 1].num;
+                                    window.location.href = `CsReservationDetail.html?num=${nextNum}`;
+                                } else {
+                                    alert("마지막 글입니다.");
+                                }
+                            };
+                        } else {
+                            alert("해당 번호의 데이터를 찾을 수 없습니다.");
+                        }
+
+                    }
+                };
+                xhttp.send();
+            }
+            window.onload = fetchData;        
+
+        </script>
+    </div>
+    </div>
 </body>
 <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
 </html>

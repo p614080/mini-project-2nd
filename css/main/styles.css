@@ -1,10 +1,29 @@
+@font-face {
+   font-family: 'WAGURITTF';
+   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+}
+
+*{
+   font-family: 'WAGURITTF', sans-serif;
+}
+
+.first_box, second_box {
+   margin-bottom: 100px;
+}
+
+h2 {
+   margin-left: 10%;
+}
+
 .svg_container {
    background-image: url('../../img/main/ocean.jpg'); /* 배경 이미지 설정 */
    background-size: cover; /* 이미지가 컨테이너를 완전히 덮도록 설정 */
    background-position: center; /* 이미지의 중심이 컨테이너의 중심에 맞춰지도록 설정 */
    background-repeat: no-repeat; /* 이미지가 반복되지 않도록 설정 */
    padding: 10px;
-   border-radius: 5px;
+   border-radius: 10px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    max-width: 60%; /* 최대 너비 설정 */
    box-sizing: border-box; /* padding과 border를 전체 너비에 포함시킴 */
@@ -23,28 +42,27 @@
 }
 
 #Busan {
-   fill: #355C7D; /* 기본 상태에서 노란색 */
+   fill: #355C7D;
    stroke: #F67280;
    transform: translate(10%, 10%);
    transform-origin: center;
 }
 
-/* 다른 구역에 대해서도 동일하게 설정 */
-
 #seo:hover, #dong:hover, #yeongdo:hover, #busanjin:hover, #dongnae:hover, #nam:hover, #buk:hover,
 #haeundae:hover, #saha:hover, #geumjeong:hover, #gangseo:hover, #yeonje:hover, 
 #suyoung:hover, #sasang:hover, #gijang:hover, #jung:hover {
-   fill: #F67280; /* 호버 시 붉은색으로 변경 */
+   fill: #F67280;
 }
 
 /* 이미지 슬라이더 */
 .slider {
    position: relative;
-   max-width: 60%;
+   max-width: 80%;
    max-height: 500px;
    margin: auto;
    overflow: hidden;
    margin-bottom: 10px;
+   border-radius: 10px;
 }
 
 /* Slides */
@@ -131,8 +149,4 @@
    justify-content: center;
    align-items: center;
    transition: background-color 0.6s ease;
-}
-
-.play-pause-btn:hover, .dot:hover {
-   background-color: #6C5B7B;
 }

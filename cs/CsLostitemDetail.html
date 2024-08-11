@@ -8,39 +8,43 @@
     <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 </head>
 <body>
-    <div class="menu_div">
-        <!-- <a href="./CsLostitemDetail.html">분실물문의 상세페이지</a> -->
-        <h1>분실물문의 상세페이지</h1>
-    </div>
-    <div class="table_div">
-        <table>
-            <tr>
-                <td>번호</td>
-                <td>제목</td>
-                <td>등록일</td>
-                <td>작성자</td>
-                <td>조회수</td>
-            </tr>
-            <tr>
-                <td id="num"></td>
-                <td id="title"></td>
-                <td id="createdDay"></td>
-                <td id="member"></td>
-                <td id="views"></td>
-            </tr>
-            <tr>
-                <td colspan="5" id="text"></td>
-                <!-- <td colspan="5" style="height: 400px;" id="text">값</td> -->
-            </tr>
-        </table>
-        <div class="button_div">
-            <input type="button" value="수정" onclick="updateBtn()">
-            <input type="button" value="삭제" onclick="deleteBtn()">
-            <input type="button" value="이전" style="margin-left: 500px;" id="prevBtn">
-            <input type="button" value="목록" onclick="location.href='CsLostitem.html';">
-            <input type="button" value="다음" id="nextBtn">
+    <div class="sidecontainer">
+        <iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
+
+    <div class="body_div">
+        <div class="menu_div">
+            <!-- <a href="./CsLostitemDetail.html">분실물문의 상세페이지</a> -->
+            <h1>분실물문의 상세페이지</h1>
         </div>
-    </div>
+        <div class="table_div">
+            <table>
+                <tr style="background-color: #F67280;">
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>등록일</td>
+                    <td>작성자</td>
+                    <td>조회수</td>
+                </tr>
+                <tr>
+                    <td id="num"></td>
+                    <td id="title"></td>
+                    <td id="createdDay"></td>
+                    <td id="member"></td>
+                    <td id="views"></td>
+                </tr>
+                <tr>
+                    <td colspan="5" id="text"></td>
+                    <!-- <td colspan="5" style="height: 400px;" id="text">값</td> -->
+                </tr>
+            </table>
+            <div class="button_div">
+                <input type="button" value="수정" onclick="updateBtn()">
+                <input type="button" value="삭제" onclick="deleteBtn()">
+                <input type="button" value="이전" style="margin-left: 500px;" id="prevBtn">
+                <input type="button" value="목록" onclick="location.href='CsLostitem.html';">
+                <input type="button" value="다음" id="nextBtn">
+            </div>
+        </div>
 
     <script>
 
@@ -105,9 +109,9 @@
                 alert("삭제권한이 없습니다");
             }
         }
-
-        
     </script>
+</div>
+</div>
 </body>
 <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
 </html>

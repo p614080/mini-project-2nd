@@ -9,6 +9,12 @@
     font-family: 'WAGURITTF', sans-serif;
 }
 
+.sidecontainer {
+    display: inline-flex;
+    width: 100%;
+    height : auto;
+  }
+
 .body_div{
     width: 100%;
 }
@@ -76,7 +82,7 @@ th, td {
 }
   
 tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #F67280;
 }
 
 
@@ -90,4 +96,18 @@ tbody tr:hover {
     text-decoration: none;
     padding: 10px;
     text-align: center;
+}
+
+#button {
+    background-color: #F67280;
+    border-color: #F67280;
+    float: right;
+    color: #FFFFFF;
+    font-family: 'WAGURITTF';
+    border-radius: 5px;
+}
+
+#button :hover {
+    background-color: #6C5B7B;
+    border-color: #6C5B7B;
 }

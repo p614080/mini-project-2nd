@@ -82,7 +82,7 @@
 
         async function loadTermsContent() {
             try {
-                const response = await fetch('terms.json');
+                const response = await fetch('../json/terms.json');
                 if (!response.ok) {
                     throw new Error('파일을 가져오는 데 실패했습니다.');
                 }

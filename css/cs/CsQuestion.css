@@ -9,6 +9,12 @@
     font-family: 'WAGURITTF', sans-serif;
 }
 
+.sidecontainer {
+    display: inline-flex;
+    width: 100%;
+    height : auto;
+  }
+
 .body_div{
     width: 100%;
 }
@@ -73,7 +79,7 @@ table {
   }
 
 tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #F67280;
 }
 
 .page_div{
@@ -92,10 +98,33 @@ tbody tr:hover {
     margin-left: auto; /* 검색박스를 오른쪽 정렬 */
     display: flex;
     align-items: center; /* 가운데 정렬(세로) */
-    /* background-color: #F67280;
-    border-color: aliceblue; */
+    background-color: #F67280;
+    border-color: #F67280;
+    float: right;
+    color: #FFFFFF;
+    font-family: 'WAGURITTF';
+    border-radius: 5px;
     font-size: 15px; /* 글자 크기 */
     padding: 7px 15px; /* 내부 여백 */
     width: 100px; /* 버튼 너비 */
     height: 40px; /* 버튼 높이 */
+}
+
+#writing :hover {
+    background-color: #6C5B7B;
+    border-color: #6C5B7B;
+}
+
+#button {
+    background-color: #F67280;
+    border-color: #F67280;
+    float: right;
+    color: #FFFFFF;
+    font-family: 'WAGURITTF';
+    border-radius: 5px;
+}
+
+#button :hover {
+    background-color: #6C5B7B;
+    border-color: #6C5B7B;
 }
