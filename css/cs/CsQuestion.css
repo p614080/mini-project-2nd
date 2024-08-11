@@ -9,6 +9,11 @@
     font-family: 'WAGURITTF', sans-serif;
 }
 
+.sidecontainer {
+    display: inline-flex;
+    width: 100%;
+  }
+
 .body_div{
     width: 100%;
 }

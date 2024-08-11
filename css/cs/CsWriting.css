@@ -9,12 +9,29 @@
     font-family: 'WAGURITTF', sans-serif;
 }
 
-/* .table_div{
+.sidecontainer {
+    display: inline-flex;
+    width: 100%;
+  }
+
+.table_div{
     width: 100%;
     text-align: center;
 }
 
-.table_div table{
+.body_div{
+    width: 100%;
+}
+
+.menu_div{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center; /* 가운데 정렬(세로) */
+    margin-bottom: 20px; /* 밑으로 여백 */
+}
+
+/* .table_div table{
     width: 100%;
     text-align: center;
     border-collapse: collapse;
