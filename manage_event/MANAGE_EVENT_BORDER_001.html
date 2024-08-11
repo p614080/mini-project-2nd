@@ -21,6 +21,8 @@ padding: 20px; /* 추가적인 여백을 설정 */
 }
 
 table {
+position: relative;  
+top : 8px;
 width: 100%;
 border-top: 1px solid #d3d3d3;
 border-collapse: collapse;
@@ -104,14 +106,16 @@ right: 0;
   <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
 
   <script>
-    const desiredProperties = ['num', 'name', 'noticeStart', 'noticeEnd', 'startDate', 'endDate', 'region'];
-
   function displayData(data) {
     const tableBody = document.querySelector('#tblEventList tbody');
     tableBody.innerHTML = ''; // 기존 테이블 지우기
 
       data.forEach(item => {
       const row = document.createElement('tr');
+      row.id = `row-${item.num}`;
+      row.addEventListener('click', () => {
+        window.location.href = `./MANAGE_EVENT_BORDER_003.html?num=${item.num}`;
+      })
       
       // 번호
       const numCell = document.createElement('td');
@@ -147,7 +151,7 @@ right: 0;
 fetch('../json/FestivalList.json')
   .then(response => response.json())
   .then(data => displayData(data))
-  .catch(error => console.error('Error fetching JSON data:', error));
+  .catch(error => console.error('json 데이터를 가져오지 못하였습니다.', error));
   </script>
 </body>
 </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
+<style>
+#container {
+  position: relative;
+  bottom: 11px;
+}
+#tblEventList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-collapse: collapse;
+}
+
+input[type="text"] {
+  width: 99%;
+}
+
+textarea {
+  width: 40vw;
+  height: 40vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로축 가운데 정렬 */
+}
+
+button {
+  background-color: #355C7D;
+  color: white;
+  text-align: center;
+  border: 0px;
+  font-size: 16px;
+  padding: 6px 10px;
+  position: relative;
+  left: 50%;
+  top: 12px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px 50px; /* 셀 내부에 여백 추가 (위아래 10px, 좌우 20px) */
+}
+
+table > tr {
+  padding-top: 20px;
+}
+
+aside {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+  float: left;
+  height: 100vh;
+}
+</style>
+
+<aside>
+  <div class="sidebar">
+    <li><a href="#" class="side-button">축제/팝업게시글 관리</a></li>
+    <li><a href="#" class="side-button">공지사항 관리</a></li>
+    <li><a href="#" class="side-button">분실물게시판 관리</a></li>
+  </div>
+</aside>
+<div id="container">
+  <form id="formEvent">
+    <div id="formEventList">
+      <table id="tblEventList">
+        <tr>
+          <th>*행사명</th>
+          <td id="eventName"></td>
+        </tr>
+        <tr>
+          <th>*장소</th>
+          <td id="eventPlace"></td>
+        </tr>
+        <tr>
+          <th>지역</th>
+          <td id="eventRegion"></td>
+        </tr>
+        <tr>
+          <th>행사기간</th>
+          <td id="eventPeriod"></td>
+        </tr>
+        <tr>
+          <th>게시기간</th>
+          <td id="noticePeriod"></td>
+        </tr>
+        <tr>
+          <th>첨부사진</th>
+          <td id="eventImage"></td>
+        </tr>
+        <tr>
+          <th>공식사이트</th>
+          <td id="officialHomePage"></td>
+        </tr>
+        <tr>
+          <th>내용</th>
+          <td id="eventDescription"></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <button type="button" id="btnPrev" onclick="window.location.href='./MANAGE_EVENT_BORDER_001.html'">이전</button>
+      <button type="button" id="btnSave">저장</button>
+    </div>
+  </form> <!-- form 끝-->
+</div>
+<!-- footer-->
+<iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+<script>
+  const queryParams = new URLSearchParams(window.location.search);
+  const num = queryParams.get('num');
+  const targetnum = num;
+
+  // JSON 데이터 가져오기
+  fetch('../json/FestivalList.json')
+    .then(response => response.json())
+    .then(data => {
+      const result = data.find(item => item.num == targetnum);
+      console.log(result);
+      
+      // 데이터가 존재하는 경우 폼에 값을 채우기
+      if (result) {
+        document.getElementById('eventName').textContent = result.name || '';
+        document.getElementById('eventPlace').textContent = result.place || '';
+        document.getElementById('eventRegion').textContent = result.region || '';
+        document.getElementById('eventPeriod').textContent = `${result.startDate} ~ ${result.endDate}`;
+        document.getElementById('noticePeriod').textContent = `${result.noticeStart} ~ ${result.noticeEnd}`;
+        document.getElementById('eventImage').textContent = result.img || '이미지 없음';
+        document.getElementById('officialHomePage').textContent = result.officialHomePage || '없음';
+        document.getElementById('eventDescription').textContent = '여기에 내용을 추가하세요.'; // 콘텐츠는 없는 상태로 시작
+      } else {
+        console.error('해당 번호의 데이터를 찾을 수 없습니다.');
+      }
+    })
+    .catch(error => console.error('json 데이터를 가져오지 못하였습니다.', error));
+</script>
+</body>
+</html>
