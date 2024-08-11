@@ -41,7 +41,7 @@
     color: #000; /* 텍스트 색상변경 */
 }
 
-.table_div{
+/* .table_div{
     width: 100%;
     text-align: center;
 }
@@ -49,7 +49,7 @@
 .table_div table{
     width: 100%;
     text-align: center;
-    border-collapse: collapse;/* 셀 간격 없앰 */
+    border-collapse: collapse;
 }
 
 .table_div tr{
@@ -62,7 +62,23 @@
 
 .table_row :hover{
     background-color: #F67280;
-}
+} */
+
+table {
+    width: 100%;
+    border-top: 1px solid #d3d3d3;
+    border-collapse: collapse;
+  }
+  th {
+    background-color: white;
+    border-top: 1px solid #727272;
+  }
+  th, td {
+    border-bottom: 1px solid;
+    padding: 10px;
+  }
+
+
 
 .page_div{
     text-align: center;
