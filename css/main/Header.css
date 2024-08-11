@@ -13,7 +13,7 @@
 }
 
 header{ 
-    font-family: 'HancomMalangMalang-Regular';
+    font-family: 'WAGURITTF';
     height: 100px;
     
 }
@@ -48,8 +48,9 @@ ul.menu> li >a >img {
     border-color: #F67280;
     float: right;
     color: #FFFFFF;
-    padding-left: 10px;
-    margin: 5px;
+    font-family: 'WAGURITTF';
+    padding: 10px 30px;
+    margin: 10px;
     border-radius: 5px;
 }
 
