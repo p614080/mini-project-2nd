@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'WAGURITTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'WAGURITTF', sans-serif;
+}
+
 iframe {
   display: block; /* 블록 요소로 설정하여 한 줄 전체 차지 */
   margin-top: 20px; /* login_container 아래에 여백 추가 */
