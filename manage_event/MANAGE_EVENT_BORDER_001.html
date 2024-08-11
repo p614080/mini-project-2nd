@@ -5,68 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Festival List</title>
   <style>
-    aside {
-      width: 200px;
-      border: 1px solid black;
-      border-radius: 10px;
-      position: relative;
-      float: left;
-      height: 100vh;
-      box-sizing: border-box;
-    }
+aside {
+width: 200px;
+border: 1px solid black;
+border-radius: 10px;
+position: relative;
+float: left;
+height: 100vh;
+box-sizing: border-box;
+}
 
-    #container {
-      margin-left: 200px; /* aside의 너비만큼 여백을 추가하여 레이아웃 맞춤 */
-      padding: 20px; /* 추가적인 여백을 설정 */
-    }
+#container {
+margin-left: 200px; /* aside의 너비만큼 여백을 추가하여 레이아웃 맞춤 */
+padding: 20px; /* 추가적인 여백을 설정 */
+}
 
-    table {
-      width: 100%; /* 테이블의 너비를 100%로 설정 */
-      border-collapse: collapse; /* 테두리 겹침을 없앰 */
-      table-layout: fixed; /* 테이블 레이아웃을 고정으로 설정 */
-      margin-top: 10px;
-    }
+table {
+width: 100%;
+border-top: 1px solid #d3d3d3;
+border-collapse: collapse;
+}
 
-    th, td {
-      border: 1px solid black; /* 셀 테두리 설정 */
-      padding: 10px; /* 셀의 여백 설정 */
-      text-align: center; /* 텍스트 중앙 정렬 */
-      box-sizing: border-box; /* 테두리와 패딩을 포함한 너비 계산 */
-    }
+th {
+background-color: white;
+border-top: 1px solid #727272;
+}
 
-    th {
-      background-color: #F67280; /* 헤더 배경색 설정 */
-      color: white; /* 헤더 텍스트 색상 설정 */
-    }
+th,td {
+border-bottom: 1px solid;
+padding: 10px;
+}
 
-    button {
-      background-color: #355C7D;
-      color: white;
-      text-align: center;
-      border: 0;
-      padding: 5px 10px;
-      font-size: 14px;
-      margin-left: 5px;
-    }
+button {
+background-color: #355C7D;
+color: white;
+text-align: center;
+border: 0;
+padding: 5px 10px;
+font-size: 14px;
+margin-left: 5px;
+}
 
-    #inputSearchText {
-      width: 35vw;
-      padding: 5px;
-      font-size: 14px;
-    }
+#inputSearchText {
+width: 35vw;
+padding: 5px;
+font-size: 14px;
+}
 
-    #search {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: -6px;
-      position: relative;
-    }
+#search {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: -6px;
+position: relative;
+}
 
-    #btnAddEventList {
-      position: absolute;
-      right: 0;
-    }
+#btnAddEventList {
+position: absolute;
+right: 0;
+}
   </style>
 </head>
 <body>
