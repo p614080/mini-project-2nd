@@ -1,3 +1,14 @@
+@font-face {
+   font-family: 'WAGURITTF';
+   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+}
+
+*{
+   font-family: 'WAGURITTF', sans-serif;
+}
+
 .first_box, second_box {
    margin-bottom: 100px;
 }
@@ -31,18 +42,16 @@ h2 {
 }
 
 #Busan {
-   fill: #355C7D; /* 기본 상태에서 노란색 */
+   fill: #355C7D;
    stroke: #F67280;
    transform: translate(10%, 10%);
    transform-origin: center;
 }
 
-/* 다른 구역에 대해서도 동일하게 설정 */
-
 #seo:hover, #dong:hover, #yeongdo:hover, #busanjin:hover, #dongnae:hover, #nam:hover, #buk:hover,
 #haeundae:hover, #saha:hover, #geumjeong:hover, #gangseo:hover, #yeonje:hover, 
 #suyoung:hover, #sasang:hover, #gijang:hover, #jung:hover {
-   fill: #F67280; /* 호버 시 붉은색으로 변경 */
+   fill: #F67280;
 }
 
 /* 이미지 슬라이더 */
