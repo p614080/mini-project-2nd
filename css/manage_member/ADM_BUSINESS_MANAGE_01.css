@@ -1,12 +1,4 @@
-@font-face {
-  font-family: 'WAGURITTF';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-*{
-    font-family: 'WAGURITTF';  
-}
+
 
 .headcontainer {
   height: 150px;
