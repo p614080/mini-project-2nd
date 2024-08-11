@@ -7,45 +7,45 @@
     <link rel="stylesheet" href="../css/main/styles.css">
     <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 </head>
-<body>
-    <div class="sidecontainer">
-        <iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
-    </div>
-    
-    <div>
+<body> 
+    <div class="first_box">
+        <h2>조회수 높은 행사</h2>
         <div class="slider">
-            <div class="slides">
-                <div class="slide" onclick="window.location.href='../eventlist/fes01.html'"><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
-                <div class="slide" onclick="window.location.href='../eventlist/fes02.html'"><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
-                <div class="slide" onclick="window.location.href='../eventlist/fes03.html'"><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
-                <div class="slide" onclick="window.location.href='../eventlist/fes04.html'"><img src="../img/eventlist/fes04.jpg" alt="Slide 4"></div>
-                <div class="slide" onclick="window.location.href='../eventlist/fes05.html'"><img src="../img/eventlist/fes05.jpg" alt="Slide 5"></div>
-                <div class="slide" onclick="window.location.href='../eventlist/fes06.html'"><img src="../img/eventlist/fes06.jpg" alt="Slide 6"></div>
-            </div>
-            <a class="prev" onclick="prevSlide()">❮</a>
-            <a class="next" onclick="nextSlide()">❯</a>
-    
-            <!-- Dots and Play/Pause Button -->
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <button class="play-pause-btn" onclick="togglePlayPause()">❚❚</button>
-            </div>
+        <div class="slides">
+            <div class="slide" onclick="window.location.href='../eventlist/fes01.html'"><img src="../img/eventlist/fes01.jpg" alt="Slide 1"></div>
+            <div class="slide" onclick="window.location.href='../eventlist/fes02.html'"><img src="../img/eventlist/fes02.jpg" alt="Slide 2"></div>
+            <div class="slide" onclick="window.location.href='../eventlist/fes03.html'"><img src="../img/eventlist/fes03.png" alt="Slide 3"></div>
+            <div class="slide" onclick="window.location.href='../eventlist/fes04.html'"><img src="../img/eventlist/fes04.jpg" alt="Slide 4"></div>
+            <div class="slide" onclick="window.location.href='../eventlist/fes05.html'"><img src="../img/eventlist/fes05.jpg" alt="Slide 5"></div>
+            <div class="slide" onclick="window.location.href='../eventlist/fes06.html'"><img src="../img/eventlist/fes06.jpg" alt="Slide 6"></div>
         </div>
-    
+        <a class="prev" onclick="prevSlide()">❮</a>
+        <a class="next" onclick="nextSlide()">❯</a>
+
+        <!-- Dots and Play/Pause Button -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <button class="play-pause-btn" onclick="togglePlayPause()">❚❚</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="second_box">
+        <h2>지도로 보기</h2>
         <div class="svg_container" id="svg_container">
             <svg class="busan_map" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
                 <g id="Busan" transform="translate(500 500)">
                 </g>
             </svg>
         </div>
-    
-        <iframe src="/main/Footer.html" class="footer" frameborder="0"></iframe>
     </div>
+
+    <iframe src="/main/Footer.html" style="width: 100%" frameborder="0"></iframe>
 
     <script>
     fetch('../json/busan_paths.json')

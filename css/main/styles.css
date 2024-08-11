@@ -8,7 +8,7 @@
    background-position: center; /* 이미지의 중심이 컨테이너의 중심에 맞춰지도록 설정 */
    background-repeat: no-repeat; /* 이미지가 반복되지 않도록 설정 */
    padding: 10px;
-   border-radius: 5px;
+   border-radius: 10px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    max-width: 60%; /* 최대 너비 설정 */
    box-sizing: border-box; /* padding과 border를 전체 너비에 포함시킴 */
@@ -44,11 +44,12 @@
 /* 이미지 슬라이더 */
 .slider {
    position: relative;
-   max-width: 60%;
+   max-width: 80%;
    max-height: 500px;
    margin: auto;
    overflow: hidden;
    margin-bottom: 10px;
+   border-radius: 10px;
 }
 
 /* Slides */
@@ -135,8 +136,4 @@
    justify-content: center;
    align-items: center;
    transition: background-color 0.6s ease;
-}
-
-.play-pause-btn:hover, .dot:hover {
-   background-color: #6C5B7B;
 }
