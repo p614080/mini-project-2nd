@@ -21,7 +21,15 @@
                 <td>조회수</td>
             </tr>
             <tr>
-                <td colspan="5" style="height: 400px;">내용</td>
+                <td id="num"></td>
+                <td id="title"></td>
+                <td id="createdDay"></td>
+                <td id="member"></td>
+                <td id="views"></td>
+            </tr>
+            <tr>
+                <td colspan="5" id="text"></td>
+                <!-- <td colspan="5" style="height: 400px;" id="text">값</td> -->
             </tr>
         </table>
         <div class="button_div">
@@ -34,6 +42,39 @@
     </div>
 
     <script>
+
+
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        let num = getQueryParam('num');
+
+        function fetchData() {
+            let xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "../js/cs/CsNotification.json", true);
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let storage = JSON.parse(this.response);
+                    let item = storage.find(item => item.num == num);
+                    if (item) {
+                        document.getElementById('num').innerText = item.num;
+                        document.getElementById('title').innerText = item.title;
+                        document.getElementById('createdDay').innerText = item.CreatedDay;
+                        document.getElementById('member').innerText = item.member;
+                        document.getElementById('views').innerText = item.Views;
+                        document.getElementById('text').innerText = item.text || "텍스트 내용이 없습니다.";
+                    } else {
+                        alert("해당 번호의 데이터를 찾을 수 없습니다.");
+                    }
+                }
+            };
+            xhttp.send();
+        }
+        window.onload = fetchData;
+
+
         function updateBtn(){
             if(document.getElementById('id값').value != 'id값'){
                 alert("수정권한이 없습니다");
