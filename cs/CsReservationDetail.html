@@ -63,7 +63,7 @@
 
         function fetchData() {
             let xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "../js/cs/CsReservation.json", true);
+            xhttp.open("GET", "../json/cs/CsReservation.json", true);
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     let storage = JSON.parse(this.response);

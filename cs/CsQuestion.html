@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>질문QnA</title>
     <link rel="stylesheet" href="../css/cs/CsQuestion.css">
-    <script src="../js/cs/CsQuestion.js"></script>
+    <!-- <script src="../js/cs/CsQuestion.js"></script> -->
     <iframe src="../main/Header.html" style="width: 100%;"></iframe>
 </head>
 <body>
@@ -50,7 +50,7 @@
 
 
         let xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "../js/cs/CsQuestion.json", true);
+            xhttp.open("GET", "../json/cs/CsQuestion.json", true);
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                   let storage = JSON.parse(this.response);
