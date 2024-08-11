@@ -30,21 +30,26 @@
     <div id="infomation02">
       <p class="info">주최측 정보:</p>
       <p class="info">주최측 연락처:</p>
-      <a href="https://www.google.com/"><button type="button" class="info_btn">주최사 홈페이지</button></a>
+      <a href="https://www.google.com/" target="_blank"><button type="button" class="info_btn">주최사 홈페이지</button></a> <!--target = blank 새창 띄어주기-->
     </div>
     <button type="button" class="ticket_btn" id="popup_btn">예약하기</button>
+    
     <div id="startext">
-    <h2>리뷰작성 폼</h2>
-    <div class ="star_rating">
-      <span class="star on" value="1"> </span>
-      <span class="star" value="2"> </span>
-      <span class="star" value="3"> </span>
-      <span class="star" value="4"> </span>
-      <span class="star" value="5"> </span>
+      <h2>리뷰작성 폼</h2>
+        <div class ="star_rating">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
     </div>
     <textarea class="star_box" placeholder="리뷰 내용을 작성해주세요." ></textarea>
     <button type="button" class="star_btn">리뷰 등록</button>
   </div>
+
+  <div id="reviewList">
+    <h3>리뷰 목록</h3>
+</div>
 
   </body>
   <iframe src="/main/Footer.html" style="width: 100%;" frameborder="0"></iframe>

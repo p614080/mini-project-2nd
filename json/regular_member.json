@@ -1,0 +1,222 @@
+[
+  {
+    "name":"박자바",
+    "id": "park123",
+    "nickname": "축제광",
+    "email": "park123@email.com",
+    "phonnumber":"010-1234-3607",
+    "signupdate":"2024-08-07",
+    "gender":"남",
+    "age": "21",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"이축제",
+    "id": "leevent",
+    "nickname": "행사조아",
+    "email": "leevent@email.com",
+    "phonnumber":"010-3333-2222",
+    "signupdate":"2022-08-07",
+    "gender":"여",
+    "age": "37",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"김프로",
+    "id": "kimpro",
+    "nickname": "프로매니저",
+    "email": "kimpro@email.com",
+    "phonnumber":"010-5555-4444",
+    "signupdate":"2023-09-12",
+    "gender":"남",
+    "age": "45",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"정관리",
+    "id": "jungmanage",
+    "nickname": "정확히",
+    "email": "jungmanage@email.com",
+    "phonnumber":"010-7777-8888",
+    "signupdate":"2021-03-18",
+    "gender":"여",
+    "age": "29",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"최디자인",
+    "id": "choidesign",
+    "nickname": "디자인러버",
+    "email": "choidesign@email.com",
+    "phonnumber":"010-2222-1111",
+    "signupdate":"2023-06-25",
+    "gender":"여",
+    "age": "33",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"손개발",
+    "id": "sondev",
+    "nickname": "코드장인",
+    "email": "sondev@email.com",
+    "phonnumber":"010-9876-5432",
+    "signupdate":"2024-02-14",
+    "gender":"남",
+    "age": "28",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"김영업",
+    "id": "kimsales",
+    "nickname": "세일즈킹",
+    "email": "kimsales@email.com",
+    "phonnumber":"010-1234-5678",
+    "signupdate":"2022-11-23",
+    "gender":"남",
+    "age": "39",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"유마케팅",
+    "id": "yumarketing",
+    "nickname": "마케팅구루",
+    "email": "yumarketing@email.com",
+    "phonnumber":"010-2345-6789",
+    "signupdate":"2023-07-30",
+    "gender":"여",
+    "age": "35",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"박기획",
+    "id": "parkplan",
+    "nickname": "기획천재",
+    "email": "parkplan@email.com",
+    "phonnumber":"010-3456-7890",
+    "signupdate":"2024-04-17",
+    "gender":"남",
+    "age": "30",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"강지원",
+    "id": "kangsupport",
+    "nickname": "지원팀장",
+    "email": "kangsupport@email.com",
+    "phonnumber":"010-5678-9012",
+    "signupdate":"2021-09-21",
+    "gender":"여",
+    "age": "40",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"홍재무",
+    "id": "hongfinance",
+    "nickname": "재무천재",
+    "email": "hongfinance@email.com",
+    "phonnumber":"010-6789-0123",
+    "signupdate":"2023-12-05",
+    "gender":"남",
+    "age": "42",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"오HR",
+    "id": "ohhr",
+    "nickname": "인사왕",
+    "email": "ohhr@email.com",
+    "phonnumber":"010-7890-1234",
+    "signupdate":"2022-10-28",
+    "gender":"여",
+    "age": "31",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"이IT",
+    "id": "leeit",
+    "nickname": "IT구루",
+    "email": "leeit@email.com",
+    "phonnumber":"010-8901-2345",
+    "signupdate":"2021-05-16",
+    "gender":"남",
+    "age": "26",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"장서비스",
+    "id": "jangservice",
+    "nickname": "서비스장인",
+    "email": "jangservice@email.com",
+    "phonnumber":"010-9012-3456",
+    "signupdate":"2024-01-22",
+    "gender":"여",
+    "age": "38",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"류전략",
+    "id": "ryustrategy",
+    "nickname": "전략통",
+    "email": "ryustrategy@email.com",
+    "phonnumber":"010-0123-4567",
+    "signupdate":"2023-08-19",
+    "gender":"남",
+    "age": "32",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"신홍보",
+    "id": "shinpomotion",
+    "nickname": "홍보왕",
+    "email": "shinpomotion@email.com",
+    "phonnumber":"010-2345-6789",
+    "signupdate":"2022-07-03",
+    "gender":"여",
+    "age": "27",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"백CS",
+    "id": "baekcs",
+    "nickname": "고객사랑",
+    "email": "baekcs@email.com",
+    "phonnumber":"010-3456-7890",
+    "signupdate":"2023-11-02",
+    "gender":"남",
+    "age": "44",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"정프로젝트",
+    "id": "jungproject",
+    "nickname": "프로젝트대가",
+    "email": "jungproject@email.com",
+    "phonnumber":"010-4567-8901",
+    "signupdate":"2024-05-10",
+    "gender":"여",
+    "age": "36",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"김영업2",
+    "id": "kimsales2",
+    "nickname": "영업고수",
+    "email": "kimsales2@email.com",
+    "phonnumber":"010-5678-9012",
+    "signupdate":"2021-02-13",
+    "gender":"남",
+    "age": "41",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  },
+  {
+    "name":"한상품",
+    "id": "hanshopping",
+    "nickname": "쇼핑왕",
+    "email": "hanshopping@email.com",
+    "phonnumber":"010-6789-0123",
+    "signupdate":"2023-03-07",
+    "gender":"여",
+    "age": "34",
+    "url": "./ADM_REGULAR_MANAGE_02.html"
+  }
+]

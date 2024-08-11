@@ -95,30 +95,20 @@ iframe {
 }
 
 .star_rating {
-  width: 100%; 
-  box-sizing: border-box; 
-  display: inline-flex; 
-  float: left;
-  flex-direction: row; 
+  display: flex;
   justify-content: flex-start;
+  margin-bottom: 15px;
 }
-.star_rating .star {
-  width: 25px; 
-  height: 25px; 
-  margin-right: 10px;
-  display: inline-block; 
-  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FE2bww%2FbtsviSSBz4Q%2F5UYnwSWgTlFt6CEFZ1L3Q0%2Fimg.png') no-repeat; 
-  background-size: 100%; 
-  box-sizing: border-box; 
+
+.star {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
 }
-.star_rating .star.on {
-  width: 25px; 
-  height: 25px;
-  margin-right: 10px;
-  display: inline-block; 
-  background: url('https://blog.kakaocdn.net/dn/b2d6gV/btsvbDoal87/XH5b17uLeEJcBP3RV3FyDk/img.png') no-repeat;
-  background-size: 100%; 
-  box-sizing: border-box; 
+
+.star.selected, .star:hover, .star:hover ~ .star {
+  color: gold;
 }
 
 .star_box {
@@ -152,4 +142,19 @@ iframe {
   transition: 0.5s ease-out;
 }
 
+/* 리뷰 목록 스타일 */
+.review {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.review .star_rating {
+  color: gold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.review .review_content {
+  font-size: 16px;
+}
 
