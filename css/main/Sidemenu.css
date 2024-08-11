@@ -35,3 +35,7 @@ ul{
 li{
   margin-top: 10px;
 }
+.menulist{
+  position: sticky;
+  top: 0;
+}

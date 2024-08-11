@@ -2,34 +2,20 @@
 <nav id="sidemenu">
   <h2>메뉴</h2>
   <div class="sidemenucontainer">
-    <script>
-      var floatPosition = parseInt($(".menulist").css("top"));
-
-      // scroll 인식
-      $(window).scroll(function () {
-        // 현재 스크롤 위치
-        var currentTop = $(window).scrollTop();
-        var bannerTop = currentTop + floatPosition + "px";
-
-        //이동 애니메이션
-        $(".menulist").stop().animate(
-          {
-            top: bannerTop,
-          },
-          500
-        );
-      });
-    </script>
     <div class="menulist">
-      <ul>
-        <li>
-          <a href="../cs/CsNotification.html" target="_parent">축제/팝업</a>
-        </li>
-        <li><a href="../eventlist/event.html" target="_parent">공지사항</a></li>
-        <li><a href="../mypage/index.html" target="_parent">마이메뉴</a></li>
-        <li></li>
-        <li></li>
-      </ul>
+        <ul>
+          <li>
+            <a href="../eventlist/event.html" target="_parent">축제/팝업</a>
+          </li>
+          <li>
+            <a href="../cs/CsNotification.html" target="_parent">공지사항</a>
+          </li>
+          <li><a href="../mypage/index.html" target="_parent">마이메뉴</a></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </aside>
+      
     </div>
   </div>
 </nav>
