@@ -33,13 +33,7 @@
     border-color: aliceblue;
 } */
 
-.menu_div a{
-    text-decoration: none;/* 밑줄을 없앰 */
-    font-size: 30px;
-    background-color:#F67280; /* 배경색 변경 */
-    border-radius: 10px; /* 둥근모서리 */
-    color: #000; /* 텍스트 색상변경 */
-}
+
 
 /* .table_div{
     width: 100%;
@@ -76,6 +70,7 @@ table {
   th, td {
     border-bottom: 1px solid;
     padding: 10px;
+    text-align: center;
   }
 
 
