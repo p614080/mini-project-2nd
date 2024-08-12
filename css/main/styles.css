@@ -119,7 +119,7 @@
 
 #Busan {
    fill: #6C5B7B;
-   stroke: #F67280;
+   stroke: white;
    transform: translate(10%, 10%);
    transform-origin: center;
 }
