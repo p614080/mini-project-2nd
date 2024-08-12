@@ -52,6 +52,7 @@ ul.menu> li >a >img {
     padding: 10px 30px;
     margin: 10px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btnHeader:hover {

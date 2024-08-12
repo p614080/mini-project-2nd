@@ -12,7 +12,7 @@
   }
 
   *{
-      font-family: 'WAGURITTF';
+    font-family: 'HancomMalangMalang-Regular', sans-serif;
   }
 
 iframe {
@@ -31,17 +31,16 @@ iframe {
 .filter-btn {
   width: 130px;
   height: 40px;
- 
   border: 0;
   border-radius: 10px;
   font-size: 0.9em;
   color: white;
-  background:#C06C84; 
+  background:#F67280; 
 }
 
 .filter-btn:hover {
-    /* background-color: #F67280; */
-    transition: 0.5s ease-out;
+    background-color: #6C5B7B; 
+    transition: 0.3s ease-out;
   }
 
   /* 검색 박스의 스타일 */
@@ -60,14 +59,15 @@ iframe {
     padding: 10px 10px;
     border: none;
     border-radius: 5px;
-    /* background-color: #C06C84;
-    color: white; */
+    background-color: #F67280;;
+    color: white; 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    /* background-color: #F67280; */
+     background-color: #6C5B7B;
+     transition: 0.3s ease-out;
 }
 
 
