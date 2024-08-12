@@ -132,46 +132,7 @@
 </body>
 <iframe src="/main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
 <script>
- function displayData(data) {
-    const listFes = document.querySelector('#festival');
-    listFes.innerHTML = ''; // 기존 테이블 지우기
-
-    data.forEach(item => {
-        // 새로운 li 요소 생성
-        const li = document.createElement('li');
-
-        // li의 ID와 텍스트 콘텐츠 설정
-        li.id = `li-${item.num}`;
-       
-        
-        // li 요소에 img 추가
-        const imgElement = document.createElement('img');
-        imgElement.src = `${item.img}`;
-
-        //li 요소에 p 추가
-        const pElement = document.createElement('p');
-        pElement.textContent=`${item.name}`;
-        // 클릭 이벤트 추가
-
-        li.addEventListener('click', () => {
-          window.location.href = `/eventlist/fesDetail.html?num=${item.num}`;
-        });
-        
-        // img 요소를 li 요소에 추가
-        li.appendChild(imgElement);
-        li.appendChild(pElement);
-        
-        // ul 요소에 li 추가
-        listFes.appendChild(li);  
-    });
-
-}
-  // JSON 데이터 가져오기
-  fetch('../json/FestivalList.json')
-  .then(response => response.json())
-  .then(data => displayData(data))
-  .catch(error => console.error('json 데이터를 가져오지 못하였습니다.', error));
-  
+ 
 </script>
 </html>
 
