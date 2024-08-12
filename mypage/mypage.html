@@ -7,17 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지</title>
     <link rel="stylesheet" href="../css/mypage/mypage.css">
+    <iframe src="/main/Header.html" style="width: 100%; height: 100%" frameborder="0" scrolling="no"></iframe>
 </head>
 <body>
-    <div class="container">
-        <h1>마이페이지</h1>
-        <div class="btn-space">
-            <a href="#" onclick="redirectTo('index')"><button class="my-btn my-btn4">홈으로</button></a>
-            <a href="#" onclick="redirectTo('user_info_modify')"><button class="my-btn my-btn1">회원정보변경</button></a>
-            <a href="#" onclick="redirectTo('password_modify')"><button class="my-btn my-btn2">비밀번호변경</button></a>
-            <a href="#" onclick="redirectTo('account_delete')"><button class="my-btn my-btn3">회원탈퇴</button></a>
+    <div class="sidecontainer">
+        <iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
+        <div class="container">
+            <h1>마이페이지</h1>
+            <div class="btn-space">
+                <a href="#" onclick="redirectTo('home')"><button class="btnHeader1">홈으로</button></a>
+                <a href="#" onclick="redirectTo('user_info_modify')"><button class="btnHeader2">회원정보변경</button></a>
+                <a href="#" onclick="redirectTo('password_change')"><button class="btnHeader3">비밀번호변경</button></a>
+                <a href="#" onclick="redirectTo('account_delete')"><button class="btnHeader4">회원탈퇴</button></a>
+            </div>
         </div>
     </div>
-    <script src="../js/mypage/mypage.js"></script>
+    <script src="/js/mypage/mypage.js"></script>
 </body>
+<iframe src="/main/Footer.html" style="width: 100%" frameborder="0"></iframe>
 </html>

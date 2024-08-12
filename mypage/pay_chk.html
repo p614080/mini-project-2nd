@@ -4,45 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예약 확인</title>
-    <link rel="stylesheet" href="./pay_chk.css">
+    <link rel="stylesheet" href="/css/mypage/reserve_pay_chk.css">
+    <iframe src="/main/Header.html" style="width: 100%; height: 100%" frameborder="0" scrolling="no"></iframe>
 </head>
 <body>
-    <div class="container">
-        <section>
+    <div class="sidecontainer">
+        <iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
+        <div class="container">
             <h1>결제확인</h1>
-            <div>
-                <div class="search-btn">
-                    <span>기간별 </span>
-                    <button onclick="filterReservations(1000)">전체</button>
-                    <button onclick="filterReservations(7)">7일</button>
-                    <button onclick="filterReservations(15)">15일</button>
-                    <button onclick="filterReservations(30)">1개월</button>
-                    <button onclick="filterReservations(60)">2개월</button>
-                    <button onclick="filterReservations(90)">3개월</button>
+            <section>
+                <div class="periodbtn">
+                    <div class="search-btn">
+                        <span>기간별 </span>
+                        <button onclick="filterPay(1000)">전체</button>
+                        <button onclick="filterPay(7)">7일</button>
+                        <button onclick="filterPay(15)">15일</button>
+                        <button onclick="filterPay(30)">1개월</button>
+                        <button onclick="filterPay(60)">2개월</button>
+                        <button onclick="filterPay(90)">3개월</button>
+                    </div>
+                    <div class="rbtn">
+                        <a href="/main/home.html"><button>홈으로</button></a>
+                    </div>
+                    <div class="table_div">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">상품명</th>
+                                    <th scope="col">결제번호</th>
+                                    <th scope="col">고객명</th>
+                                    <th scope="col">결제(취소일)</th>
+                                    <th scope="col">결제금액</th>
+                                    <th scope="col">결제방법</th>
+                                    <th scope="col">상태</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pay-table-body">
+                                <!-- 데이터 랜더링 영역 -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="pagination" class="pagination">
+                        <!-- 페이지네이션 랜더링 영역 -->
+                    </div>
                 </div>
-                <div class="rbtn">
-                    <a href="./index.html"><button>홈으로</button></a>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">예약(취소)일</th>
-                            <th scope="col">예매번호</th>
-                            <th scope="col">예매자</th>
-                            <th scope="col">행사명</th>
-                            <th scope="col">행사기간</th>
-                            <th scope="col">매수(인원)</th>
-                            <th scope="col">상태</th>
-                        </tr>
-                    </thead>
-                    <tbody id="reservation-table-body">
-
-                    </tbody>
-                </table>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
-    <script src="./pay_chk.js"></script>
+    <script src="/js/mypage/pay_chk.js"></script>
 </body>
+<iframe src="/main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
 </html>
