@@ -1,13 +1,14 @@
 @font-face {
-    font-family: 'WAGURITTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
   }
 
   .sidecontainer {
     display: inline-flex;
-    width: 100%;
+    width: 80%;
+    
   }
 
   *{
@@ -30,12 +31,12 @@ iframe {
 .filter-btn {
   width: 130px;
   height: 40px;
-  font-weight: bold;
+ 
   border: 0;
   border-radius: 10px;
   font-size: 0.9em;
-  /* color: white;
-  background:#C06C84; */
+  color: white;
+  background:#C06C84; 
 }
 
 .filter-btn:hover {
@@ -89,8 +90,8 @@ iframe {
 
 #festival img {
     display: block; /* 이미지의 여백 제거 */
-    width: 250px;
-    height: 350px;
+    width: 200px;
+    height: 300px;
 }
 
 #festival p {
