@@ -5,18 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Festival List</title>
   <style>
-aside {
-width: 200px;
-border: 1px solid black;
-border-radius: 10px;
-position: relative;
-float: left;
+.sidecontainer {
+display: inline-flex;
+width: 100%;
 height: 100vh;
-box-sizing: border-box;
 }
 
 #container {
-margin-left: 200px; /* aside의 너비만큼 여백을 추가하여 레이아웃 맞춤 */
 padding: 20px; /* 추가적인 여백을 설정 */
 }
 
@@ -70,15 +65,8 @@ right: 0;
 </head>
 <body>
   <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
-
-  <aside>
-    <div class="sidebar">
-      <li><a href="#" class="side-button">축제/팝업게시글 관리</a></li>
-      <li><a href="#" class="side-button">공지사항 관리</a></li>
-      <li><a href="#" class="side-button">분실물게시판 관리</a></li>
-    </div>
-  </aside>
-
+  <div class="sidecontainer">
+      <iframe iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
   <div id="container">
     <div id="search">
       <input type="text" id="inputSearchText" placeholder="검색어를 입력해주세요">
@@ -100,6 +88,7 @@ right: 0;
           <!-- 데이터 행 삽입-->
         </tbody>
       </table>
+    </div>
     </div>
   </div>
 

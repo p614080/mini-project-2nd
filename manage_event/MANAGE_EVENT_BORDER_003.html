@@ -2,6 +2,12 @@
 <html lang="en">
 <iframe src="../main/Header.html" style="width: 100%; border:none;" scrolling="no"></iframe>
 <style>
+.sidecontainer {
+display: inline-flex;
+width: 100%;
+height: 100vh;
+}
+
 #container {
   position: relative;
   bottom: 11px;
@@ -60,13 +66,8 @@ aside {
 }
 </style>
 
-<aside>
-  <div class="sidebar">
-    <li><a href="#" class="side-button">축제/팝업게시글 관리</a></li>
-    <li><a href="#" class="side-button">공지사항 관리</a></li>
-    <li><a href="#" class="side-button">분실물게시판 관리</a></li>
-  </div>
-</aside>
+<div class="sidecontainer">
+  <iframe iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
 <div id="container">
   <form id="formEvent">
     <div id="formEventList">
@@ -110,6 +111,7 @@ aside {
       <button type="button" id="btnSave">저장</button>
     </div>
   </form> <!-- form 끝-->
+</div>
 </div>
 <!-- footer-->
 <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
