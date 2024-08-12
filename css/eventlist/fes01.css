@@ -56,7 +56,7 @@ iframe {
 #infomation01 {
   border: 1px solid gray;
   padding: 20px;
-  width: auto; /* 고정 너비 */
+  width: 400px; /* 고정 너비 */
   height: 300px;
   box-sizing: border-box; /* 패딩과 테두리를 요소의 총 너비에 포함 */
 }
@@ -162,7 +162,7 @@ iframe {
   background-color: gray;
   transition: 0.5s ease-out;
 }
-
+                            
 /* 리뷰 목록 스타일 */
 .review {
   padding: 10px;
@@ -180,9 +180,9 @@ iframe {
 }
 
 #reviewList {
-  margin-left: 19%;
+  margin-left: 15%;
   margin-top: 5%;
   border: 3px solid gray;
-  width: 850px; /* 고정 너비 */
+  width: 900px; /* 고정 너비 */
   border-radius: 10px;
 }
