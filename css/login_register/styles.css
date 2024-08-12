@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'WAGURITTF';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'HancomMalangMalang-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
 }
 
-* {
-  font-family: 'WAGURITTF', sans-serif;
+*{
+  font-family: 'HancomMalangMalang-Regular', sans-serif;
   transition: color 0.3s ease, background-color 0.3s ease; /* 전체 색상 변경에 애니메이션 추가 */
 }
 
