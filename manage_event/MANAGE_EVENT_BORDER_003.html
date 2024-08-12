@@ -107,8 +107,9 @@ aside {
       </table>
     </div>
     <div>
-      <button type="button" id="btnPrev" onclick="window.location.href='./MANAGE_EVENT_BORDER_001.html'">이전</button>
-      <button type="button" id="btnSave">저장</button>
+      <button type="button" id="btnPrev" onclick="movePrev()">이전</button>
+      <button type="button" id="btnList" onclick="window.location.href='./MANAGE_EVENT_BORDER_001.html'">목록</button>
+      <button type="button" id="btnSave" onclick="moveNext()">다음</button>
     </div>
   </form> <!-- form 끝-->
 </div>
@@ -119,22 +120,46 @@ aside {
   const queryParams = new URLSearchParams(window.location.search);
   const num = queryParams.get('num');
   const targetnum = num;
+  const parseNum = parseInt(targetnum);
+
+  //이전게시글로 넘어가기
+  function movePrev(){
+    if(targetnum == 1){
+      alert('이전페이지가 없습니다.');
+    }else{
+      window.location.href=`./MANAGE_EVENT_BORDER_003.html?num=${parseNum-1}`;
+    }
+  }
+
+  function moveNext(){
+    if(targetnum == 10){
+      alert('다음페이지가 없습니다.');
+    }else{
+      window.location.href=`./MANAGE_EVENT_BORDER_003.html?num=${parseNum+1}`;
+    }
+  }
 
   // JSON 데이터 가져오기
   fetch('../json/FestivalList.json')
     .then(response => response.json())
     .then(data => {
       const result = data.find(item => item.num == targetnum);
-      console.log(result);
+
       
       // 데이터가 존재하는 경우 폼에 값을 채우기
       if (result) {
+        
         document.getElementById('eventName').textContent = result.name || '';
         document.getElementById('eventPlace').textContent = result.place || '';
         document.getElementById('eventRegion').textContent = result.region || '';
         document.getElementById('eventPeriod').textContent = `${result.startDate} ~ ${result.endDate}`;
         document.getElementById('noticePeriod').textContent = `${result.noticeStart} ~ ${result.noticeEnd}`;
+        const eventImage = document.getElementById('eventImage');
+        eventImage.textContent=`${result.img}`;
         document.getElementById('eventImage').textContent = result.img || '이미지 없음';
+        const img = document.createElement('img');
+        img.src=`${result.img}`;
+
         document.getElementById('officialHomePage').textContent = result.officialHomePage || '없음';
         document.getElementById('eventDescription').textContent = '여기에 내용을 추가하세요.'; // 콘텐츠는 없는 상태로 시작
       } else {
