@@ -82,4 +82,6 @@
     margin: 10px;
   }
 
-  
+  table th {
+    background-color: #F67280;
+}
