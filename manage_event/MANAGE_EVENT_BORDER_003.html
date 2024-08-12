@@ -5,7 +5,7 @@
 .sidecontainer {
 display: inline-flex;
 width: 100%;
-height: 100vh;
+height: auto;
 }
 
 #container {
@@ -113,9 +113,12 @@ aside {
     </div>
   </form> <!-- form 끝-->
 </div>
+  
 </div>
 <!-- footer-->
+<div>
 <iframe src="../main/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+</div>
 <script>
   const queryParams = new URLSearchParams(window.location.search);
   const num = queryParams.get('num');
@@ -148,18 +151,26 @@ aside {
       
       // 데이터가 존재하는 경우 폼에 값을 채우기
       if (result) {
-        
         document.getElementById('eventName').textContent = result.name || '';
         document.getElementById('eventPlace').textContent = result.place || '';
         document.getElementById('eventRegion').textContent = result.region || '';
         document.getElementById('eventPeriod').textContent = `${result.startDate} ~ ${result.endDate}`;
         document.getElementById('noticePeriod').textContent = `${result.noticeStart} ~ ${result.noticeEnd}`;
         const eventImage = document.getElementById('eventImage');
-        eventImage.textContent=`${result.img}`;
-        document.getElementById('eventImage').textContent = result.img || '이미지 없음';
-        const img = document.createElement('img');
-        img.src=`${result.img}`;
-
+        
+        //img 엘리먼트 생성하기
+        const imgElement = document.createElement('img');
+        imgElement.src=`${result.img}`;
+        imgElement.style.width='300px';
+        imgElement.style.height='450px';
+        //p 엘리먼트 생성하기
+        const pElement = document.createElement('p');
+        pElement.textContent =`${result.img}`;
+        
+        //eventImage 테이블에 이미지&이미지경로 넣기
+        eventImage.append(imgElement);
+        eventImage.append(pElement);
+        
         document.getElementById('officialHomePage').textContent = result.officialHomePage || '없음';
         document.getElementById('eventDescription').textContent = '여기에 내용을 추가하세요.'; // 콘텐츠는 없는 상태로 시작
       } else {
