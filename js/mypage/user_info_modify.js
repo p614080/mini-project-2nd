@@ -92,7 +92,7 @@ function updateInfo() {
     document.cookie = `randomUser=${encodeURIComponent(JSON.stringify(updatedUser))}; path=/; max-age=${60 * 60 * 24}`;
 
     alert("회원정보가 수정되었습니다.");
-    window.location.href = './mypage.html';
+    window.location.href = '/mypage/mypage.html';
 }
 
 function phoneAuth() {
