@@ -7,10 +7,11 @@
 .container {
   display: flex;
   justify-content: center;
-  margin-left: 3px;
+  margin-left: 50px;
   width: 100%px;
   height: 500px;
   border-top: 1px solid #355C7D;
+  margin-bottom: 200px;
 }
 
 .btn {

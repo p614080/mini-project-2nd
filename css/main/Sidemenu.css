@@ -39,3 +39,30 @@ li{
   position: sticky;
   top: 0;
 }
+
+.submenu {
+  display: none; 
+  position: absolute; 
+  background-color: #ffffff; 
+  border: 1px solid #355C7D; /* 테두리 */
+  border-radius: 5px; 
+  padding: 5px 0; 
+  z-index: 1000;
+}
+
+li:hover .submenu {
+  display: block; 
+}
+
+.submenu li {
+  margin: 10px; 
+}
+
+.submenu li a {
+  padding: 10px; 
+  color: black;
+}
+
+.submenu li a:hover {
+  color: #F67280; 
+}

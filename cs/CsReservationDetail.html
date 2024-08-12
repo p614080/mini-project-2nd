@@ -48,18 +48,6 @@
         </div>
 
         <script>
-            function updateBtn(){
-                if(document.getElementById('id값').value != 'id값'){
-                    alert("수정권한이 없습니다");
-                }
-            }
-
-            function deleteBtn(){
-                if(document.getElementById('id값').value != 'id값'){
-                    alert("삭제권한이 없습니다");
-                }
-            }
-
             function getQueryParam(param) {
                 let urlParams = new URLSearchParams(window.location.search);
                 return urlParams.get(param);
@@ -111,6 +99,17 @@
             }
             window.onload = fetchData;        
 
+            function updateBtn(){
+            // if(document.getElementById('id값').value != 'id값'){
+            // }
+                confirm("글을 수정하시겠습니까?");
+            }
+
+            function deleteBtn(){
+            // if(document.getElementById('id값').value != 'id값'){
+            // }
+                confirm("삭제하시겠습니까?");
+            }
         </script>
     </div>
     </div>
