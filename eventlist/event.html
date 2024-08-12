@@ -13,117 +13,121 @@
     ></iframe>
   </head>
   <body>
-    <div id="eventPage">
-      <div id="logo">
-        <b><h1>축제/팝업 리스트</h1></b>
-      </div>
-      <div class="sidecontainer">
-        <iframe
-          src="/main/Sidemenu.html"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
-      </div>
+    <div class="sidecontainer">
+      <iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
+      <div id="eventPage">
+        <div id="logo">
+          <b><h1>축제/팝업 리스트</h1></b>
+        </div>
 
-      <div id="search-content">
-        <span class="search" alt="검색"></span>
-        <form class="search-box" id="searchForm">
-          <input
-            id="searchInput"
-            class="search-text"
-            type="text"
-            name=""
-            placeholder="제목을 입력하세요."
-          />
-          <button type="button" class="btn" id="searchButton">검색</button>
-        </form>
+        <div id="search-content">
+          <span class="search" alt="검색"></span>
+          <form class="search-box" id="searchForm">
+            <input
+              id="searchInput"
+              class="search-text"
+              type="text"
+              name=""
+              placeholder="제목을 입력하세요."
+            />
+            <button type="button" class="btn" id="searchButton">검색</button>
+          </form>
+        </div>
+
+        <!-- 필터링 버튼 추가 -->
+        <div id="filter-buttons">
+          <button
+            type="button"
+            class="filter-btn"
+            onclick="filterPosts('event')"
+          >
+            축제
+          </button>
+          <button
+            type="button"
+            class="filter-btn"
+            onclick="filterPosts('popup')"
+          >
+            팝업
+          </button>
+          <button type="button" class="filter-btn" onclick="filterPosts('all')">
+            전체 보기
+          </button>
+        </div>
+
+        <nav>
+          <ul id="festival">
+            <li class="post popup">
+              <a href="/eventlist/fes01.html"
+                ><img src="/img/eventlist/fes01.jpg" alt="팝업1"
+              /></a>
+              <p>케로로 바캉스 팝업</p>
+              <!-- 이미지 아래에 텍스트 추가 -->
+            </li>
+            <li class="post popup">
+              <a href="/eventlist/fes02.html"
+                ><img src="/img/eventlist/fes02.jpg" alt="팝업2"
+              /></a>
+              <p>부산 노릇노릇</p>
+            </li>
+            <li class="post event">
+              <a href="/eventlist/fes03.html"
+                ><img src="/img/eventlist/fes03.png" alt="축제1" />
+              </a>
+              <p>부산 나이트 워크</p>
+            </li>
+            <li class="post event">
+              <a href="/eventlist/fes04.html"
+                ><img src="/img/eventlist/fes04.jpg" alt="축제2"
+              /></a>
+              <p>부산국제코미디 페스티벌</p>
+            </li>
+            <li class="post event">
+              <a href="/eventlist/fes05.html"
+                ><img src="/img/eventlist/fes05.jpg" alt="축제3"
+              /></a>
+              <p>어둠에서 보기</p>
+            </li>
+            <li class="post event">
+              <a href="/eventlist/fes06.html"
+                ><img src="/img/eventlist/fes06.jpg" alt="축제4"
+              /></a>
+              <p>유라리 건맥 축제</p>
+            </li>
+            <li class="post event">
+              <a href="/eventlist/fes07.html"
+                ><img src="/img/eventlist/fes07.png" alt="축제5"
+              /></a>
+              <p>부산국제마케팅광고제</p>
+            </li>
+            <li class="post popup">
+              <a href="/eventlist/fes08.html"
+                ><img src="/img/eventlist/fes08.jpg" alt="팝업3" />
+              </a>
+              <p>두근두근 도라에몽 인 부산</p>
+            </li>
+            <li class="post popup">
+              <a href="/eventlist/fes09.html"
+                ><img src="/img/eventlist/fes09.jpg" alt="팝업4"
+              /></a>
+              <p>이번 여름에 나랑 다꾸할래?</p>
+            </li>
+            <li class="post popup">
+              <a href="/eventlist/fes10.html"
+                ><img src="/img/eventlist/fes10.jpg" alt="팝업5"
+              /></a>
+              <p>인생은 스폰지밥처럼!! 25주년 스폰지밥</p>
+            </li>
+
+            <li class="post popup">
+              <a href="/eventlist/fes11.html"
+                ><img src="/img/eventlist/fes11.jpg" alt="팝업6"
+              /></a>
+              <p>락피쉬 부산 전포 팝업스토어</p>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      <!-- 필터링 버튼 추가 -->
-      <div id="filter-buttons">
-        <button type="button" class="filter-btn" onclick="filterPosts('event')">
-          축제
-        </button>
-        <button type="button" class="filter-btn" onclick="filterPosts('popup')">
-          팝업
-        </button>
-        <button type="button" class="filter-btn" onclick="filterPosts('all')">
-          전체 보기
-        </button>
-      </div>
-
-      <nav>
-        <ul id="festival">
-          <li class="post popup">
-            <a href="/eventlist/fes01.html"
-              ><img src="/img/eventlist/fes01.jpg" alt="팝업1"
-            /></a>
-            <p>케로로 바캉스 팝업</p>
-            <!-- 이미지 아래에 텍스트 추가 -->
-          </li>
-          <li class="post popup">
-            <a href="/eventlist/fes02.html"
-              ><img src="/img/eventlist/fes02.jpg" alt="팝업2"
-            /></a>
-            <p>부산 노릇노릇</p>
-          </li>
-          <li class="post event">
-            <a href="/eventlist/fes03.html"
-              ><img src="/img/eventlist/fes03.png" alt="축제1" />
-            </a>
-            <p>부산 나이트 워크</p>
-          </li>
-          <li class="post event">
-            <a href="/eventlist/fes04.html"
-              ><img src="/img/eventlist/fes04.jpg" alt="축제2"
-            /></a>
-            <p>부산국제코미디 페스티벌</p>
-          </li>
-          <li class="post event">
-            <a href="/eventlist/fes05.html"
-              ><img src="/img/eventlist/fes05.jpg" alt="축제3"
-            /></a>
-            <p>어둠에서 보기</p>
-          </li>
-          <li class="post event">
-            <a href="/eventlist/fes06.html"
-              ><img src="/img/eventlist/fes06.jpg" alt="축제4"
-            /></a>
-            <p>유라리 건맥 축제</p>
-          </li>
-          <li class="post event">
-            <a href="/eventlist/fes07.html"
-              ><img src="/img/eventlist/fes07.png" alt="축제5"
-            /></a>
-            <p>부산국제마케팅광고제</p>
-          </li>
-          <li class="post popup">
-            <a href="/eventlist/fes08.html"
-              ><img src="/img/eventlist/fes08.jpg" alt="팝업3" />
-            </a>
-            <p>두근두근 도라에몽 인 부산</p>
-          </li>
-          <li class="post popup">
-            <a href="/eventlist/fes09.html"
-              ><img src="/img/eventlist/fes09.jpg" alt="팝업4"
-            /></a>
-            <p>이번 여름에 나랑 다꾸할래?</p>
-          </li>
-          <li class="post popup">
-            <a href="/eventlist/fes10.html"
-              ><img src="/img/eventlist/fes10.jpg" alt="팝업5"
-            /></a>
-            <p>인생은 스폰지밥처럼!! 25주년 스폰지밥</p>
-          </li>
-
-          <li class="post popup">
-            <a href="/eventlist/fes11.html"
-              ><img src="/img/eventlist/fes11.jpg" alt="팝업6"
-            /></a>
-            <p>락피쉬 부산 전포 팝업스토어</p>
-          </li>
-        </ul>
-      </nav>
     </div>
   </body>
   <iframe src="/main/Footer.html" style="width: 100%" frameborder="0"></iframe>
