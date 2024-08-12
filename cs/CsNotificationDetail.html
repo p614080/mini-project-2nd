@@ -39,9 +39,7 @@
                 </tr>
             </table>
             <div class="button_div">
-                <input type="button" value="수정" onclick="updateBtn()">
-                <input type="button" value="삭제" onclick="deleteBtn()">
-                <input type="button" value="이전" style="margin-left: 500px;" id="prevBtn">
+                <input type="button" value="이전" style="margin-left: 800px;" id="prevBtn">
                 <input type="button" value="목록" onclick="location.href='CsNotification.html';">
                 <input type="button" value="다음" id="nextBtn">
             </div>
@@ -101,19 +99,6 @@
                 xhttp.send();
             }
             window.onload = fetchData;
-
-
-            function updateBtn(){
-                if(document.getElementById('id값').value != 'id값'){
-                    alert("수정권한이 없습니다");
-                }
-            }
-
-            function deleteBtn(){
-                if(document.getElementById('id값').value != 'id값'){
-                    alert("삭제권한이 없습니다");
-                }
-            }
             
         </script>
     </div>
