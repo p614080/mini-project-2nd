@@ -70,8 +70,8 @@ table {
 #fileBtn{ 
     margin-left: auto; /* 검색박스를 오른쪽 정렬 */
     margin-bottom: 10px;
+    margin-top: 5px;
     display: flex;
-    align-items: center; /* 가운데 정렬(세로) */
     background-color: #F67280;
     border-color: #F67280;
     /* float: right; */
@@ -79,9 +79,7 @@ table {
     font-family: 'WAGURITTF';
     border-radius: 5px;
     font-size: 15px; /* 글자 크기 */
-    padding: 7px 15px; /* 내부 여백 */
-    width: 100px; /* 버튼 너비 */
-    height: 40px; /* 버튼 높이 */
+
 }
 
 #listBtn{ 
