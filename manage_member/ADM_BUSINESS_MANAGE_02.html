@@ -63,7 +63,7 @@
             >행사리스트</a
           >
           <a
-            href="./ADM_BUSINESS_MANAGE_01.html"
+            onclick="removeCheck()"
             class="btn"
             id="BusinessMember"
             >계정 정지/삭제</a
@@ -90,6 +90,17 @@
         document.getElementById("approve").innerHTML = `${userData.approve}`;
       } else {
         document.getElementById("details").innerHTML = "데이터가 없습니다.";
+      }
+      function removeCheck() {
+        if (confirm("삭제 또는 정지 하시겠습니까?") == true) {
+          //확인
+
+          document.removefrm.submit();
+        } else {
+          //취소
+
+          return false;
+        }
       }
     </script>
   </body>
