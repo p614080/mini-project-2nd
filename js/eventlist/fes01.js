@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 // 팝업 창 열기 
 function openPopup() {
-  const popup = window.open("", "popupWindow", "width=600,height=400,scrollbars=yes");
+  const popup = window.open("", "popupWindow", "width=400,height=400,scrollbars=yes");
   popup.document.write(`
       <html>
       <head>
@@ -76,12 +76,12 @@ function openPopup() {
                     font-weight: bold;
                 }
                 input, select {
-                    width: 100%;
+                    width: 70%;
                     padding: 8px;
                     box-sizing: border-box;
                 }
                 .btn {
-                    background-color: #4CAF50;
+                    background-color: #F67280;
                     color: white;
                     border: none;
                     padding: 10px 20px;
@@ -93,7 +93,7 @@ function openPopup() {
                     cursor: pointer;
                 }
                 .close-btn {
-                    background-color: #f44336;
+                    background-color: #355C7D;
                     color: white;
                     border: none;
                     padding: 10px 20px;
