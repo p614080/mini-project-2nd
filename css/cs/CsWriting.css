@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'WAGURITTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
-}
+  }
 
 *{
-    font-family: 'WAGURITTF', sans-serif;
+    font-family: 'HancomMalangMalang-Regular';
 }
 
 .sidecontainer {
@@ -32,19 +32,6 @@
     margin-bottom: 20px; /* 밑으로 여백 */
 }
 
-/* .table_div table{
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
-}
-
-.table_div tr{
-    height: 50px;
-}
-
-.table_div td{
-    border: 1px solid #000;
-} */
 
 table {
     width: 100%;
@@ -76,7 +63,6 @@ table {
     border-color: #F67280;
     /* float: right; */
     color: #FFFFFF;
-    font-family: 'WAGURITTF';
     border-radius: 5px;
     font-size: 15px; /* 글자 크기 */
 
@@ -88,7 +74,6 @@ table {
     border-color: #F67280;
     /* float: right; */
     color: #FFFFFF;
-    font-family: 'WAGURITTF';
     border-radius: 5px;
     font-size: 15px; /* 글자 크기 */
     padding: 7px 15px; /* 내부 여백 */
@@ -102,7 +87,6 @@ table {
     border-color: #F67280;
     /* float: right; */
     color: #FFFFFF;
-    font-family: 'WAGURITTF';
     border-radius: 5px;
     font-size: 15px; /* 글자 크기 */
     padding: 7px 15px; /* 내부 여백 */

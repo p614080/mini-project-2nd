@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'WAGURITTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
-}
+  }
 
 *{
-    font-family: 'WAGURITTF', sans-serif;
+    font-family: 'HancomMalangMalang-Regular';
 }
 
 .sidecontainer {
@@ -25,25 +25,6 @@
 }
 
 
-
-/* .table_div{
-    width: 100%;
-    text-align: center;
-}
-
-.table_div table{
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
-}
-
-.table_div tr{
-    height: 50px;
-}
-
-.table_div td{
-    border: 1px solid #000;
-} */
 
 .table_div{
     width: 100%;
@@ -80,7 +61,6 @@ table {
     background-color: #F67280;
     border-color: #F67280;
     color: #FFFFFF;
-    font-family: 'WAGURITTF';
     border-radius: 5px;
 }
 
