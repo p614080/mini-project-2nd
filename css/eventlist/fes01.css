@@ -46,7 +46,7 @@ iframe {
 }
 
 /* 이미지 css */
-.img01 {
+.img {
  width: 400px;
  height: auto; /* 비율 유지 */
 }
@@ -55,15 +55,17 @@ iframe {
 
 #infomation01 {
   border: 1px solid gray;
+  border-radius: 10px;
   padding: 20px;
-  width: 400px; /* 고정 너비 */
-  height: 300px;
+  width: 500px; /* 고정 너비 */
+  height: 450px;
   box-sizing: border-box; /* 패딩과 테두리를 요소의 총 너비에 포함 */
 }
 
 /* infomation02는 infomation01 아래쪽에 배치*/
 #infomation02 {
   border: 1px solid gray;
+  border-radius: 10px;
   padding: 20px;
   width: 400px; /* 고정 너비 */
   box-sizing: border-box; /* 패딩과 테두리를 요소의 총 너비에 포함 */
@@ -79,12 +81,13 @@ iframe {
   border-radius: 10px;
   max-height: 50px;
   padding: 10px 0;
-  font-size: 1.1em;
+  font-size:0.9em;
   text-align: center;
+  color: white;
   background:#F67280;
 }
 .info_btn:hover {
-  background-color: gray;
+  background-color: #6C5B7B;
   transition: 0.5s ease-out;
 }
 
@@ -99,13 +102,13 @@ iframe {
   margin-top: 50px;
   margin-left: 750px;
   padding: 20px 0;
-  font-size: 1.1em;
+  font-size: 1.5em;
   text-align: center;
   background:#355C7D;
 }
 /* 예약하기 버튼 효과 */
 .ticket_btn:hover {
-  background-color: gray;
+  background-color: #6C5B7B;
   transition: 0.5s ease-out;
 }
 
@@ -156,10 +159,11 @@ iframe {
   padding: 15px 0;
   font-size: 1.1em;
   text-align: center;
+  color: white;
   background:#F67280;
 }
 .star_btn:hover {
-  background-color: gray;
+  background-color:#6C5B7B;
   transition: 0.5s ease-out;
 }
                             
@@ -182,7 +186,7 @@ iframe {
 #reviewList {
   margin-left: 15%;
   margin-top: 5%;
-  border: 3px solid gray;
+  border: 3px solid #6C5B7B;
   width: 900px; /* 고정 너비 */
   border-radius: 10px;
 }

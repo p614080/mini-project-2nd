@@ -63,6 +63,16 @@ function openPopup() {
       <head>
       <title>예약하기</title>
             <style>
+                @font-face {
+                font-family: 'HancomMalangMalang-Regular';
+                src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+                font-weight: 400;
+                font-style: normal;
+                }
+
+                *{
+                 font-family: 'HancomMalangMalang-Regular', sans-serif;
+                }
                 body {
                     font-family: Arial, sans-serif;
                     padding: 20px;
