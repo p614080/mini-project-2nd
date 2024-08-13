@@ -14,7 +14,6 @@ function filterPosts(category) {
 
 
 // --------- 검색 기능
-
 document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
@@ -44,7 +43,7 @@ function filterPosts(filter, query = '') {
         item.classList.remove('show');
     });
 
-    // 화면이 업데이트된 후에 애니메이션을 적용합니다.
+    // 화면이 업데이트된 후에 애니메이션을 적용
     setTimeout(() => {
         items.forEach(item => {
             if (item.style.display === 'block') {
