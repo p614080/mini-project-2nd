@@ -31,19 +31,29 @@
     font-size: 30px
 }
 
-.container p {
+.container h1 {
     font-size: 16px;
-    margin: ;
+    
 }
 
-.btn-space {
+.container p {
+    font-size: 16px;
+}
+
+.btn-align {
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+}
+
+/* .btn-space {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 10px;
     width: 100%;
-}
+} */
 
 
 .btnHeader1 {

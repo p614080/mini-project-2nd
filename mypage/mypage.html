@@ -12,14 +12,20 @@
 <body>
     <div class="sidecontainer">
         <iframe src="/main/Sidemenu.html" frameborder="0" scrolling="no"></iframe>
-        <div class="container">
+        <div class="btn-align">
+            <p id="mymap">나의 이벤트 맵</p><br><br><br>
             <h1>마이페이지</h1>
+            <a href="#" onclick="redirectTo('user_info_modify')"><button class="btnHeader2">회원정보변경</button></a>
+            <a href="#" onclick="redirectTo('password_change')"><button class="btnHeader3">비밀번호변경</button></a>
+            <a href="#" onclick="redirectTo('account_delete')"><button class="btnHeader4">회원탈퇴</button></a>
+        </div>
+        <div class="container">
             <div class="btn-space">
-                <a href="#" onclick="redirectTo('user_info_modify')"><button class="btnHeader2">회원정보변경</button></a>
+                <!-- <a href="#" onclick="redirectTo('user_info_modify')"><button class="btnHeader2">회원정보변경</button></a>
                 <a href="#" onclick="redirectTo('password_change')"><button class="btnHeader3">비밀번호변경</button></a>
-                <a href="#" onclick="redirectTo('account_delete')"><button class="btnHeader4">회원탈퇴</button></a>
+                <a href="#" onclick="redirectTo('account_delete')"><button class="btnHeader4">회원탈퇴</button></a> -->
             </div>
-            <p id="mymap">나의 이벤트 맵</p>
+            <!-- <p id="mymap">나의 이벤트 맵</p> -->
             <div id="map" style="width: 100%; height: 100%;">
 
             </div>
