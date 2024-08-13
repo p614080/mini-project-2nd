@@ -1,19 +1,53 @@
-
 <header>
-        <link rel="stylesheet" href="../css/main/Header.css">
-    <div>
-        <img id="imgLogo" src="../img/main/header.gif" onclick="window.open('../main/home.html','_parent')">
-        <ul class="menu">
-            <li><a href="../cs/CsNotification.html" target="_parent">공지사항</a></li>
-            <li><a href="../eventlist/event.html" target="_parent" style="text-decoration: none;">축제/팝업</a></li>
-            <li><a href="javascript:void(0);" target="_parent" style="text-decoration: none;" onclick="alert('준비중인 서비스입니다.');">이벤트</a></li>
-            <li> 
-                <a href="javascript:void(0)"><img id="imgSearch" src="../img/main/01-magnifying-glass-32.png" alt="검색" onclick="alert('준비중인 서비스입니다.');"></a>
-            </li>
-            <li>
-            <button type="button" id="btnSignIn" class="btnHeader" onclick="window.open('../login_register/terms.html','_parent')">회원가입</button>
-            <button type="button" id="btnLogin"  class="btnHeader" onclick="window.open('../login_register/login.html','_parent')">로그인</button>
-            </li>
-        </ul>
+  <link rel="stylesheet" href="../css/main/Header.css" />
+  <div class="container">
+    <img
+      id="imgLogo"
+      src="../img/main/header.gif"
+      onclick="window.open('../main/home.html','_parent')"
+    />
+    <div class="a_container">
+      <a href="../cs/CsNotification.html" target="_parent">공지사항</a>
+      <a
+        href="../eventlist/event.html"
+        target="_parent"
+        style="text-decoration: none"
+        >축제/팝업</a
+      >
+      <a
+        href="javascript:void(0);"
+        target="_parent"
+        style="text-decoration: none"
+        onclick="alert('준비중인 서비스입니다.');"
+        >이벤트</a
+      >
+
+      <a href="javascript:void(0)"
+        ><img
+          id="imgSearch"
+          src="../img/main/01-magnifying-glass-32.png"
+          alt="검색"
+          onclick="alert('준비중인 서비스입니다.');"
+      /></a>
     </div>
+
+    <div>
+      <button
+        type="button"
+        id="btnSignIn"
+        class="btnHeader"
+        onclick="window.open('../login_register/terms.html','_parent')"
+      >
+        회원가입
+      </button>
+      <button
+        type="button"
+        id="btnLogin"
+        class="btnHeader"
+        onclick="window.open('../login_register/login.html','_parent')"
+      >
+        로그인
+      </button>
+    </div>
+  </div>
 </header>
