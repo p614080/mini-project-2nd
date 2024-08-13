@@ -25,10 +25,10 @@ function redirectToPasswordAuth(action) {
         .catch(error => console.error('Error fetching JSON data:', error));
 }
 
-// 홈으로 이동
-document.querySelector('.btnHeader1').addEventListener('click', function() {
-    window.location.href = `/main/home.html`;
-});
+// // 홈으로 이동
+// document.querySelector('.btnHeader1').addEventListener('click', function() {
+//     window.location.href = `/main/home.html`;
+// });
 
 // 회원정보변경 버튼 클릭 시
 document.querySelector('.btnHeader2').addEventListener('click', function() {

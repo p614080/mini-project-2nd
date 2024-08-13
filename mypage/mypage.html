@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +6,8 @@
     <title>마이페이지</title>
     <link rel="stylesheet" href="../css/mypage/mypage.css">
     <iframe src="/main/Header.html" style="width: 100%; height: 100%" frameborder="0" scrolling="no"></iframe>
+    <!-- <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vsns5epb3t&submodules=geocoder"></script> -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vsns5epb3t"></script>
 </head>
 <body>
     <div class="sidecontainer">
@@ -15,14 +15,94 @@
         <div class="container">
             <h1>마이페이지</h1>
             <div class="btn-space">
-                <a href="#" onclick="redirectTo('home')"><button class="btnHeader1">홈으로</button></a>
                 <a href="#" onclick="redirectTo('user_info_modify')"><button class="btnHeader2">회원정보변경</button></a>
                 <a href="#" onclick="redirectTo('password_change')"><button class="btnHeader3">비밀번호변경</button></a>
                 <a href="#" onclick="redirectTo('account_delete')"><button class="btnHeader4">회원탈퇴</button></a>
             </div>
+            <p id="mymap">나의 이벤트 맵</p>
+            <div id="map" style="width: 100%; height: 100%;">
+
+            </div>
         </div>
     </div>
     <script src="/js/mypage/mypage.js"></script>
+    <script>
+        var mapOptions = {
+            center: new naver.maps.LatLng(35.198362, 129.053922),
+            zoom: 11
+        };
+        
+        var map = new naver.maps.Map('map', mapOptions);
+
+        // var marker = new naver.maps.Marker({
+        //     position: new naver.maps.LatLng(35.1711778, 129.127195),
+        //     map: map
+        // });
+
+        // naver.maps.Event.addListener(map, 'click', function(e) {
+        //     marker.setPosition(e.latlng);
+        // });
+
+        var cityhall = new naver.maps.LatLng(35.1711778, 129.127195);
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(35.198362, 129.053922),
+            zoom: 11
+        });
+
+        var contentString = [
+            '<div class="map_innerHTML">',
+            '  <h3>♫ 부산맥주축제-비어밤 🎶</h3>',
+            '  <div class="map_info">',
+            '    <img src="../img/mypage/beerbomb.png" width="55" height="55" alt="비어밤in해운대" class="thumb" />',
+            '    <div class="map_details">',
+            '      <p>장소 : 부산 해운대구 수영강변대로 120<br> 영화의전당 야외광장</p><br>',
+            '      <p>라인업 : 박명수, 뉴진스님, 미란이, 호미들</p><br>',
+            '      <p><a href="https://beerbombfestival.com/" target="_blank"> BeerBomb in 해운대</a></p>',
+            '    </div>',
+            '  </div>',
+            '</div>'
+        ].join('');
+
+        var marker = new naver.maps.Marker({
+            map: map,
+            position: cityhall
+        });
+
+        var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+        });
+
+        naver.maps.Event.addListener(marker, "click", function(e) {
+            if (infowindow.getMap()) {
+                infowindow.close();
+            } else {
+                infowindow.open(map, marker);
+            }
+        });
+
+        resize();
+        window.addEventListener('resize', resize);
+        
+        function resize() {
+            var mapWidth = window.innerWidth;
+            var mapHeight;
+        
+            if (mapWidth <= 767) {
+                mapWidth = Math.min(mapWidth, 80 * window.innerWidth / 100) + 'px';
+                mapHeight = '250px';
+            } else if (mapWidth <= 1023) {
+                mapWidth = '700px';
+                mapHeight = '400px';
+            } else {
+                mapWidth = '1280px';
+                mapHeight = '700px';
+            }
+        
+            document.getElementById('map').style.width = mapWidth;
+            document.getElementById('map').style.height = mapHeight;
+            map.setSize(new naver.maps.Size(parseInt(mapWidth), parseInt(mapHeight)));
+        }
+      </script>
 </body>
 <iframe src="/main/Footer.html" style="width: 100%" frameborder="0"></iframe>
-</html>
+</html> 

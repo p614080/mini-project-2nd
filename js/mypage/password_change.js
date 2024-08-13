@@ -16,7 +16,7 @@ document.getElementById('confirm-btn').addEventListener('click', function() {
 
     // 비밀번호가 일치하는 경우
     if (user.password === newPassword){
-        alert('새 비밀번호로 변경하였습니다.');
+        alert('비밀번호를 새로 변경하였습니다.');
         window.location.href = '/mypage/mypage.html';
     } else {
         alert("기존 비밀번호가 일치하지 않습니다.")

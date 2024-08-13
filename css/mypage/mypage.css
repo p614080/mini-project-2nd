@@ -15,9 +15,8 @@
     font-family: 'WAGURITTF', sans-serif;
 }
 
-
 .container {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -25,62 +24,39 @@
     background-color: #f9f9f9;
     box-sizing: border-box;
     text-align: center;
+    position: relative;
+}
+
+#mymap {
+    font-size: 30px
+}
+
+.container p {
+    font-size: 16px;
+    margin: ;
 }
 
 .btn-space {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 10px;
+    width: 100%;
 }
 
-.my-btn {
-    padding: 10px 20px;
-    width: 150px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.my-btn1 {
-    background-color: #F67280;
-}
-
-.my-btn2 {
-    background-color: coral;
-}
-
-.my-btn3 {
-    background-color: cornflowerblue;
-}
-
-.my-btn4 {
-    background-color:indianred ;
-}
-
-.my-btn:hover {
-    transform: scale(1.05);
-}
-
-.my-btn:active {
-    transform: scale(0.95);
-}
 
 .btnHeader1 {
-    background-color:cornflowerblue;
-    border-color: cornflowerblue;
+    background-color:#F67280;
+    border-color: #F67280;
     float: right;
     color: #FFFFFF;
     font-family: 'WAGURITTF';
-    padding: 10px 30px;
+    padding: 20px 20px;
     margin: 3px;
     border-radius: 5px;
-    width: 150px;
+    width: 180px;
+    font-size: 20px;
 }
 
 .btnHeader1:hover {
@@ -89,15 +65,16 @@
 }
 
 .btnHeader2 {
-    background-color:coral;
-    border-color: coral;
+    background-color:#F67280;
+    border-color: #F67280;
     float: right;
     color: #FFFFFF;
     font-family: 'WAGURITTF';
-    padding: 10px 30px;
+    padding: 10px 15px;
     margin: 3px;
     border-radius: 5px;
-    width: 150px;
+    width: 180px;
+    font-size: 20px;
 }
 
 .btnHeader2:hover {
@@ -106,15 +83,16 @@
 }
 
 .btnHeader3 {
-    background-color:deepskyblue;
-    border-color: deepskyblue;
+    background-color:#F67280;
+    border-color: #F67280;
     float: right;
     color: #FFFFFF;
     font-family: 'WAGURITTF';
-    padding: 10px 30px;
+    padding: 10px 15px;
     margin: 3px;
     border-radius: 5px;
-    width: 150px;
+    width: 180px;
+    font-size: 20px;
 }
 
 .btnHeader3:hover {
@@ -123,18 +101,59 @@
 }
 
 .btnHeader4 {
-    background-color: indianred;
-    border-color: indianred;
+    background-color:#F67280 ;
+    border-color: #F67280;
     float: right;
-    color: #FFFFFF;
+    color:#FFF;
     font-family: 'WAGURITTF';
-    padding: 10px 30px;
+    padding: 10px 15px;
     margin: 3px;
     border-radius: 5px;
-    width: 150px;
+    width: 180px;
+    font-size: 20px;
 }
 
 .btnHeader4:hover {
     background-color: #6C5B7B;
     border-color: #6C5B7B;
+}
+
+.map_innerHTML {
+    font-family: 'WAGURITTF', sans-serif; /* 일관된 폰트 사용 */
+    color: #333; /* 텍스트 색상 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 부드러운 그림자 추가 */
+    max-width: 400px; /* 최대 너비 설정 */
+}
+
+.map_info {
+    display: flex;
+    align-items: flex-start; /* 이미지와 텍스트 정렬 */
+}
+
+.thumb {
+    width: 110px; /* 이미지 크기 */
+    height: 150px;
+    margin-right: 10px; /* 이미지와 텍스트 사이 여백 */
+    border-radius: 5px; /* 이미지 모서리 둥글게 */
+}
+
+.map_details {
+    flex: 1; /* 텍스트 영역이 나머지 공간을 차지하도록 설정 */
+}
+
+.map_details p {
+    margin: 5px 0; /* 단락 간격 설정 */
+}
+
+.map_details a {
+    color: #F67280; /* 링크 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.map_details a:hover {
+    text-decoration: underline; /* 링크 호버 시 밑줄 추가 */
 }

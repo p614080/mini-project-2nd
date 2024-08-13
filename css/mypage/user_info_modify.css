@@ -1,3 +1,9 @@
+.sidecontainer {
+    display: inline-flex;
+    width: 100%;
+    height : auto;
+  }
+  
 @font-face {
     font-family: 'WAGURITTF';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
@@ -9,11 +15,6 @@
     font-family: 'WAGURITTF', sans-serif;
 }
 
-.sidecontainer {
-    display: inline-flex;
-    width: 100%;
-    height : auto;
-  }
 
 .container {
     width: 40%;

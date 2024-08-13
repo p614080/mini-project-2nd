@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (action === 'passwordChange') {
                     window.location.href = '/mypage/password_change.html';
                 } else if (action === 'delete') {
-                    alert('회원탈퇴 처리가 완료되었습니다.');
+                    alert('회원탈퇴가 정상 처리되었습니다.');
                     window.location.href = '/main/home.html';
                 }
             } else {
